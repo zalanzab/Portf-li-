@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <img src="./style/Photos/logo.png" alt="School Logo">
+            <span id="nav-name">ZAB ZALÁN</span>
+        </div>
+
+        <nav>
+            <button onclick="scrollToSection('rolam')" id="nav-about">Rólam</button>
+            <button onclick="scrollToSection('tanulmanyok')" id="nav-study">Tanulmányok</button>
+            <button onclick="scrollToSection('projektek')" id="nav-projects">Projektek</button>
+            <button onclick="scrollToSection('osszegzes')" id="nav-summary">Összegzés</button>
+        </nav>
+
+        <button class="lang-btn" onclick="toggleLanguage()">HU / EN</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="card">
+            <div class="card-text">
+                <h1 id="name">ZAB ZALÁN</h1>
+                <p id="title">Ipari informatikus hallgató</p>
+            </div>
+
+            <div class="profile-pic">
+                <img src="./style/Photos/profil.jpeg" alt="Profilkép">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SECTIONS -->
+    <section id="rolam" class="content">
+        <h2 id="about-title">Rólam</h2>
+        <p>Itt jön majd a bemutatkozás szöveg...</p>
+    </section>
+
+    <section id="tanulmanyok" class="content">
+        <h2>Tanulmányok</h2>
+    </section>
+
+    <section id="projektek" class="content">
+        <h2>Projektek</h2>
+    </section>
+
+    <section id="osszegzes" class="content">
+        <h2>Összegzés</h2>
+    </section>
+
+<script src="./style/script.js"></script>
+</body>
+</html>
