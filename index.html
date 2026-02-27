@@ -9,17 +9,28 @@
 <body>
     <header>
         <div class="logo">
-            <img src="./style/Photos/logo.png" alt="School Logo">
+            <a href="https://szek-szechenyi.www.intezmeny.edir.hu/" target="_blank">
+                <img src="./style/Photos/logo.png" alt="School Logo">
+            </a>
             <span id="nav-name">ZAB ZALÁN</span>
         </div>
-    <button class="menu-toggle" onclick="toggleMenu()">
-        ☰
-    </button>
-        <nav>
-            <button onclick="scrollToSection('rolam')" id="nav-about">Rólam</button>
-            <button onclick="scrollToSection('tanulmanyok')" id="nav-study">Tanulmányok</button>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                ☰
+            </button>
+        <nav id="nav-menu">
+            <div class="dropdown">
+                <button class="dropbtn" id="nav-study" onclick="scrollToSection('tanulmanyok')">Tanulmányok</button>
+                <div class="dropdown-content">
+                    <button id="ev9-btn" onclick="scrollToSection('ev9')">9. évfolyam</button>
+                    <button id="ev10-btn" onclick="scrollToSection('ev10')">10. évfolyam</button>
+                    <button id="ev11-btn" onclick="scrollToSection('ev11')">11. évfolyam</button>
+                    <button id="ev12-btn" onclick="scrollToSection('ev12')">12. évfolyam</button>
+                    <button id="ev13-btn" onclick="scrollToSection('ev13')">13. évfolyam</button>
+                </div>
+            </div>
             <button onclick="scrollToSection('projektek')" id="nav-projects">Projektek</button>
             <button onclick="scrollToSection('osszegzes')" id="nav-summary">Összegzés</button>
+            <button onclick="scrollToSection('rolam')" id="nav-about">Rólam</button>
         </nav>
 
         <button class="lang-btn" onclick="toggleLanguage()">HU / EN</button>
@@ -32,6 +43,7 @@
             <div class="card-text">
                 <h1 id="name">ZAB ZALÁN</h1>
                 <p id="title">Ipari informatikus hallgató</p>
+                <button class="about-btn" id="about-btn" onclick="scrollToSection('rolam')">Rólam<span class="arrow">→</span></button>
             </div>
 
             <div class="profile-pic">
@@ -42,21 +54,52 @@
     </section>
 
     <!-- SECTIONS -->
-    <section id="rolam" class="content">
-        <h2 id="about-title">Rólam</h2>
-        <p>Itt jön majd a bemutatkozás szöveg...</p>
-    </section>
 
     <section id="tanulmanyok" class="content">
-        <h2>Tanulmányok</h2>
+        <h2 id="study-title">Tanulmányok</h2>
+            <div id="ev9">
+            <h3 id="ev9-title">9. évfolyam</h3>
+            <p id="ev9-text">Itt lesz a 9. évfolyam leírása.</p>
+        </div>
+
+        <div id="ev10">
+            <h3 id="ev10-title">10. évfolyam</h3>
+            <p id="ev10-text">Itt lesz a 10. évfolyam leírása.</p>
+        </div>
+
+        <div id="ev11">
+            <h3 id="ev11-title">11. évfolyam</h3>
+            <p id="ev11-text">Itt lesz a 11. évfolyam leírása.</p>
+        </div>
+
+        <div id="ev12">
+            <h3 id="ev12-title">12. évfolyam</h3>
+            <p id="ev12-text">Itt lesz a 12. évfolyam leírása.</p>
+        </div>
+
+        <div id="ev13">
+            <h3 id="ev13-title">13. évfolyam</h3>
+            <p id="ev13-text">Itt lesz a 13. évfolyam leírása.</p>
+        </div>
+        <button class="back-btn" id="back-study" onclick="scrollToTop()">Vissza ↑</button>
     </section>
 
     <section id="projektek" class="content">
-        <h2>Projektek</h2>
+        <h2 id="projects-title">Projektek</h2>
+        <p id="projects-text">Projektjeim bemutatása...</p>
+        <button class="back-btn" id="back-projects" onclick="scrollToTop()">Vissza ↑</button>
     </section>
 
     <section id="osszegzes" class="content">
-        <h2>Összegzés</h2>
+        <h2 id="summary-title">Összegzés</h2>
+        <p id="summary-text">Tanulmányaim összefoglalása...</p>
+        <button class="back-btn" id="back-summary" onclick="scrollToTop()">Vissza ↑</button>
+    </section>
+
+    <section id="rolam" class="content">
+        <h2 id="about-title">Rólam</h2>
+        <p id="about-text">Itt jön majd a bemutatkozás szöveg...</p>
+        <button class="back-btn" id="back-about" onclick="scrollToTop()">Vissza ↑</button>
     </section>
 
 <script src="./style/script.js"></script>

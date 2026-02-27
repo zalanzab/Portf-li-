@@ -94,6 +94,40 @@ nav button:hover {
     object-fit: cover;
 }
 
+.about-btn {
+    margin-top: 25px;
+    background: linear-gradient(135deg, #1e73ff, #0044cc);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.about-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.about-btn.clicked {
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.about-btn:hover .arrow {
+    transform: translateX(5px);
+}
+
 /* CONTENT SECTIONS */
 
 .content {
@@ -140,11 +174,87 @@ nav button:hover {
         text-align: center;
         padding: 30px;
     }
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+    }
 
     .profile-pic img {
         width: 140px;
         height: 140px;
         margin-top: 20px;
+        order: 2;
+    }
+    .about-btn {
+        order: 3;
+        margin-top: 20px;
     }
 
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 180px;
+    top: 100%;
+    left: 0;
+    border-radius: 8px;
+}
+
+.dropdown-content button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    width: auto;        /* EZ FONTOS */
+}
+
+.dropdown-content button:hover {
+    color: #8a1538;
+    background: transparent;
+}
+
+/* Hoverre lenyílik */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.back-btn {
+    margin-top: 60px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.back-btn:active {
+    transform: scale(0.95);
 }
