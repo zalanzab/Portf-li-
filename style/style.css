@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    line-height: 1.5;
     background-color: white;
 }
 
@@ -57,7 +58,6 @@ nav button:hover {
     display: flex;
     justify-content: center;
 }
-
 .card {
     background-color: white;
     width: 800px;
@@ -70,6 +70,7 @@ nav button:hover {
     transition: 0.3s;
     position: relative;
     top: 190px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
 }
 
 .card:hover {
@@ -97,4 +98,53 @@ nav button:hover {
 
 .content {
     padding: 100px 80px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    nav button {
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    .card {
+        width: 70%;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .profile-pic img {
+        width: 140px;
+        height: 140px;
+        margin-top: 20px;
+    }
+
 }

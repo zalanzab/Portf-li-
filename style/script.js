@@ -16,7 +16,7 @@ function toggleLanguage() {
         document.getElementById("nav-projects").innerText = "Projektek";
         document.getElementById("nav-summary").innerText = "Összegzés";
         document.getElementById("about-title").innerText = "Rólam";
-        document.getElementById("title").innerText = "ipari informatikus";
+        document.getElementById("title").innerText = "Ipari informatikus hallgató";
         isHungarian = true;
     }
 }
@@ -25,4 +25,7 @@ function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({
         behavior: "smooth"
     });
+}
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("active");
 }
