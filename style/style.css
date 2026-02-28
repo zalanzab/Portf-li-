@@ -66,7 +66,6 @@ nav button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     transition: 0.3s;
     position: relative;
     top: 190px;
@@ -191,6 +190,21 @@ nav button:hover {
         order: 3;
         margin-top: 20px;
     }
+    .dropdown-content {
+        position: static;
+        display: block;
+        background: none;
+        padding-left: 15px;
+    }
+     .content {
+        padding: 60px 20px;
+    }
+
+    .study-grid {
+        grid-template-columns: 1fr;
+    }
+
+
 
 
 }
@@ -211,12 +225,18 @@ nav button:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: black;
-    min-width: 180px;
+    background-color: #111;
+    min-width: 200px;
     top: 100%;
     left: 0;
-    border-radius: 8px;
+    border-radius: 12px;
+    padding: 10px 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
 }
+
 
 .dropdown-content button {
     background: none;
@@ -236,6 +256,8 @@ nav button:hover {
 /* Hoverre lenyílik */
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 .back-btn {
     margin-top: 60px;
@@ -257,4 +279,100 @@ nav button:hover {
 
 .back-btn:active {
     transform: scale(0.95);
+}
+
+/*tanulmanyok kartya*/
+.study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.study-card {
+    padding: 40px;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    color: #222;
+}
+
+/* Finom, visszafogott színátmenetek */
+
+.card-1 {
+    background: linear-gradient(135deg, #d8a7b1, #ffffff);
+}
+
+.card-2 {
+    background: linear-gradient(135deg, #a8c7e6, #ffffff);
+}
+
+.card-3 {
+    background: linear-gradient(135deg, #b7d7a8, #ffffff);
+}
+
+.card-4 {
+    background: linear-gradient(135deg, #e6c9a8, #ffffff);
+}
+
+.study-card h3 {
+    margin-top: 0;
+    color: #8a1538;
+}
+
+/* Hover animáció */
+
+.study-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* Szöveg dinamikus vágása */
+
+.text-content {
+    max-height: 80px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+/* Kinyitott állapot */
+
+.study-card.active {
+    transform: scale(1.02);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+}
+
+.study-card.active .text-content {
+    max-height: 500px;
+    margin-top: 20px;
+}
+
+/* Fekete, kisebb gomb */
+
+.expand-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.expand-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Mobil */
+
+@media (max-width: 768px) {
+    .study-grid {
+        grid-template-columns: 1fr;
+    }
 }

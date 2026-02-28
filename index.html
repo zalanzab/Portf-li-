@@ -21,11 +21,10 @@
             <div class="dropdown">
                 <button class="dropbtn" id="nav-study" onclick="scrollToSection('tanulmanyok')">Tanulmányok</button>
                 <div class="dropdown-content">
-                    <button id="ev9-btn" onclick="scrollToSection('ev9')">9. évfolyam</button>
-                    <button id="ev10-btn" onclick="scrollToSection('ev10')">10. évfolyam</button>
-                    <button id="ev11-btn" onclick="scrollToSection('ev11')">11. évfolyam</button>
-                    <button id="ev12-btn" onclick="scrollToSection('ev12')">12. évfolyam</button>
-                    <button id="ev13-btn" onclick="scrollToSection('ev13')">13. évfolyam</button>
+                    <button onclick="scrollToSection('ev910')" id="ev910-btn">9–10. évfolyam</button>
+                    <button onclick="scrollToSection('ev11')" id="ev11-btn">11. évfolyam</button>
+                    <button onclick="scrollToSection('ev12')" id="ev12-btn">12. évfolyam</button>
+                    <button onclick="scrollToSection('ev13')" id="ev13-btn">13. évfolyam</button>
                 </div>
             </div>
             <button onclick="scrollToSection('projektek')" id="nav-projects">Projektek</button>
@@ -33,7 +32,7 @@
             <button onclick="scrollToSection('rolam')" id="nav-about">Rólam</button>
         </nav>
 
-        <button class="lang-btn" onclick="toggleLanguage()">HU / EN</button>
+        <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">HU</button>
     </header>
 
     <!-- HERO SECTION -->
@@ -56,33 +55,104 @@
     <!-- SECTIONS -->
 
     <section id="tanulmanyok" class="content">
-        <h2 id="study-title">Tanulmányok</h2>
-            <div id="ev9">
-            <h3 id="ev9-title">9. évfolyam</h3>
-            <p id="ev9-text">Itt lesz a 9. évfolyam leírása.</p>
+    <h2 id="study-title">Tanulmányok</h2>
+
+    <div class="study-grid">
+
+        <div class="study-card card-1" id="ev910">
+            <h3 id="card1-title">9–10. évfolyam</h3>
+
+            <div class="text-content">
+                <p id="card1-text">
+                    Lorem ipsum fájdalom ül magát a szövetkezéshez
+                    A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés
+                    Sed nisi Senki sem kívánja, hogy az elemeket megsértse
+                    Duis sagittis fájdalom Praesent máris Lorem ipsum fájdalom ül magát a szövetkezéshez
+                    A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés
+                    Sed nisi Senki sem kívánja, hogy az elemeket megsértse
+                    Duis sagittis fájdalom Praesent máris Lorem ipsum fájdalom ül magát a szövetkezéshez
+                    A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés
+                    Sed nisi Senki sem kívánja, hogy az elemeket megsértse
+                    Duis sagittis fájdalom Praesent máris Lorem ipsum fájdalom ül magát a szövetkezéshez
+                    A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés
+                    Sed nisi Senki sem kívánja, hogy az elemeket megsértse
+                    Duis sagittis fájdalom Praesent máris Lorem ipsum fájdalom ül magát a szövetkezéshez
+                    A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés
+                    Sed nisi Senki sem kívánja, hogy az elemeket megsértse
+                    Duis sagittis fájdalom Praesent máris
+                </p>
+            </div>
+
+            <button id="card1-btn" class="expand-btn" onclick="toggleCard(this)">Bővebben</button>
         </div>
 
-        <div id="ev10">
-            <h3 id="ev10-title">10. évfolyam</h3>
-            <p id="ev10-text">Itt lesz a 10. évfolyam leírása.</p>
+
+        <div class="study-card card-2" id="ev11">
+            <h3 id="card2-title">11. évfolyam</h3>
+
+            <div class="text-content">
+                <p id="card2-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                    Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+                    Duis sagittis ipsum. Praesent mauris. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                    Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+                    Duis sagittis ipsum. Praesent mauris. 
+                </p>
+            </div>
+
+            <button id="card2-btn" class="expand-btn" onclick="toggleCard(this)">Bővebben</button>
         </div>
 
-        <div id="ev11">
-            <h3 id="ev11-title">11. évfolyam</h3>
-            <p id="ev11-text">Itt lesz a 11. évfolyam leírása.</p>
+
+
+        <div class="study-card card-3" id="ev12">
+            <h3 id="card3-title">12. évfolyam</h3>
+
+            <div class="text-content">
+                <p id="card3-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                    Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+                    Duis sagittis ipsum. Praesent mauris. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                    Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+                    Duis sagittis ipsum. Praesent mauris.
+                </p>
+            </div>
+
+            <button id="card3-btn" class="expand-btn" onclick="toggleCard(this)">Bővebben</button>
         </div>
 
-        <div id="ev12">
-            <h3 id="ev12-title">12. évfolyam</h3>
-            <p id="ev12-text">Itt lesz a 12. évfolyam leírása.</p>
+
+
+        <div class="study-card card-4" id="ev13">
+            <h3 id="card4-title">13. évfolyam</h3>
+
+            <div class="text-content">
+                <p id="card4-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                    Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+                    Duis sagittis ipsum. Praesent mauris. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                    Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+                    Duis sagittis ipsum. Praesent mauris. 
+                </p>
+            </div>
+
+            <button id="card4-btn" class="expand-btn" onclick="toggleCard(this)">Bővebben</button>
         </div>
 
-        <div id="ev13">
-            <h3 id="ev13-title">13. évfolyam</h3>
-            <p id="ev13-text">Itt lesz a 13. évfolyam leírása.</p>
-        </div>
-        <button class="back-btn" id="back-study" onclick="scrollToTop()">Vissza ↑</button>
-    </section>
+
+    </div>
+
+    <button class="back-btn" id="back-about" onclick="scrollToTop()">Vissza ↑</button>
+</section>
 
     <section id="projektek" class="content">
         <h2 id="projects-title">Projektek</h2>
