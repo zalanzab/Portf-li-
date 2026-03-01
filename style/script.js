@@ -175,3 +175,24 @@ function toggleCard(button) {
         }
     }
 }
+function handleStudyClick() {
+
+    const dropdown = document.querySelector(".dropdown-content");
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile) {
+        //  Desktop → azonnal scroll
+        scrollToSection('tanulmanyok');
+        return;
+    }
+
+    //  Mobil logika
+    if (!dropdown.classList.contains("mobile-open")) {
+        // Első kattintás → lenyit
+        dropdown.classList.add("mobile-open");
+    } else {
+        // Második kattintás → scroll
+        dropdown.classList.remove("mobile-open");
+        scrollToSection('tanulmanyok');
+    }
+}

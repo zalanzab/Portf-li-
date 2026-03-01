@@ -1,11 +1,21 @@
+/* ===================================================== */
+/* ================== 1. GLOBAL / OLDAL ================= */
+/* ===================================================== */
+/* Az egész oldal alap stílusa */
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    background-color: white;
+   font-family: 'Montserrat', sans-serif;
 }
 
-/* NAVBAR */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* ===================================================== */
+/* ================== 2. NAVBAR / FEJLÉC =============== */
+/* ===================================================== */
+/* Felső fekete navigációs sáv */
 
 header {
     background-color: black;
@@ -15,7 +25,18 @@ header {
     align-items: center;
     padding: 0 40px;
     height: 90px;
+    position: relative;
 }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Bal oldali logó + név */
 
 .logo {
     display: flex;
@@ -29,6 +50,8 @@ header {
     padding-top: 40px;
 }
 
+/* Navigációs gombok */
+
 nav button {
     background: none;
     border: none;
@@ -39,8 +62,10 @@ nav button {
 }
 
 nav button:hover {
-    color: #8a1538; /* Qatar bordó */
+    color: #8a1538;
 }
+
+/* Nyelvváltó gomb */
 
 .lang-btn {
     background-color: #8a1538;
@@ -50,7 +75,11 @@ nav button:hover {
     cursor: pointer;
 }
 
-/* HERO */
+
+/* ===================================================== */
+/* ================== 3. HERO SZEKCIÓ ================== */
+/* ===================================================== */
+/* Fekete-fehér átmenetes felső rész */
 
 .hero {
     background: linear-gradient(to bottom, black 80%, white 20%);
@@ -58,6 +87,9 @@ nav button:hover {
     display: flex;
     justify-content: center;
 }
+
+/* Fehér bemutatkozó kártya */
+
 .card {
     background-color: white;
     width: 800px;
@@ -69,12 +101,14 @@ nav button:hover {
     transition: 0.3s;
     position: relative;
     top: 190px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    box-shadow: 0px 18px 40px rgba(0,0,0,0.25);
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
+
+/* Szöveg rész */
 
 .card-text h1 {
     color: #8a1538;
@@ -86,12 +120,16 @@ nav button:hover {
     margin-top: 10px;
 }
 
+/* Profilkép */
+
 .profile-pic img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
 }
+
+/* Rólam gomb */
 
 .about-btn {
     margin-top: 25px;
@@ -127,10 +165,30 @@ nav button:hover {
     transform: translateX(5px);
 }
 
-/* CONTENT SECTIONS */
+
+/* ===================================================== */
+/* ================== 4. TARTALMI SZEKCIÓK ============= */
+/* ===================================================== */
+/* Tanulmányok, Projektek, Összegzés, Rólam */
 
 .content {
     padding: 100px 80px;
+}
+.content h2 {
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #111;
+    position: relative;
+}
+.content h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #8a1538;
+    margin-top: 20px;
 }
 
 .menu-toggle {
@@ -142,72 +200,180 @@ nav button:hover {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-
-    nav {
-        display: none;
-        flex-direction: column;
-        background-color: black;
-        position: absolute;
-        top: 90px;
-        right: 0;
-        width: 200px;
-        padding: 20px;
-    }
-
-    nav button {
-        margin: 10px 0;
-        text-align: left;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-    .card {
-        width: 70%;
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
-    }
-    .card-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        order: 1;
-    }
-
-    .profile-pic img {
-        width: 140px;
-        height: 140px;
-        margin-top: 20px;
-        order: 2;
-    }
-    .about-btn {
-        order: 3;
-        margin-top: 20px;
-    }
-    .dropdown-content {
-        position: static;
-        display: block;
-        background: none;
-        padding-left: 15px;
-    }
-     .content {
-        padding: 60px 20px;
-    }
-
-    .study-grid {
-        grid-template-columns: 1fr;
-    }
 
 
+/* ===================================================== */
+/* ================== 5. TANULMÁNYOK GRID ============== */
+/* ===================================================== */
+/* A színes kártyák elrendezése */
 
-
+.study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
 }
+
+/* ===================================================== */
+/* ================== 6. SZÍNES TANULMÁNY KÁRTYÁK ====== */
+/* ===================================================== */
+/* 9-10, 11, 12, 13 évfolyam kártyák */
+
+.study-card {
+    padding: 40px;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    color: #222;
+}
+
+
+.study-card p {
+    flex-grow: 1;
+    margin: 25px 0;
+    line-height: 1.6;
+    color: #555;
+}
+.study-card .btn {
+    align-self: flex-start;
+    padding: 10px 22px;
+    background: #8a1538;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.study-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.study-card h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #8a1538;
+    margin-top: 15px;
+}
+
+/* Színátmenetek */
+
+.card-1 {
+    background: linear-gradient(135deg, #d8a7b1, #ffffff);
+}
+
+.card-2 {
+    background: linear-gradient(135deg, #a8c7e6, #ffffff);
+}
+
+.card-3 {
+    background: linear-gradient(135deg, #b7d7a8, #ffffff);
+}
+
+.card-4 {
+    background: linear-gradient(135deg, #e6c9a8, #ffffff);
+}
+
+/* Hover effekt */
+
+.study-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+
+/* ===================================================== */
+/* ================== 7. KÁRTYA SZÖVEG LENYÍLÁS ======== */
+/* ===================================================== */
+
+.text-content {
+    max-height: 80px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.study-card.active {
+    transform: scale(1.02);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+}
+
+
+.study-card.active .text-content {
+    max-height: 500px;
+    margin-top: 20px;
+}
+
+
+/* ===================================================== */
+/* ================== 8. GOMBOK ======================== */
+/* ===================================================== */
+
+.expand-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.expand-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.back-btn {
+    margin-top: 60px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.back-btn:active {
+    transform: scale(0.95);
+}
+.about-back {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    margin-top: 0; /* felülírja a global margin-top: 60px-et */
+}
+
+.about-card .back-btn {
+    align-self: flex-start;
+    margin-top: 40px;
+}
+
+
+
+
+/* ===================================================== */
+/* ================== 9. DROPDOWN MENÜ ================= */
+/* ===================================================== */
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -236,21 +402,19 @@ nav button:hover {
     transform: translateY(10px);
     transition: all 0.3s ease;
 }
-
-
-.dropdown-content button {
-    background: none;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: block;
-    width: auto;        /* EZ FONTOS */
-}
-
-.dropdown-content button:hover {
-    color: #8a1538;
-    background: transparent;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    border-radius: 12px;
+    padding: 10px 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
 }
 
 /* Hoverre lenyílik */
@@ -259,120 +423,160 @@ nav button:hover {
     opacity: 1;
     transform: translateY(0);
 }
-.back-btn {
-    margin-top: 60px;
-    background: black;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    font-size: 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
 
-.back-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-.back-btn:active {
-    transform: scale(0.95);
-}
-
-/*tanulmanyok kartya*/
-.study-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.study-card {
-    padding: 40px;
-    border-radius: 25px;
-    position: relative;
-    transition: all 0.4s ease;
-    overflow: hidden;
-    color: #222;
-}
-
-/* Finom, visszafogott színátmenetek */
-
-.card-1 {
-    background: linear-gradient(135deg, #d8a7b1, #ffffff);
-}
-
-.card-2 {
-    background: linear-gradient(135deg, #a8c7e6, #ffffff);
-}
-
-.card-3 {
-    background: linear-gradient(135deg, #b7d7a8, #ffffff);
-}
-
-.card-4 {
-    background: linear-gradient(135deg, #e6c9a8, #ffffff);
-}
-
-.study-card h3 {
-    margin-top: 0;
+.dropdown-content button:hover {
     color: #8a1538;
+    background: transparent;
 }
 
-/* Hover animáció */
-
-.study-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+/* ===================================================== */
+/* ================== 10. RÓLAM GRID ============== */
+/* ===================================================== */
+.about-section {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
-/* Szöveg dinamikus vágása */
-
-.text-content {
-    max-height: 80px;
+.about-card {
+    
+    position: relative;
+    width: 85%;
+    max-width: 1200px;
+    padding: 80px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #c7b299, #e9d6c3 );
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
     overflow: hidden;
-    transition: max-height 0.5s ease;
+
+}
+.about-card p {
+    flex-grow: 1;
+    margin: 25px 0;
+    line-height: 1.6;
+    color: #555;
 }
 
-/* Kinyitott állapot */
-
-.study-card.active {
-    transform: scale(1.02);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 5dvi rgba(0,0,0,0.15);
 }
 
-.study-card.active .text-content {
-    max-height: 500px;
+.about-content {
+    max-width: 70%;
+}
+
+.about-content h2 {
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.about-content h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #8a1538;
     margin-top: 20px;
 }
 
-/* Fekete, kisebb gomb */
-
-.expand-btn {
+.about-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+.about-image {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: black;
-    color: white;
-    border: none;
-    padding: 8px 18px;
-    font-size: 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
+    top: 40px;
+    right: 60px;
 }
 
-.expand-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+.about-image img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
-/* Mobil */
+
+/* ===================================================== */
+/* ================== 11. MOBIL RESPONSIVE ============= */
+/* ===================================================== */
 
 @media (max-width: 768px) {
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        z-index: 999;
+    }
+    
+    nav button {
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .card {
+        width: 70%;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+    }
+    .profile-pic img {
+        width: 140px;
+        height: 140px;
+        margin-top: 20px;
+        order: 2;
+    }
+    .about-btn {
+        order: 3;
+        margin-top: 20px;
+    }
+    .about-btn {
+        order: 3;
+        margin-top: 20px;
+    }
+
     .study-grid {
         grid-template-columns: 1fr;
     }
+    .study-card {
+        width: 85%;
+        padding: 25px;
+    }
+    .content {
+        padding: 60px 15px;
+    }
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content.mobile-open {
+        display: block;
+    }
+
 }

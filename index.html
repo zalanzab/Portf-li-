@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,7 +20,9 @@
             </button>
         <nav id="nav-menu">
             <div class="dropdown">
-                <button class="dropbtn" id="nav-study" onclick="scrollToSection('tanulmanyok')">Tanulmányok</button>
+                <button class="dropbtn" id="nav-study" onclick="handleStudyClick()">
+    Tanulmányok
+</button>
                 <div class="dropdown-content">
                     <button onclick="scrollToSection('ev910')" id="ev910-btn">9–10. évfolyam</button>
                     <button onclick="scrollToSection('ev11')" id="ev11-btn">11. évfolyam</button>
@@ -81,6 +84,7 @@
                         Sed nisi Senki sem kívánja, hogy az elemeket megsértse
                         Duis sagittis fájdalom Praesent máris
                     </p>
+                
                 </div>
 
                 <button id="card1-btn" class="expand-btn" onclick="toggleCard(this)">Bővebben</button>
@@ -166,10 +170,21 @@
         <button class="back-btn" id="back-summary" onclick="scrollToTop()">Vissza ↑</button>
     </section>
 
-    <section id="rolam" class="content">
-        <h2 id="about-title">Rólam</h2>
-        <p id="about-text">Itt jön majd a bemutatkozás szöveg...</p>
-        <button class="back-btn" id="back-about" onclick="scrollToTop()">Vissza ↑</button>
+
+    <section id="rolam" class="about-section">
+        <div class="about-card">
+            <div class="about-content">
+                <h2 id="about-title">Rólam</h2>
+                <p id="about-text">
+                    Ide jön majd a bemutatkozó szöveg, amit Te írsz.  
+                    Több bekezdés is lehet, levegős, olvasható formában.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="./style/Photos/fekete.jpg" alt="Rólam">
+            </div>
+        </div>
+        <button class="back-btn about-back" id="back-about" onclick="scrollToTop()">Vissza ↑</button>
     </section>
 
 <script src="./style/script.js"></script>
