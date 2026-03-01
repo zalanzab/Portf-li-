@@ -18,6 +18,8 @@ h1, h2, h3 {
 /* Felső fekete navigációs sáv */
 
 header {
+    margin: 0;
+    box-sizing: border-box;
     background-color: black;
     color: white;
     display: flex;
@@ -82,7 +84,8 @@ nav button:hover {
 /* Fekete-fehér átmenetes felső rész */
 
 .hero {
-    background: linear-gradient(to bottom, black 80%, white 20%);
+    margin: 0;
+    background: url('./Photos/earth.jpg') center/cover no-repeat;
     padding: 100px 0;
     display: flex;
     justify-content: center;
@@ -102,6 +105,7 @@ nav button:hover {
     position: relative;
     top: 190px;
     box-shadow: 0px 18px 40px rgba(0,0,0,0.25);
+    z-index: 1;
 }
 
 .card:hover {
@@ -572,6 +576,7 @@ nav button:hover {
     .content {
         padding: 60px 15px;
     }
+    
     .dropdown-content {
         display: none;
     }
