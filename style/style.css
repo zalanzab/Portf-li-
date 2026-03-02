@@ -5,6 +5,7 @@
 
 body {
    font-family: 'Montserrat', sans-serif;
+   margin: 0;
 }
 
 h1, h2, h3 {
@@ -230,6 +231,7 @@ nav button:hover {
     transition: all 0.4s ease;
     overflow: hidden;
     color: #222;
+    
 }
 
 
@@ -270,19 +272,19 @@ nav button:hover {
 /* Színátmenetek */
 
 .card-1 {
-    background: linear-gradient(135deg, #d8a7b1, #ffffff);
+    background: linear-gradient(135deg, #d4af37, #ffffff);
 }
 
 .card-2 {
-    background: linear-gradient(135deg, #a8c7e6, #ffffff);
+    background: linear-gradient(135deg, #c0c0c0, #ffffff);
 }
 
 .card-3 {
-    background: linear-gradient(135deg, #b7d7a8, #ffffff);
+    background: linear-gradient(135deg, #d8a7b1, #ffffff);
 }
 
 .card-4 {
-    background: linear-gradient(135deg, #e6c9a8, #ffffff);
+    background: linear-gradient(135deg, #c7b299, #ffffff);
 }
 
 /* Hover effekt */
@@ -359,17 +361,7 @@ nav button:hover {
 .back-btn:active {
     transform: scale(0.95);
 }
-.about-back {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    margin-top: 0; /* felülírja a global margin-top: 60px-et */
-}
 
-.about-card .back-btn {
-    align-self: flex-start;
-    margin-top: 40px;
-}
 
 
 
@@ -406,20 +398,6 @@ nav button:hover {
     transform: translateY(10px);
     transition: all 0.3s ease;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #111;
-    min-width: 200px;
-    top: 100%;
-    left: 0;
-    border-radius: 12px;
-    padding: 10px 0;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-}
 
 /* Hoverre lenyílik */
 .dropdown:hover .dropdown-content {
@@ -433,79 +411,7 @@ nav button:hover {
     background: transparent;
 }
 
-/* ===================================================== */
-/* ================== 10. RÓLAM GRID ============== */
-/* ===================================================== */
-.about-section {
-    padding: 100px 0;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
 
-.about-card {
-    
-    position: relative;
-    width: 85%;
-    max-width: 1200px;
-    padding: 80px;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #c7b299, #e9d6c3 );
-    box-shadow:0 20px 60px rgba(0,0,0,0.15);
-    transition: all 0.4s ease;
-    overflow: hidden;
-
-}
-.about-card p {
-    flex-grow: 1;
-    margin: 25px 0;
-    line-height: 1.6;
-    color: #555;
-}
-
-.about-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-
-.about-content {
-    max-width: 70%;
-}
-
-.about-content h2 {
-    font-size: 42px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-.about-content h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #8a1538;
-    margin-top: 20px;
-}
-
-.about-content p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-}
-.about-image {
-    position: absolute;
-    top: 40px;
-    right: 60px;
-}
-
-.about-image img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-}
 
 
 /* ===================================================== */
@@ -513,6 +419,7 @@ nav button:hover {
 /* ===================================================== */
 
 @media (max-width: 768px) {
+
 
     nav {
         display: none;
@@ -604,5 +511,52 @@ nav button:hover {
         width: 100px;
         height: 100px;
     }
+    .about-card {
+        width: 67%;
+        margin: 40px auto 60px auto;
+        padding: 35px 25px;
+    }
 
+    .about-inner {
+        padding-left: 25px;
+    }
+
+}
+.about-card {
+    margin: 60px 0 70px 0;
+    background: #efefef;
+    border-radius: 25px;
+    padding: 50px 60px;
+    max-width: 750px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.about-inner {
+    position: relative;
+    padding-left: 40px; /* itt hozzuk beljebb a vonalat */
+}
+
+.about-inner::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 3px;
+    height: 80%;
+    background: linear-gradient(to bottom, #7a0015);
+    border-radius: 3px;
+}
+
+.about-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #222;
+}
+.about-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
 }
