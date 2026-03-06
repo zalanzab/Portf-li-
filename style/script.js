@@ -13,8 +13,10 @@ function toggleLanguage() {
         setText("nav-name","ZALAN ZAB");
         setText("nav-study","Studies");
         setText("nav-projects","Projects");
+        setText("nav-technologies","Technologies");
         setText("nav-summary","Summary");
         setText("nav-about","About Me");
+        
 
         /* ===== HERO ===== */
         setText("title","Industrial Informatics Student");
@@ -25,6 +27,7 @@ function toggleLanguage() {
         /* ===== SECTION CÍMEK ===== */
         setText("study-title","Studies");
         setText("projects-title","Projects");
+        setText("technologies-title","Technologies");
         setText("summary-title","Summary");
         setText("about-title","About Me");
 
@@ -38,6 +41,7 @@ function toggleLanguage() {
         setText("back-about","Back ↑");
         setText("back-study","Back ↑");
         setText("back-projects","Back ↑");
+        setText("back-technologies","Back ↑");
         setText("back-summary","Back ↑");
 
 
@@ -47,10 +51,10 @@ function toggleLanguage() {
         setText("card3-title","Grade 12");
         setText("card4-title","Grade 13");
 
-        setText("card1-text","Lorem ipsum pain sits itself at the association The essence is bad International freedom Course before course step Sed nisi No one wishes to offend the elements Duis sagittis pain Praesent already Lorem ipsum pain sits itself at the association The essence is bad International freedom Course before course step Sed nisi No one wishes to offend the elements Duis sagittis pain Praesent already Lorem ipsum pain sits itself at the association The essence is bad International freedom Course before course step Sed nisi No one wishes to offend the elements Duis sagittis pain Praesent already Lorem ipsum pain sits itself at the association The essence is bad International freedom Course before course step Sed nisi No one wishes to offend the elements Duis sagittis pain Praesent already Lorem ipsum pain sits itself at the association The essence is bad International freedom Course before course step Sed nisi No one wishes to offend the elements Duis sagittis pain Praesent already");
-        setText("card2-text","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.");
-        setText("card3-text","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.");
-        setText("card4-text","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.");
+        setText("card1-text","Lorem");
+        setText("card2-text","Lorem");
+        setText("card3-text","Lorem");
+        setText("card4-text","Lorem");
 
         setText("card1-btn","More");
         setText("card2-btn","More");
@@ -60,6 +64,7 @@ function toggleLanguage() {
 
 
         setText("projects-text","Presentation of my projects.");
+        setText("technologies-text","Used technologies and self-reflection");
         setText("summary-text","Summary of my studies.");
         setText("about-text","Here comes the introductory text...");
         setText("lang-btn","EN");
@@ -72,8 +77,10 @@ function toggleLanguage() {
         setText("nav-name","ZAB ZALÁN");
         setText("nav-study","Tanulmányok");
         setText("nav-projects","Projektek");
+        setText("nav-technologies","Technológiák");
         setText("nav-summary","Összegzés");
         setText("nav-about","Rólam");
+        
 
         /* ===== HERO ===== */
         setText("title","Ipari informatikus hallgató");
@@ -84,9 +91,10 @@ function toggleLanguage() {
         /* ===== SECTION CÍMEK ===== */
         setText("study-title","Tanulmányok");
         setText("projects-title","Projektek");
+        setText("technologies-title","Technológiák");
         setText("summary-title","Összegzés");
         setText("about-title","Rólam");
-
+        
         /* ===== ÉVFOLYAMOK ===== */
         setText("ev910-btn","9–10. évfolyam");
         setText("ev11-btn","11. évfolyam");
@@ -97,6 +105,7 @@ function toggleLanguage() {
         setText("back-about","Vissza ↑");
         setText("back-study","Vissza ↑");
         setText("back-projects","Vissza ↑");
+        setText("back-technologies","Vissza ↑");
         setText("back-summary","Vissza ↑");
 
 
@@ -106,11 +115,10 @@ function toggleLanguage() {
         setText("card3-title","12. évfolyam");
         setText("card4-title","13. évfolyam");
 
-        setText("card1-text","Lorem ipsum fájdalom ül magát a szövetkezéshez A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés Sed nisi Senki sem kívánja, hogy az elemeket megsértse Duis sagittis fájdalom Praesent máris Lorem ipsum fájdalom ül magát a szövetkezéshez A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés Sed nisi Senki sem kívánja, hogy az elemeket megsértse Duis sagittis fájdalom Praesent máris Lorem ipsum fájdalom ül magát a szövetkezéshez A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés Sed nisi Senki sem kívánja, hogy az elemeket megsértse Duis sagittis fájdalom Praesent máris Lorem ipsum fájdalom ül magát a szövetkezéshez A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés Sed nisi Senki sem kívánja, hogy az elemeket megsértse Duis sagittis fájdalom Praesent máris Lorem ipsum fájdalom ül magát a szövetkezéshez A lényeg rossz Nemzetközi szabadság Tanfolyam előtti kurzus lépés Sed nisi Senki sem kívánja, hogy az elemeket megsértse Duis sagittis fájdalom Praesent máris");
-        setText("card2-text","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.");
-        setText("card3-text","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.");
-        setText("card4-text","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.");
-
+        setText("card1-text","Lorem");
+        setText("card2-text","Lorem");
+        setText("card3-text","Lorem ");
+        setText("card4-text","Lorem ");
         setText("card1-btn","Bővebben");
         setText("card2-btn","Bővebben");
         setText("card3-btn","Bővebben");
@@ -119,6 +127,7 @@ function toggleLanguage() {
 
 
         setText("projects-text","Projektjeim bemutatása...");
+        setText("technologies-text","Alkalmazott technológiák és szakmai önreflexió...");
         setText("summary-text","Tanulmányaim összefoglalása...");
         setText("about-text","Itt jön majd a bemutatkozás szöveg...");
         setText("lang-btn","HU");
