@@ -1,4 +1,4 @@
-let isHungarian = true;
+﻿let isHungarian = true;
 
 function setText(id, text) {
     const el = document.getElementById(id);
@@ -150,7 +150,6 @@ function scrollToSection(id) {
 function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("active");
 }
-
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -184,6 +183,7 @@ function toggleCard(button) {
         }
     }
 }
+
 function handleStudyClick() {
 
     const dropdown = document.querySelector(".dropdown-content");

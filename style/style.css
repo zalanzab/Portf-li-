@@ -1,4 +1,4 @@
-/* 1. GLOBAL / OLDAL
+﻿/* 1. GLOBAL / OLDAL
 /* Az egész oldal alap stílusa */
 
 body {
@@ -9,7 +9,6 @@ body {
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
-
 
 /* ================== 2. NAVBAR / FEJLÉC
 /* Felső fekete navigációs sáv */
@@ -51,6 +50,7 @@ header {
 
 /* Navigációs gombok */
 
+
 nav button {
     background: none;
     border: none;
@@ -73,8 +73,6 @@ nav button:hover {
     padding: 8px 15px;
     cursor: pointer;
 }
-
-
 /* ================== 3. HERO SZEKCIÓ 
 /* Fekete-fehér átmenetes felső rész */
 
@@ -118,7 +116,6 @@ nav button:hover {
     font-size: 20px;
     margin-top: 10px;
 }
-
 /* Profilkép */
 
 .profile-pic img {
@@ -159,7 +156,6 @@ nav button:hover {
 .arrow {
     transition: transform 0.3s ease;
 }
-
 .about-btn:hover .arrow {
     transform: translateX(5px);
 }
@@ -188,17 +184,6 @@ nav button:hover {
     margin-top: 20px;
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-}
-
-
-
 
 /* ================== 5. TANULMÁNYOK GRID
 /* A színes kártyák elrendezése */
@@ -223,7 +208,6 @@ nav button:hover {
     
 }
 
-
 .study-card p {
     flex-grow: 1;
     margin: 25px 0;
@@ -240,22 +224,6 @@ nav button:hover {
     font-size: 14px;
     letter-spacing: 1px;
     transition: 0.3s ease;
-}
-
-.study-card h3 {
-    margin: 0 0 20px 0;
-    font-size: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.study-card h3::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: #8a1538;
-    margin-top: 15px;
 }
 
 /* Színátmenetek */
@@ -283,28 +251,116 @@ nav button:hover {
     box-shadow: 0 20px 50px rgba(0,0,0,0.15);
 }
 
+/*---tanulokártya tartalom---*/
 
-/* ================== 7. KÁRTYA SZÖVEG LENYÍLÁS */
+.card-title {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
+.preview-text {
+    line-height: 1.6;
+    color: #333;
+    margin: 25px 0;
+}
 
-.text-content {
-    max-height: 80px;
+.card-expanded {
+    max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: 0.4s;
 }
 
 .study-card.active {
-    transform: scale(1.02);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+    grid-column: span 2;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
+.study-card.active .preview-text {
+    display: none;
+}
 
-.study-card.active .text-content {
-    max-height: 500px;
+.study-card.active .card-expanded {
+    max-height: 4000px;
+    opacity: 1;
+    margin-top: 30px;
+}
+
+.card-expanded h4 {
+    color: #8a1538;
+    border-left: 4px solid #8a1538;
+    padding-left: 10px;
+    margin-top: 25px;
+}
+
+.card-expanded h5 {
+    margin-top: 15px;
+}
+
+.card-expanded p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.villamos-row,
+.gepeszet-row,
+.topic-grid,
+.exam-parts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.gepeszet-row {
+    margin-top: 14px;
+}
+
+.villamos-box,
+.gepeszet-box {
+    border: none;
+    background: none;
+}
+
+.villamos-image-box,
+.gepeszet-image-box {
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.villamos-image-box img,
+.gepeszet-image-box img {
+    width: 100%;
+    max-height: 230px;
+    object-fit: contain;
+    display: block;
+}
+
+.topic-box {
+    border: 1px solid black;
+    border-radius: 18px;
+    padding: 16px;
+}
+
+.exam-parts {
     margin-top: 20px;
+    margin-bottom: 56px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 20px;
+    gap: 20px;
 }
 
-
+.exam-box {
+    padding: 8px;
+}
 
 /* ================== 8. GOMBOK  */
 
@@ -350,11 +406,6 @@ nav button:hover {
     transform: scale(0.95);
 }
 
-
-
-
-
-
 /* ================== 9. DROPDOWN MENÜ  */
 
 
@@ -399,117 +450,8 @@ nav button:hover {
     background: transparent;
 }
 
+/* ================== 9. DROPDOWN MENÜ  */
 
-
-
-
-/* ================== 11. MOBIL RESPONSIVE ============= */
-
-
-@media (max-width: 768px) {
-
-
-    nav {
-        display: none;
-        flex-direction: column;
-        background-color: black;
-        position: absolute;
-        top: 90px;
-        right: 0;
-        width: 200px;
-        padding: 20px;
-        z-index: 999;
-    }
-    
-    nav button {
-        margin: 10px 0;
-        text-align: left;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .card {
-        width: 70%;
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
-    }
-    .card-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        order: 1;
-    }
-    .profile-pic img {
-        width: 140px;
-        height: 140px;
-        margin-top: 20px;
-        order: 2;
-    }
-    .about-btn {
-        order: 3;
-        margin-top: 20px;
-    }
-    .about-btn {
-        order: 3;
-        margin-top: 20px;
-    }
-
-    .study-grid {
-        grid-template-columns: 1fr;
-    }
-    .study-card {
-        width: 85%;
-        padding: 25px;
-    }
-    .content {
-        padding: 60px 15px;
-    }
-    
-    .dropdown-content {
-        display: none;
-    }
-
-    .dropdown-content.mobile-open {
-        display: block;
-    }
-    .about-card {
-        width: 85%;
-        padding: 25px; /* kisebb margó mobilon */
-    }
-
-    .about-content {
-        max-width: 100%;
-        padding-right: 120px;
-    }
-
-    .about-image {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
-    .about-image img {
-        width: 100px;
-        height: 100px;
-    }
-    .about-card {
-        width: 67%;
-        margin: 40px auto 60px auto;
-        padding: 35px 25px;
-    }
-
-    .about-inner {
-        padding-left: 25px;
-    }
-
-}
 .about-card {
     margin: 60px 0 70px 0;
     background: #efefef;
@@ -521,7 +463,7 @@ nav button:hover {
 
 .about-inner {
     position: relative;
-    padding-left: 40px; /* itt hozzuk beljebb a vonalat */
+    padding-left: 40px;
 }
 
 .about-inner::before {
@@ -547,4 +489,87 @@ nav button:hover {
 .about-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 220px;
+        background: black;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav button {
+        margin: 8px 0;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: static;
+        box-shadow: none;
+        background: #111;
+        margin-top: 8px;
+    }
+
+    .dropdown-content.mobile-open {
+        display: block;
+    }
+
+    .card {
+        width: 70%;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .profile-pic img {
+        margin-top: 20px;
+        width: 140px;
+        height: 140px;
+    }
+
+    .content {
+        padding: 60px 15px;
+    }
+
+    .study-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .study-card {
+        width: 85%;
+        padding: 25px;
+    }
+
+    .topic-grid,
+    .villamos-row,
+    .gepeszet-row,
+    .exam-parts {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        width: 67%;
+        margin: 40px auto 60px auto;
+        padding: 35px 25px;
+    }
+
+    .about-inner {
+        padding-left: 25px;
+    }
 }

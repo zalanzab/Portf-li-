@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
@@ -61,62 +61,156 @@
         <h2 id="study-title">Tanulmányok</h2>
 
         <div class="study-grid">
-
             <div class="study-card card-1" id="ev910">
-                <h3 id="card1-title">9–10. évfolyam</h3>
+                <h3 class="card-title" id="card1-title">9–10. évfolyam</h3>
+                <p class="preview-text" id="card1-preview">
+                    A 9–10. évfolyam alatt célom a szakmai alapismeretek megszerzése volt,
+                    amelyek alapot adnak a későbbi tanulmányokhoz és gyakorlati feladatokhoz.
+                    Ez idő alatt megismertem a digitális, villamos és gépészeti alapokat,
+                    valamint elsajátítottam a szakmai és üzleti ismereteket, amelyek
+                    felkészítettek a 10. év végén tett ágazati vizsga sikeres teljesítésére.
+                </p>
 
-                <div class="text-content">
-                    <p id="card1-text">
-                        Lorem 
+                <button class="expand-btn" id="card1-btn" onclick="toggleCard(this)">Bővebben</button>
+
+                <div class="card-expanded">
+                    <h4 id="card1-h4-1">1. Megszerzett alapismeretek</h4>
+
+                    <h5 id="card1-h5-1">Digitális kultúra</h5>
+                    <p id="card1-p-1">
+                        A digitális kultúra órák során megismertem a számítógépek és az internet működését,
+                        a digitális írástudás alapjait, valamint a biztonságos online kommunikáció szabályait.
+                        Gyakorlatban készítettem dokumentumokat Word 2016-ban, táblázatokat Excelben és prezentációkat PowerPointban.
+                        Ezek a feladatok fejlesztették a logikus gondolkodásomat és a problémamegoldó képességemet,
+                        valamint biztos alapot adtak a későbbi projektekhez és a honlapkészítéshez.
                     </p>
-                
+
+                    <div class="villamos-row">
+                        <div class="villamos-box">
+                            <h5 id="card1-h5-2">Villamos alapismeretek</h5>
+                            <p id="card1-p-2">
+                                A villamos alapismeretek során megtanultam az elektromos alapfogalmakat,
+                                az áramkörök működését és a biztonságos munkavégzés szabályait. Gyakorlatban különböző áramköröket építettem,
+                                használtam alkatrészeket, mint dióda, ellenállás és LED. Tanultam az alapvető forrasztási technikákat,
+                                és mérőeszközökkel ellenőriztem az áramkörök működését. Ezek a tapasztalatok fejlesztették a precizitásomat és a kézügyességemet,
+                                valamint segítettek az elméleti tudás gyakorlati alkalmazásában
+                            </p>
+                        </div>
+                        <div class="villamos-image-box">
+                            <img src="./style/Photos/tranzisztor_no_bg.png" alt="Tranzisztor">
+                        </div>
+                    </div>
+
+                    <div class="gepeszet-row">
+                        <div class="gepeszet-image-box">
+                            <img src="./style/Photos/gepeszet_no_bg (1).png" alt="Gépészet">
+                        </div>
+                        <div class="gepeszet-box">
+                            <h5 id="card1-h5-3">Gépészeti alapismeretek</h5>
+                            <p id="card1-p-3">
+                                A gépészeti alapismeretek órák során megismertem a mechanikai rendszerek működését és az alapvető szerkezeti elemeket.
+                                Gyakorlati feladatok során eszközöket használtam, mint reszelő, vasfűrész, fúrógép és csavarhúzó,
+                                valamint kisebb alkatrészeket szereltem össze. Megtanultam a műszaki rajzok készítését, olvasását és értelmezését,
+                                ami segített a mechanikai elemek helyes összeszerelésében és a problémamegoldásban.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h4 id="card1-h4-2">2. Szakmai és üzleti alapok</h4>
+
+                    <div class="topic-grid">
+                        <div class="topic-box">
+                            <h5 id="card1-h5-4">Munkavállalói ismeretek</h5>
+                            <p id="card1-p-4">
+                                A munkavállalói ismeretek órákon megtanultam a munka világának alapvető szabályait,
+                                az álláskeresés és az önéletrajz készítésének módját, valamint a motivációs levél és az állásinterjú alapjait.
+                                Gyakorlati feladatok során csoportos munkát végeztünk, amelyek fejlesztették a kommunikációs és szervezési készségeimet,
+                                valamint a felelősségvállalást.
+                            </p>
+                        </div>
+
+                        <div class="topic-box">
+                            <h5 id="card1-h5-5">Pénzügyi és vállalkozói ismeretek</h5>
+                            <p id="card1-p-5">
+                                A pénzügyi és vállalkozói ismeretek órák során alapvető gazdasági fogalmakat,
+                                költségvetés-készítést és üzleti döntések alapjait sajátítottam el.
+                                Gyakorlati feladatokban kis üzleti szimulációkban vettem részt, amelyek fejlesztették a tervezési és problémamegoldó képességeimet,
+                                valamint a stratégiai gondolkodást
+                            </p>
+                        </div>
+                    </div>
+
+                    <h4 id="card1-h4-3">Ágazati vizsga</h4>
+                    <p id="card1-p-6">
+                        A 10. év végén sikeresen teljesítettem az ágazati vizsgát,
+                        amely során bizonyítottam a megszerzett alapismereteket és a szakmai kompetenciáimat a villamos és gépészeti alapok területén.
+                    </p>
+
+                    <div class="exam-parts">
+                        <div class="exam-box">
+                            <b id="card1-exam-1">Írásbeli rész:</b>
+                            <p id="card1-p-7">
+                                Elméleti tudásomat a gépészet és elektronika alapjairól kellett bemutatnom,
+                                például műszaki rajzok készítésében, gépészettel és elektronikával kapcsolatos
+                                kérdések megválaszolásával és egyszerű áramköri számítások megoldásával.
+                            </p>
+                        </div>
+
+                        <div class="exam-box">
+                            <b id="card1-exam-2">Gyakorlati rész:</b>
+                            <p id="card1-p-8">
+                                Elkészítettem egy mechanikus és villamos elemekből álló alkatrészcsoport egyes elemeit,
+                                valamint gondoskodtam azok precíz előállításáról és összeszereléséről a végső működő egység kialakítása érdekében.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <button id="card1-btn" class="expand-btn" onclick="toggleCard(this)">Bővebben</button>
             </div>
-
 
             <div class="study-card card-2" id="ev11">
-                <h3 id="card2-title">11. évfolyam</h3>
-
-                <div class="text-content">
-                    <p id="card2-text">
-                        Lorem 
-                    </p>
+                <h3 class="card-title" id="card2-title">11. évfolyam</h3>
+                <p class="preview-text" id="card2-preview">Programozási alapok és webfejlesztés kezdete.</p>
+                <button class="expand-btn" id="card2-btn" onclick="toggleCard(this)">Bővebben</button>
+                <div class="card-expanded">
+                    <ul>
+                        <li id="card2-li-1">Elektrotechnikai alapok</li>
+                        <li id="card2-li-2">Hálózati alapismeretek</li>
+                        <li id="card2-li-3">Informatikai alapok</li>
+                        <li id="card2-li-4">Programozási logika</li>
+                    </ul>
+                    <p id="card2-p">Ebben az időszakban az informatika alapjaival ismerkedtem meg. Megtanultam a számítógépek működését, valamint az alapvető programozási gondolkodásmódot.</p>
                 </div>
-
-                <button id="card2-btn" class="expand-btn" onclick="toggleCard(this)">Bővebben</button>
             </div>
-
-
 
             <div class="study-card card-3" id="ev12">
-                <h3 id="card3-title">12. évfolyam</h3>
-
-                <div class="text-content">
-                    <p id="card3-text">
-                        Lorem
-                    </p>
+                <h3 class="card-title" id="card3-title">12. évfolyam</h3>
+                <p class="preview-text" id="card3-preview">Programozási alapok és webfejlesztés kezdete.</p>
+                <button class="expand-btn" id="card3-btn" onclick="toggleCard(this)">Bővebben</button>
+                <div class="card-expanded">
+                    <ul>
+                        <li id="card3-li-1">Elektrotechnikai alapok</li>
+                        <li id="card3-li-2">Hálózati alapismeretek</li>
+                        <li id="card3-li-3">Informatikai alapok</li>
+                        <li id="card3-li-4">Programozási logika</li>
+                    </ul>
+                    <p id="card3-p">Ebben az időszakban az informatika alapjaival ismerkedtem meg. Megtanultam a számítógépek működését, valamint az alapvető programozási gondolkodásmódot.</p>
                 </div>
-
-                <button id="card3-btn" class="expand-btn" onclick="toggleCard(this)">Bővebben</button>
             </div>
-
-
 
             <div class="study-card card-4" id="ev13">
-                <h3 id="card4-title">13. évfolyam</h3>
-
-                <div class="text-content">
-                    <p id="card4-text">
-                        Lorem
-                    </p>
+                <h3 class="card-title" id="card4-title">13. évfolyam</h3>
+                <p class="preview-text" id="card4-preview">Programozási alapok és webfejlesztés kezdete.</p>
+                <button class="expand-btn" id="card4-btn" onclick="toggleCard(this)">Bővebben</button>
+                <div class="card-expanded">
+                    <ul>
+                        <li id="card4-li-1">Elektrotechnikai alapok</li>
+                        <li id="card4-li-2">Hálózati alapismeretek</li>
+                        <li id="card4-li-3">Informatikai alapok</li>
+                        <li id="card4-li-4">Programozási logika</li>
+                    </ul>
+                    <p id="card4-p">Ebben az időszakban az informatika alapjaival ismerkedtem meg. Megtanultam a számítógépek működését, valamint az alapvető programozási gondolkodásmódot.</p>
                 </div>
-
-                <button id="card4-btn" class="expand-btn" onclick="toggleCard(this)">Bővebben</button>
             </div>
-
-
         </div>
 
         <button class="back-btn" id="back-study" onclick="scrollToTop()">Vissza ↑</button>
