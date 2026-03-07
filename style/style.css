@@ -255,7 +255,7 @@ nav button:hover {
 
 .card-title {
     margin: 0;
-    font-size: 20px;
+    font-size: 28px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -293,6 +293,7 @@ nav button:hover {
 }
 
 .card-expanded h4 {
+    font-size: 25px;
     color: #8a1538;
     border-left: 4px solid #8a1538;
     padding-left: 10px;
@@ -300,7 +301,11 @@ nav button:hover {
 }
 
 .card-expanded h5 {
+    font-size: 20px;
     margin-top: 15px;
+}
+.card-expanded b {
+    font-size: 20px;
 }
 
 .card-expanded p {
