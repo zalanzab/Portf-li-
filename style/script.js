@@ -56,10 +56,10 @@ function toggleLanguage() {
         setText("card3-text","Lorem");
         setText("card4-text","Lorem");
 
-        setText("card1-btn","More");
-        setText("card2-btn","More");
-        setText("card3-btn","More");
-        setText("card4-btn","More");
+        setText("card1-btn","Bővebben");
+        setText("card2-btn","Bővebben");
+        setText("card3-btn","Bővebben");
+        setText("card4-btn","Bővebben");
 
 
 
@@ -160,27 +160,14 @@ function scrollToTop() {
 function toggleCard(button) {
 
     const card = button.closest(".study-card");
-    const text = card.querySelector(".text-content");
+    if (!card) return;
 
     const isActive = card.classList.toggle("active");
 
     if (isActive) {
-        text.style.maxHeight = text.scrollHeight + "px";
-
-        if (isHungarian) {
-            button.innerText = "Kevesebb";
-        } else {
-            button.innerText = "Less";
-        }
-
+        button.innerText = "Bezárás";
     } else {
-        text.style.maxHeight = "80px";
-
-        if (isHungarian) {
-            button.innerText = "Bővebben";
-        } else {
-            button.innerText = "More";
-        }
+        button.innerText = "Bővebben";
     }
 }
 
