@@ -1,9 +1,16 @@
 ﻿﻿/* 1. GLOBAL / OLDAL
 /* Az egész oldal alap stílusa */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
    font-family: 'Montserrat', sans-serif;
    margin: 0;
+   overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -22,6 +29,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
+    width: 100%;
     height: 90px;
     position: relative;
 }
@@ -77,6 +85,7 @@ nav button:hover {
 /* Fekete-fehér átmenetes felső rész */
 
 .hero {
+    width: 100%;
     margin: 0;
     background: url('./Photos/earth.jpg') center/cover no-repeat;
     padding: 100px 0;
@@ -225,6 +234,20 @@ nav button:hover {
     letter-spacing: 1px;
     transition: 0.3s ease;
 }
+.study-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.study-card h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #8a1538;
+    margin-top: 15px;
+}
 
 /* Színátmenetek */
 
@@ -255,7 +278,6 @@ nav button:hover {
 
 .card-title {
     margin: 0;
-    font-size: 28px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -315,6 +337,9 @@ nav button:hover {
 
 .villamos-row,
 .gepeszet-row,
+.programozas-row,
+.digit-row,
+.analog-row,
 .topic-grid,
 .exam-parts {
     display: grid;
@@ -327,13 +352,19 @@ nav button:hover {
 }
 
 .villamos-box,
-.gepeszet-box {
+.gepeszet-box,
+.analog-box,
+.digit-box,
+.programozas-box {
     border: none;
     background: none;
 }
 
 .villamos-image-box,
-.gepeszet-image-box {
+.gepeszet-image-box,
+.analog-image-box,
+.digit-image-box,
+.programozas-omage-box {
     min-height: 230px;
     display: flex;
     align-items: center;
@@ -341,7 +372,10 @@ nav button:hover {
 }
 
 .villamos-image-box img,
-.gepeszet-image-box img {
+.gepeszet-image-box img,
+.analog-image-box img,
+.digit-image-box img,
+.programozas-image-box img {
     width: 100%;
     max-height: 230px;
     object-fit: contain;
@@ -354,7 +388,9 @@ nav button:hover {
     padding: 16px;
 }
 
-.exam-parts {
+.exam-parts,
+.elektro-parts,
+.automatika-parts {
     margin-top: 20px;
     margin-bottom: 56px;
     border: 1px solid black;
@@ -455,7 +491,7 @@ nav button:hover {
     background: transparent;
 }
 
-/* ================== 9. DROPDOWN MENÜ  */
+/* ================== 10. DROPDOWN MENÜ  */
 
 .about-card {
     margin: 60px 0 70px 0;
@@ -498,40 +534,30 @@ nav button:hover {
 
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+
 
     nav {
         display: none;
         flex-direction: column;
+        background-color: black;
         position: absolute;
         top: 90px;
         right: 0;
-        width: 220px;
-        background: black;
+        width: 200px;
         padding: 20px;
         z-index: 999;
+    }
+
+    nav button {
+        margin: 10px 0;
+        text-align: left;
     }
 
     nav.active {
         display: flex;
     }
 
-    nav button {
-        margin: 8px 0;
-        text-align: left;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: static;
-        box-shadow: none;
-        background: #111;
-        margin-top: 8px;
-    }
-
-    .dropdown-content.mobile-open {
+    .menu-toggle {
         display: block;
     }
 
@@ -541,33 +567,65 @@ nav button:hover {
         text-align: center;
         padding: 30px;
     }
-
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+    }
     .profile-pic img {
-        margin-top: 20px;
         width: 140px;
         height: 140px;
+        margin-top: 20px;
+        order: 2;
     }
-
-    .content {
-        padding: 60px 15px;
+    .about-btn {
+        order: 3;
+        margin-top: 20px;
+    }
+    .about-btn {
+        order: 3;
+        margin-top: 20px;
     }
 
     .study-grid {
         grid-template-columns: 1fr;
     }
-
     .study-card {
         width: 85%;
         padding: 25px;
     }
-
-    .topic-grid,
-    .villamos-row,
-    .gepeszet-row,
-    .exam-parts {
-        grid-template-columns: 1fr;
+    .content {
+        padding: 60px 15px;
     }
 
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content.mobile-open {
+        display: block;
+    }
+    .about-card {
+        width: 85%;
+        padding: 25px; /* kisebb margó mobilon */
+    }
+
+    .about-content {
+        max-width: 100%;
+        padding-right: 120px;
+    }
+
+    .about-image {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .about-image img {
+        width: 100px;
+        height: 100px;
+    }
     .about-card {
         width: 67%;
         margin: 40px auto 60px auto;
@@ -577,4 +635,5 @@ nav button:hover {
     .about-inner {
         padding-left: 25px;
     }
+
 }

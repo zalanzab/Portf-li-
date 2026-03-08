@@ -169,32 +169,250 @@
 
             <div class="study-card card-2" id="ev11">
                 <h3 class="card-title" id="card2-title">11. évfolyam</h3>
-                <p class="preview-text" id="card2-preview">Programozási alapok és webfejlesztés kezdete.</p>
-                <button class="expand-btn" id="card2-btn" onclick="toggleCard(this)">Bővebben</button>
+                <p class="preview-text">
+                    A 11. évfolyamon a korábban megszerzett alapok után a tanulmányaim már kifejezetten az elektronikai, 
+                    elektrotechnikai és informatikai rendszerek mélyebb megismerésére irányultak. 
+                    Ebben az évben nagyobb hangsúlyt kapott az áramkörök működésének részletesebb tanulmányozása, 
+                    valamint a programozási és digitális rendszerek alapjainak elsajátítása. 
+                    A tantárgyak során az elméleti ismeretek mellett számos gyakorlati feladatot is végeztem, 
+                    amelyek segítettek jobban megérteni a különböző elektronikai és digitális rendszerek működését.
+                </p>
+                <button class="expand-btn" id="card1-btn" onclick="toggleCard(this)">Bővebben</button>
+
                 <div class="card-expanded">
-                    <ul>
-                        <li id="card2-li-1">Elektrotechnikai alapok</li>
-                        <li id="card2-li-2">Hálózati alapismeretek</li>
-                        <li id="card2-li-3">Informatikai alapok</li>
-                        <li id="card2-li-4">Programozási logika</li>
-                    </ul>
-                    <p id="card2-p">Ebben az időszakban az informatika alapjaival ismerkedtem meg. Megtanultam a számítógépek működését, valamint az alapvető programozási gondolkodásmódot.</p>
-                </div>
+                    <h4>Megszerzett ismeretek</h4>
+
+                    <h5>Programozás alapjai</h5>
+                    <p>
+                        <p>
+                            A programozás alapjai tantárgy során megismerkedtem az algoritmikus gondolkodás 
+                            és a programozási logika alapjaival. 
+                            Az órákon megtanultam, hogyan lehet egy problémát kisebb lépésekre bontani, 
+                            majd azt egy program segítségével megoldani. 
+                            Foglalkoztunk az alapvető programozási szerkezetekkel, például a változókkal, 
+                            elágazásokkal és ciklusokkal, valamint az algoritmusok felépítésével.
+                        </p>
+                        
+                        <div class="programozas-row">
+                            <div class="programozas-box">
+                                <p>
+                                    A gyakorlati feladatok során különböző egyszerű programokat készítettem, a
+                                    melyek segítségével gyakoroltam a logikai gondolkodást és a hibakeresést. 
+                                    A programok írásához a Visual Studio Code fejlesztői környezetet használtuk, a
+                                    mely egy modern kódszerkesztő. Ebben a programban írtam és futtattam a kódokat, 
+                                    valamint megtanultam a programok strukturált felépítését és a hibák javításának alapvető módszereit.
+                                </p>
+                            </div>
+                        <div class="programozas-image-box">
+                            <img src="./style/Photos/visual-studio.png" alt="VisualStudio">
+                        </div>
+                        </div>
+                        
+                            <p>
+                            A feladatok során különböző alapvető programozási problémákat oldottunk meg, 
+                            például számítási feladatokat, feltételek vizsgálatát vagy ismétlődő műveletek végrehajtását. 
+                            Ezek a gyakorlatok segítettek abban, hogy fejlődjön a logikai gondolkodásom és jobban megértsem a programozás működésének alapelveit.
+                            </p>
+                    </p>
+                    <h5>Automatika és elektronikai ismeretek</h5>
+                    <div class="automatika-parts">
+                        <p>
+                            Az automatika és elektronikai ismeretek órákon megismertem az elektronikai rendszerek működésének alapelveit 
+                            és az automatizált rendszerekben használt alapvető elektronikai elemek szerepét. Tanultunk különböző elektronikai alkatrészekről, 
+                            például ellenállásokról, diódákról, kondenzátorokról és tranzisztorokról, valamint ezek működéséről az áramkörökben.
+                            <br></br>
+                            A gyakorlati feladatok során különböző egyszerű áramköröket építettünk és elemeztünk, 
+                            valamint számítógépes szimulációs programok segítségével vizsgáltuk az áramkörök működését. Ezek a gyakorlatok segítettek jobban megérteni, 
+                            hogyan működnek az elektronikai rendszerek a valóságban.
+                        </p>
+                    </div>
+
+                    <h5>Analóg áramkörök</h5>
+                            <p>
+                                <p>
+                                    Az analóg áramkörök tantárgy során az analóg elektronika alapelveit tanultam. 
+                                    Megismertem az olyan alapvető alkatrészek működését, mint az ellenállások, kondenzátorok és diódák, 
+                                    valamint ezek szerepét az áramkörökben. Tanultunk az Ohm-törvényről, a feszültség- és áramviszonyokról, 
+                                    valamint egyszerűbb áramköri számításokról.
+                                </p>
+                        <div class="analog-row">
+                            <div class="analog-box">
+                                <p>
+                                A gyakorlati feladatok során az Electronic Workbench (EWB) 5.12 programot használtuk, 
+                                amely egy elektronikai áramkör szimulációs szoftver.
+                                Ennek segítségével különböző analóg kapcsolásokat építettem fel virtuális környezetben, 
+                                majd megfigyeltem azok működését. A programban mérőműszereket is használhattunk, 
+                                például virtuális multimétert és oszcilloszkópot, amelyekkel ellenőrizni lehetett a feszültség- 
+                                és áramértékeket az áramkör különböző pontjain.
+                                </p>
+                            </div>
+                            <div class="analog-image-box">
+                                <img src="./style/Photos/Electronics-Workbench.webp" alt="Analog-aramkorok">
+                            </div>
+                        </div>
+                        </p>
+                    <h5>Digitális áramkörök</h5>
+                            <p>
+                                A digitális áramkörök tantárgy során a digitális elektronika alapjaival foglalkoztunk. 
+                                Megtanultam a bináris számrendszer használatát, valamint a logikai műveletek és logikai kapuk működését. 
+                                Tanulmányoztuk az alapvető logikai kapukat, például az AND, OR, NOT, NAND és NOR kapukat, 
+                                valamint ezek működését különböző kapcsolásokban.
+                            </p>
+                    <div class="digit-row">
+                        <div class="digit-image-box">
+                            <img src="./style/Photos/logisim.png" alt="Digit">
+                        </div>
+                        <div class="digit-box">
+                            <p>
+                                A gyakorlati feladatok során a Logisim nevű digitális áramkör szimulációs programot használtuk. 
+                                Ebben a programban különböző digitális áramköröket építettem fel logikai kapuk segítségével, majd teszteltem azok működését. 
+                                A feladatok során egyszerű logikai hálózatokat és kombinációs áramköröket készítettünk, 
+                                amelyek segítettek megérteni a digitális rendszerek működésének alapjait.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h5>Elektrotechnika</h5>
+                    <div class="elektro-parts">
+                        <p>
+                            Az elektrotechnika tantárgy során tovább mélyítettem a villamos alapismereteimet. 
+                            Tanultam az elektromos áramkörök működéséről, a feszültség, az áramerősség és az ellenállás közötti összefüggésekről, 
+                            valamint különböző áramköri számításokról.
+                            <br></br>
+                            Az órák során foglalkoztunk az Ohm-törvénnyel a soros és párhuzamos kapcsolásokban, 
+                            valamint az ellenállások eredő értékének kiszámításával. Ezek az ismeretek segítettek abban, 
+                            hogy jobban megértsem az elektronikai áramkörök működését.
+                            <br></br>
+                            A gyakorlati feladatok során különböző áramköröket elemeztünk, számításokat végeztünk, 
+                            és a korábban tanult elektronikai ismereteket alkalmaztuk. Ezek a feladatok fejlesztették a műszaki gondolkodásomat és a problémamegoldó képességemet.
+                        </p>
+                    </div>
+                    
             </div>
+        </div>
 
             <div class="study-card card-3" id="ev12">
                 <h3 class="card-title" id="card3-title">12. évfolyam</h3>
-                <p class="preview-text" id="card3-preview">Programozási alapok és webfejlesztés kezdete.</p>
-                <button class="expand-btn" id="card3-btn" onclick="toggleCard(this)">Bővebben</button>
+                <p class="preview-text">
+                    A 11. évfolyamon a korábban megszerzett alapok után a tanulmányaim már kifejezetten az elektronikai, 
+                    elektrotechnikai és informatikai rendszerek mélyebb megismerésére irányultak. 
+                    Ebben az évben nagyobb hangsúlyt kapott az áramkörök működésének részletesebb tanulmányozása, 
+                    valamint a programozási és digitális rendszerek alapjainak elsajátítása. 
+                    A tantárgyak során az elméleti ismeretek mellett számos gyakorlati feladatot is végeztem, 
+                    amelyek segítettek jobban megérteni a különböző elektronikai és digitális rendszerek működését.
+                </p>
+                <button class="expand-btn" id="card1-btn" onclick="toggleCard(this)">Bővebben</button>
+
                 <div class="card-expanded">
-                    <ul>
-                        <li id="card3-li-1">Elektrotechnikai alapok</li>
-                        <li id="card3-li-2">Hálózati alapismeretek</li>
-                        <li id="card3-li-3">Informatikai alapok</li>
-                        <li id="card3-li-4">Programozási logika</li>
-                    </ul>
-                    <p id="card3-p">Ebben az időszakban az informatika alapjaival ismerkedtem meg. Megtanultam a számítógépek működését, valamint az alapvető programozási gondolkodásmódot.</p>
-                </div>
+                    <h4>Megszerzett ismeretek</h4>
+
+                    <h5>Programozás alapjai</h5>
+                    <p>
+                        <p>
+                            A programozás alapjai tantárgy során megismerkedtem az algoritmikus gondolkodás 
+                            és a programozási logika alapjaival. 
+                            Az órákon megtanultam, hogyan lehet egy problémát kisebb lépésekre bontani, 
+                            majd azt egy program segítségével megoldani. 
+                            Foglalkoztunk az alapvető programozási szerkezetekkel, például a változókkal, 
+                            elágazásokkal és ciklusokkal, valamint az algoritmusok felépítésével.
+                        </p>
+                        
+                        <div class="programozas-row">
+                            <div class="programozas-box">
+                                <p>
+                                    A gyakorlati feladatok során különböző egyszerű programokat készítettem, a
+                                    melyek segítségével gyakoroltam a logikai gondolkodást és a hibakeresést. 
+                                    A programok írásához a Visual Studio Code fejlesztői környezetet használtuk, a
+                                    mely egy modern kódszerkesztő. Ebben a programban írtam és futtattam a kódokat, 
+                                    valamint megtanultam a programok strukturált felépítését és a hibák javításának alapvető módszereit.
+                                </p>
+                            </div>
+                        <div class="programozas-image-box">
+                            <img src="./style/Photos/visual-studio.png" alt="VisualStudio">
+                        </div>
+                        </div>
+                        
+                            <p>
+                            A feladatok során különböző alapvető programozási problémákat oldottunk meg, 
+                            például számítási feladatokat, feltételek vizsgálatát vagy ismétlődő műveletek végrehajtását. 
+                            Ezek a gyakorlatok segítettek abban, hogy fejlődjön a logikai gondolkodásom és jobban megértsem a programozás működésének alapelveit.
+                            </p>
+                    </p>
+                    <h5>Automatika és elektronikai ismeretek</h5>
+                    <div class="automatika-parts">
+                        <p>
+                            Az automatika és elektronikai ismeretek órákon megismertem az elektronikai rendszerek működésének alapelveit 
+                            és az automatizált rendszerekben használt alapvető elektronikai elemek szerepét. Tanultunk különböző elektronikai alkatrészekről, 
+                            például ellenállásokról, diódákról, kondenzátorokról és tranzisztorokról, valamint ezek működéséről az áramkörökben.
+                            <br></br>
+                            A gyakorlati feladatok során különböző egyszerű áramköröket építettünk és elemeztünk, 
+                            valamint számítógépes szimulációs programok segítségével vizsgáltuk az áramkörök működését. Ezek a gyakorlatok segítettek jobban megérteni, 
+                            hogyan működnek az elektronikai rendszerek a valóságban.
+                        </p>
+                    </div>
+
+                    <h5>Analóg áramkörök</h5>
+                            <p>
+                                <p>
+                                    Az analóg áramkörök tantárgy során az analóg elektronika alapelveit tanultam. 
+                                    Megismertem az olyan alapvető alkatrészek működését, mint az ellenállások, kondenzátorok és diódák, 
+                                    valamint ezek szerepét az áramkörökben. Tanultunk az Ohm-törvényről, a feszültség- és áramviszonyokról, 
+                                    valamint egyszerűbb áramköri számításokról.
+                                </p>
+                        <div class="analog-row">
+                            <div class="analog-box">
+                                <p>
+                                A gyakorlati feladatok során az Electronic Workbench (EWB) 5.12 programot használtuk, 
+                                amely egy elektronikai áramkör szimulációs szoftver.
+                                Ennek segítségével különböző analóg kapcsolásokat építettem fel virtuális környezetben, 
+                                majd megfigyeltem azok működését. A programban mérőműszereket is használhattunk, 
+                                például virtuális multimétert és oszcilloszkópot, amelyekkel ellenőrizni lehetett a feszültség- 
+                                és áramértékeket az áramkör különböző pontjain.
+                                </p>
+                            </div>
+                            <div class="analog-image-box">
+                                <img src="./style/Photos/Electronics-Workbench.webp" alt="Analog-aramkorok">
+                            </div>
+                        </div>
+                        </p>
+                    <h5>Digitális áramkörök</h5>
+                            <p>
+                                A digitális áramkörök tantárgy során a digitális elektronika alapjaival foglalkoztunk. 
+                                Megtanultam a bináris számrendszer használatát, valamint a logikai műveletek és logikai kapuk működését. 
+                                Tanulmányoztuk az alapvető logikai kapukat, például az AND, OR, NOT, NAND és NOR kapukat, 
+                                valamint ezek működését különböző kapcsolásokban.
+                            </p>
+                    <div class="digit-row">
+                        <div class="digit-image-box">
+                            <img src="./style/Photos/logisim.png" alt="Digit">
+                        </div>
+                        <div class="digit-box">
+                            <p>
+                                A gyakorlati feladatok során a Logisim nevű digitális áramkör szimulációs programot használtuk. 
+                                Ebben a programban különböző digitális áramköröket építettem fel logikai kapuk segítségével, majd teszteltem azok működését. 
+                                A feladatok során egyszerű logikai hálózatokat és kombinációs áramköröket készítettünk, 
+                                amelyek segítettek megérteni a digitális rendszerek működésének alapjait.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h5>Elektrotechnika</h5>
+                    <div class="elektro-parts">
+                        <p>
+                            Az elektrotechnika tantárgy során tovább mélyítettem a villamos alapismereteimet. 
+                            Tanultam az elektromos áramkörök működéséről, a feszültség, az áramerősség és az ellenállás közötti összefüggésekről, 
+                            valamint különböző áramköri számításokról.
+                            <br></br>
+                            Az órák során foglalkoztunk az Ohm-törvénnyel a soros és párhuzamos kapcsolásokban, 
+                            valamint az ellenállások eredő értékének kiszámításával. Ezek az ismeretek segítettek abban, 
+                            hogy jobban megértsem az elektronikai áramkörök működését.
+                            <br></br>
+                            A gyakorlati feladatok során különböző áramköröket elemeztünk, számításokat végeztünk, 
+                            és a korábban tanult elektronikai ismereteket alkalmaztuk. Ezek a feladatok fejlesztették a műszaki gondolkodásomat és a problémamegoldó képességemet.
+                        </p>
+                    </div>
+                    
+            </div>
             </div>
 
             <div class="study-card card-4" id="ev13">
