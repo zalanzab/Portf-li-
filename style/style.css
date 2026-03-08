@@ -340,6 +340,9 @@ nav button:hover {
 .programozas-row,
 .digit-row,
 .analog-row,
+.szamitogep-row,
+.mikrokontroller-row,
+.adatbazis-row,
 .topic-grid,
 .exam-parts {
     display: grid;
@@ -355,6 +358,9 @@ nav button:hover {
 .gepeszet-box,
 .analog-box,
 .digit-box,
+.szamitogep-box,
+.mikrokontroller-box,
+.adatbazis-box,
 .programozas-box {
     border: none;
     background: none;
@@ -364,6 +370,9 @@ nav button:hover {
 .gepeszet-image-box,
 .analog-image-box,
 .digit-image-box,
+.szamitogep-image-box,
+.mikrokontroller-image-box,
+.adatbazis-image-box,
 .programozas-omage-box {
     min-height: 230px;
     display: flex;
@@ -375,6 +384,9 @@ nav button:hover {
 .gepeszet-image-box img,
 .analog-image-box img,
 .digit-image-box img,
+.szamitogep-image-box img,
+.mikrokontroller-image-box img,
+.adatbazis-image-box img,
 .programozas-image-box img {
     width: 100%;
     max-height: 230px;
@@ -390,6 +402,8 @@ nav button:hover {
 
 .exam-parts,
 .elektro-parts,
+.plc-parts,
+.halozat-parts,
 .automatika-parts {
     margin-top: 20px;
     margin-bottom: 56px;
