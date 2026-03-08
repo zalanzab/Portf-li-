@@ -604,10 +604,57 @@ nav button:hover {
 
     .study-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     .study-card {
-        width: 85%;
-        padding: 25px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .study-card h3 {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+    .study-card p {
+        margin: 16px 0;
+        font-size: 15px;
+        line-height: 1.55;
+    }
+    .study-card .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .study-card.active {
+        grid-column: span 1;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+    .study-card.active .card-expanded {
+        margin-top: 20px;
+    }
+    #ev11.active .card-expanded {
+        max-height: 12000px;
+    }
+    .card-expanded h4 {
+        font-size: 20px;
+    }
+    .card-expanded h5,
+    .card-expanded b {
+        font-size: 17px;
+    }
+    .villamos-row,
+    .gepeszet-row,
+    .programozas-row,
+    .digit-row,
+    .analog-row,
+    .szamitogep-row,
+    .mikrokontroller-row,
+    .adatbazis-row,
+    .topic-grid,
+    .exam-parts {
+        grid-template-columns: 1fr;
     }
     .content {
         padding: 60px 15px;
