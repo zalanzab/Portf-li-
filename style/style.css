@@ -343,6 +343,10 @@ nav button:hover {
 .szamitogep-row,
 .mikrokontroller-row,
 .adatbazis-row,
+.cisco-row,
+.programfejlesztes-row,
+.weblapszerkesztes-row,
+.rendszeruzemeltetes-row,
 .topic-grid,
 .exam-parts {
     display: grid;
@@ -361,6 +365,10 @@ nav button:hover {
 .szamitogep-box,
 .mikrokontroller-box,
 .adatbazis-box,
+.cisco-box,
+.programfejlesztes-box,
+.weblapszerkesztes-box,
+.rendszeruzemeltetes-box,
 .programozas-box {
     border: none;
     background: none;
@@ -373,6 +381,10 @@ nav button:hover {
 .szamitogep-image-box,
 .mikrokontroller-image-box,
 .adatbazis-image-box,
+.cisco-image-box,
+.programfejlesztes-image-box,
+.weblapszerkesztes-image-box,
+.rendszeruzemeltetes-image-box,
 .programozas-omage-box {
     min-height: 230px;
     display: flex;
@@ -387,6 +399,10 @@ nav button:hover {
 .szamitogep-image-box img,
 .mikrokontroller-image-box img,
 .adatbazis-image-box img,
+.cisco-image-box img,
+.programfejlesztes-image-box img,
+.weblapszerkesztes-image-box img,
+.rendszeruzemeltetes-image-box img,
 .programozas-image-box img {
     width: 100%;
     max-height: 230px;
@@ -404,6 +420,8 @@ nav button:hover {
 .elektro-parts,
 .plc-parts,
 .halozat-parts,
+.ipari-parts,
+.iranyitastechnika-parts,
 .automatika-parts {
     margin-top: 20px;
     margin-bottom: 56px;

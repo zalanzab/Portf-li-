@@ -291,7 +291,7 @@
                     </div>
                     
             </div>
-        </div>
+            </div>
 
             <div class="study-card card-3" id="ev12">
                 <h3 class="card-title" id="card3-title">12. évfolyam</h3>
@@ -392,16 +392,155 @@
 
             <div class="study-card card-4" id="ev13">
                 <h3 class="card-title" id="card4-title">13. évfolyam</h3>
-                <p class="preview-text" id="card4-preview">Programozási alapok és webfejlesztés kezdete.</p>
-                <button class="expand-btn" id="card4-btn" onclick="toggleCard(this)">Bővebben</button>
+                <p class="preview-text" id="card4-preview">
+                    A 13. évfolyam során a tanulmányaim már kifejezetten az ipari informatikai rendszerek 
+                    mélyebb megértésére és gyakorlati alkalmazására összpontosítottak. 
+                    Az órákon az automatizálás, a hálózatok, a programfejlesztés és az ipari kommunikációs rendszerek kerültek a középpontba. 
+                    Ebben az évben több olyan feladatot is végeztünk, amelyek közelebb álltak a valós ipari környezethez, például hálózatok konfigurálását, 
+                    IoT rendszerek modellezését vagy PLC vezérlések készítését. A tantárgyak során a korábbi években megszerzett villamos, 
+                    informatikai és programozási alapokat alkalmaztam és továbbfejlesztettem.
+                </p>
+
+                <button class="expand-btn" id="card1-btn" onclick="toggleCard(this)">Bővebben</button>
+
                 <div class="card-expanded">
-                    <ul>
-                        <li id="card4-li-1">Elektrotechnikai alapok</li>
-                        <li id="card4-li-2">Hálózati alapismeretek</li>
-                        <li id="card4-li-3">Informatikai alapok</li>
-                        <li id="card4-li-4">Programozási logika</li>
-                    </ul>
-                    <p id="card4-p">Ebben az időszakban az informatika alapjaival ismerkedtem meg. Megtanultam a számítógépek működését, valamint az alapvető programozási gondolkodásmódot.</p>
+                    <h4>Megszerzett alapismeretek</h4>
+
+                    <h5>Automatikai és elektronikai ismeretek</h5>
+                    <p>
+                        Az automatikai és elektronikai ismeretek órák elsősorban elméleti jellegűek voltak. 
+                        Ezeken az órákon az automatizálási rendszerek működésének alapelveit, 
+                        az elektronikai áramkörök szerepét és az ipari vezérlőrendszerek felépítését tanultuk. 
+                        Megismerkedtünk a különböző érzékelőkkel, beavatkozókkal és vezérlőegységekkel, 
+                        valamint azok működési elvével és alkalmazási területeivel. Az órák célja az volt, hogy átfogó képet kapjunk arról, 
+                        hogyan működnek az automatizált rendszerek az iparban, és milyen elektronikai megoldások teszik lehetővé a különböző folyamatok vezérlését.
+                    </p>
+
+                    <div class="programfejlesztes-row">
+                        <div class="programfejlesztes-box">
+                            <h5>Programfejlesztés</h5>
+                            <p>
+                                A programfejlesztés órákon a szoftveres gondolkodás és a problémamegoldás került előtérbe. 
+                                A feladatokat elsősorban Visual Studio Code fejlesztői környezetben készítettük, 
+                                ahol kisebb programokat és alkalmazásokat írtunk különböző gyakorlati problémák megoldására. 
+                                Készítettem például egyszerű számoló- és átváltó programokat, például magasság- vagy távolságértékek konvertálását végző kis alkalmazásokat, 
+                                amelyeknél a felhasználó által megadott adatokat a program feldolgozta és más mértékegységbe alakította át. 
+                                Ezek a feladatok segítettek megérteni a programok felépítését, a bemenetek és kimenetek kezelését, valamint a feltételek és műveletek használatát.
+                            </p>
+                        </div>
+                        <div class="programfejlesztes-image-box">
+                            <img src="./style/Photos/visual-studio.png" alt="Programfejlesztés">
+                        </div>
+                    </div>
+
+                    <div class="cisco-row">
+                        <div class="cisco-image-box">
+                            <img src="./style/Photos/Cisco-Packet-Tracer.webp" alt="Cisco-Packet-Tracer">
+                        </div>
+                        <div class="cisco-box">
+                            <p>
+                                Emellett a Cisco Packet Tracer programot is használtuk, 
+                                ahol egy okosotthon rendszer működését modelleztük. A projekt során különböző eszközöket – 
+                                például világítást, szenzorokat és vezérlőegységeket – kapcsoltunk össze hálózaton keresztül, majd ezek működését automatizáltuk. 
+                                A feladat során megtanultam, hogyan kommunikálnak egymással az IoT eszközök, valamint hogyan lehet különböző események alapján vezérlési logikát kialakítani.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="topic-grid">
+                        <div class="topic-box">
+                            <h5>Robottechnika CAD/CAM</h5>
+                            <p>
+                                A robottechnika CAD/CAM órák során a számítógéppel támogatott tervezés és gyártás alapjaival foglalkoztunk. 
+                                Megismerkedtünk azzal, hogyan lehet különböző alkatrészeket digitális formában megtervezni, 
+                                majd ezek alapján gyártási folyamatokat előkészíteni. Az órák célja az volt, hogy betekintést nyerjünk a modern ipari gyártási folyamatokba, 
+                                ahol a tervezés és a gyártás szorosan összekapcsolódik a számítógépes rendszerekkel és automatizált gépekkel. 
+                                A gyakorlatok során egyszerűbb alkatrészek digitális modelljeit készítettem el CAD környezetben, majd ezek alapján megismertük, 
+                                hogyan lehet a terveket gyártási folyamatokhoz felhasználni.
+                            </p>
+                        </div>
+
+                        <div class="topic-box">
+                            <h5>IoT (Internet of Things)</h5>
+                            <p>
+                                Az IoT órákon az internetre csatlakoztatott eszközök működésével és alkalmazásával foglalkoztunk. 
+                                Az órák során megismertük, hogyan kommunikálnak egymással a különböző okoseszközök, szenzorok és vezérlőegységek hálózaton keresztül. 
+                                A tananyag főként az IoT rendszerek felépítésére, működési elvére és gyakorlati alkalmazására koncentrált, 
+                                például okosotthon rendszerek vagy ipari adatgyűjtő rendszerek esetében. Ezek az ismeretek segítettek megérteni, 
+                                hogyan kapcsolódnak össze az informatikai és automatizálási rendszerek a modern ipari és hétköznapi környezetben.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h5>Weblapszerkesztés</h5>
+                        <p>
+                            <p>
+                            A weblapszerkesztés órák során a webes technológiák alapjaival foglalkoztunk, és megtanultuk, 
+                            hogyan épül fel egy weboldal. Az órákon megismertem a weboldalak felépítését, a struktúrák kialakítását és a tartalom rendszerezését. 
+                            A tananyag része volt a HTML, amely a weboldalak szerkezetének kialakítására szolgál, valamint a CSS, 
+                            amellyel a weboldalak megjelenését és formázását lehet beállítani, illetve a JavaScript, amely a weboldalak interaktivitását biztosítja.
+                            </p>
+                        <div class="weblapszerkesztes-row">
+                            <div class="weblapszerkesztes-box">
+                                <p>
+                                Emellett tanultunk a Bootstrap keretrendszerről is, amely segít a reszponzív, 
+                                különböző képernyőméretekhez alkalmazkodó oldalak készítésében.
+                                Az itt megszerzett ismereteket később a saját portfólióm elkészítése során tudtam hasznosítani. 
+                                A tanult webes alapok segítségével jobban megértettem, hogyan lehet egy weboldalt logikusan felépíteni és átlátható módon megjeleníteni a tartalmakat. 
+                                Ez a tantárgy hozzájárult ahhoz, hogy a szakmai munkáimat egy jól strukturált és könnyen áttekinthető webes felületen tudjam bemutatni.
+                                </p>
+                            </div>
+                            <div class="weblapszerkesztes-image-box">
+                                <img src="./style/Photos/W3Schools.png" alt="weblapszerkesztes">
+                            </div>
+                        </div>
+                        </p>
+
+                    <h5>Ipari és terepi buszrendszerek</h5>
+                    <div class="ipari-parts">
+                        <p>
+                           Az ipari és terepi buszrendszerek tantárgy során az ipari kommunikációs rendszerekkel foglalkoztunk. 
+                           Elméleti szinten megismertük, hogyan kommunikálnak egymással az ipari eszközök különböző buszrendszereken keresztül, 
+                           és miért fontos a megbízható adatátvitel az automatizált rendszerekben. 
+                           A gyakorlati feladatok során különböző ipari kommunikációs modelleket tanulmányoztunk, 
+                           és megértettük, hogyan történik az adatok továbbítása az érzékelők, vezérlők és felügyeleti rendszerek között. 
+                           Ez a tantárgy segített megérteni az ipari hálózatok működését és a különböző eszközök közötti kommunikáció jelentőségét.
+                        </p>
+                    </div>
+
+                    <h5>Számítógépes rendszerüzemeltetés</h5>
+                            <p>
+                                A számítógépes rendszerüzemeltetés órákon a számítógépes hálózatok gyakorlati működtetésével és konfigurálásával foglalkoztunk. 
+                                A gyakorlatok során a Cisco Packet Tracer programot használtuk, ahol különböző hálózati topológiákat építettünk fel és konfiguráltunk. 
+                                A feladatok során IP-címzést állítottunk be, DHCP szervereket konfiguráltunk, valamint különböző hálózati eszközök – például routerek és switchek – működését vizsgáltuk.
+                            </p>
+                    <div class="rendszeruzemeltetes-row">
+                        <div class="rendszeruzemeltetes-image-box">
+                            <img src="./style/Photos/vmware.png" alt="rendszeruzemeltetes">
+                        </div>
+                        <div class="rendszeruzemeltetes-box">
+                            <p>
+                                A gyakorlatok során megismertük a VMware Tools használatát is, 
+                                amely lehetővé teszi a virtuális gépek hatékonyabb működését és jobb integrációját a hoszt rendszerrel. 
+                                Ennek segítségével könnyebben telepíthetők és kezelhetők a virtuális rendszerek, valamint javul a rendszer teljesítménye 
+                                és a hálózati eszközök közötti kommunikáció. Megtanultam, hogyan lehet egy hálózatot megfelelően felépíteni és működtetni, 
+                                hogyan történik az eszközök közötti kommunikáció, valamint hogyan lehet hibákat felismerni és javítani a rendszerben.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h5>Irányítástechnikai alapok</h5>
+                    <div class="iranyitastechnika-parts">
+                        <p>
+                           Az irányítástechnikai alapok órák során az automatizált rendszerek vezérlésének elméleti és gyakorlati alapjaival foglalkoztunk. 
+                           Megismertük a különböző vezérlési folyamatokat, a logikai kapcsolatok működését, valamint azt, 
+                           hogyan lehet egy ipari folyamatot lépésről lépésre automatizálni. A gyakorlatok során a Zelio Soft szoftvert használtuk, 
+                           amelyben PLC-alapú vezérléseket készítettünk. A programban Ladder és FBD diagramok segítségével építettük fel a vezérlési logikát, 
+                           majd szimulációval ellenőriztük a működését. Készítettem például közlekedési lámpa vezérlést, 
+                           ahol a lámpák megfelelő sorrendben és időzítéssel váltakoztak, valamint számláló programot és egy parkolóház működését modellező vezérlést is. 
+                           Ezek a feladatok segítettek megérteni, hogyan lehet ipari folyamatokat logikai programokkal irányítani és szimulálni.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
