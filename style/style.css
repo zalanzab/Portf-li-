@@ -655,6 +655,9 @@ nav button:hover {
     #ev11.active .card-expanded {
         max-height: 12000px;
     }
+    #ev13.active .card-expanded {
+        max-height: none;
+    }
     .card-expanded h4 {
         font-size: 20px;
     }
@@ -670,6 +673,10 @@ nav button:hover {
     .szamitogep-row,
     .mikrokontroller-row,
     .adatbazis-row,
+    .cisco-row,
+    .programfejlesztes-row,
+    .weblapszerkesztes-row,
+    .rendszeruzemeltetes-row,
     .topic-grid,
     .exam-parts {
         grid-template-columns: 1fr;
