@@ -14,7 +14,6 @@ function toggleLanguage() {
         setText("nav-study","Studies");
         setText("nav-projects","Projects");
         setText("nav-technologies","Technologies");
-        setText("nav-summary","Summary");
         setText("nav-about","About Me");
         
 
@@ -28,7 +27,6 @@ function toggleLanguage() {
         setText("study-title","Studies");
         setText("projects-title","Projects");
         setText("technologies-title","Technologies");
-        setText("summary-title","Summary");
         setText("about-title","About Me");
 
         /* ===== ÉVFOLYAMOK ===== */
@@ -42,7 +40,6 @@ function toggleLanguage() {
         setText("back-study","Back ↑");
         setText("back-projects","Back ↑");
         setText("back-technologies","Back ↑");
-        setText("back-summary","Back ↑");
 
 
         /* ===== STUDY CARDS ===== */
@@ -65,7 +62,6 @@ function toggleLanguage() {
 
         setText("projects-text","Presentation of my projects.");
         setText("technologies-text","Used technologies and self-reflection");
-        setText("summary-text","Summary of my studies.");
         setText("about-text","Here comes the introductory text...");
         setText("lang-btn","EN");
 
@@ -78,8 +74,7 @@ function toggleLanguage() {
         setText("nav-study","Tanulmányok");
         setText("nav-projects","Projektek");
         setText("nav-technologies","Technológiák");
-        setText("nav-summary","Összegzés");
-        setText("nav-about","Rólam");
+        setText("nav-about","Bemutatkozás");
         
 
         /* ===== HERO ===== */
@@ -92,8 +87,7 @@ function toggleLanguage() {
         setText("study-title","Tanulmányok");
         setText("projects-title","Projektek");
         setText("technologies-title","Technológiák");
-        setText("summary-title","Összegzés");
-        setText("about-title","Rólam");
+        setText("about-title","Bemutatkozás");
         
         /* ===== ÉVFOLYAMOK ===== */
         setText("ev910-btn","9–10. évfolyam");
@@ -106,7 +100,6 @@ function toggleLanguage() {
         setText("back-study","Vissza ↑");
         setText("back-projects","Vissza ↑");
         setText("back-technologies","Vissza ↑");
-        setText("back-summary","Vissza ↑");
 
 
         /* ===== TANULMÁNYOK TARTALOM ===== */
@@ -128,7 +121,6 @@ function toggleLanguage() {
 
         setText("projects-text","Projektjeim bemutatása...");
         setText("technologies-text","Alkalmazott technológiák és szakmai önreflexió...");
-        setText("summary-text","Tanulmányaim összefoglalása...");
         setText("about-text","Itt jön majd a bemutatkozás szöveg...");
         setText("lang-btn","HU");
 

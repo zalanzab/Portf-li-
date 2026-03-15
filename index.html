@@ -19,6 +19,7 @@
                 ☰
             </button>
         <nav id="nav-menu">
+                    <button onclick="scrollToSection('rolam')" id="nav-about">Bemutatkozás</button>
             <div class="dropdown">
                 <button class="dropbtn" id="nav-study" onclick="handleStudyClick()">Tanulmányok</button>
                 <div class="dropdown-content">
@@ -30,8 +31,6 @@
             </div>
             <button onclick="scrollToSection('projektek')" id="nav-projects">Projektek</button>
             <button onclick="scrollToSection('technologiak')" id="nav-technologies">Technológiák</button>
-            <button onclick="scrollToSection('osszegzes')" id="nav-summary">Összegzés</button>
-            <button onclick="scrollToSection('rolam')" id="nav-about">Bemutatkozás</button>
         </nav>
 
         <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">HU</button>
@@ -56,6 +55,82 @@
     </section>
 
     <!-- SECTIONS -->
+
+    <section id="rolam" class="content">
+        <h2 id="about-title">Bemutatkozás</h2>
+        <div class="about-card">
+            <div class="about-inner">
+                <p>
+                    <div class="me-row">
+                        <div class="me-box">
+                        <p>
+                        Zab Zalán vagyok, 20 éves, a Székesfehérvári SZC Széchenyi István Technikum 13. évfolyamos tanulója ipari informatikai technikus szakon. 
+                        <br></br>
+                        Már a tanulmányaim kezdetétől fogva érdekelt az informatika világa, különösen azok a technológiák, 
+                        amelyek a mindennapi életünket teszik kényelmesebbé és hatékonyabbá. Kifejezetten közel áll hozzám az automatizálás és az okosotthon-megoldások területe, 
+                        mivel ezek jól szemléltetik, hogyan kapcsolódik össze a szoftver, az elektronika és a modern technológia a hétköznapokban.
+                        </p>
+                        </div>
+                        <div class="me-image-box">
+                            <img src="./style/Photos/me.jpeg" alt="Én">
+                        </div>
+                        </div>
+                            <p>
+                            Személyiségemet leginkább a kíváncsiság, a problémamegoldó gondolkodás és a kitartás jellemzi. Szeretek új dolgokat megérteni, 
+                            rendszereket átlátni, majd megoldást találni az előttem álló kihívásokra. Számomra a fejlődés egyik legfontosabb része az, 
+                            hogy mindig nyitott legyek az új ismeretekre, és folyamatosan bővítsem a tudásomat.
+                            </p>
+                </p>
+                <div class="nyelvek-row">
+                        <div class="nyelvek-box">
+                            <h5>Nyelvek</h5>
+                            <p>
+                                A tanulmányaim mellett fontos számomra a nyelvtanulás is. 
+                                Angolul beszélek, és a jövőben szeretnék spanyolul is megtanulni, 
+                                mivel érdekelnek a különböző kultúrák és fontosnak tartom, hogy nemzetközi környezetben is magabiztosan tudjak kommunikálni.
+                            </p>
+                        </div>
+                        <div class="nyelvek-image-box">
+                            <img src="./style/Photos/nyelvek.png" alt="Nyelvek">
+                        </div>
+                </div>
+
+                <h5>Szabadidő és érdeklődés</h5>
+                    <p>
+                        Szabadidőmben szeretek utazni és új helyeket felfedezni. 
+                        A sport szintén meghatározó része az életemnek: a futball már kisgyerekkorom óta jelen van az életemben, 
+                        és hosszú ideig aktívan is fociztam. A sport sokat tanított a kitartásról, 
+                        a csapatmunkáról és arról, hogy a folyamatos fejlődéshez idő és elkötelezettség szükséges.
+                    </p>
+
+                <div class="topic-grid">
+                        <div class="travel-image-box">
+                            <img src="./style/Photos/me_travel.jpg" alt="travel">
+                        </div>
+
+                        <div class="foci-image-box">
+                            <img src="./style/Photos/foci.JPG" alt="foci">
+                        </div>
+                    </div>
+                
+                <div class="egyetem-row">
+                        <div class="egyetem-box">
+                            <h5>Jövőbeli célok</h5>
+                            <p>
+                                A jövőben szeretném tovább mélyíteni a tudásomat az informatikai és mérnöki területen, ezért célom, 
+                                hogy a Óbudai Egyetem hallgatója legyek. Úgy gondolom, hogy a kíváncsiság, 
+                                a folyamatos tanulás és az új technológiák iránti érdeklődés segít abban, hogy hosszú távon is fejlődni tudjak ezen a területen.
+                            </p>
+                        </div>
+                        <div class="egyetem-image-box">
+                            <img src="./style/Photos/egyetem.png" alt="Egyetem">
+                        </div>
+                </div>
+
+            </div>
+        </div>
+        <button class="back-btn" id="back-about" onclick="scrollToTop()">Vissza ↑</button>
+    </section>
 
     <section id="tanulmanyok" class="content">
         <h2 id="study-title">Tanulmányok</h2>
@@ -560,22 +635,6 @@
         <button class="back-btn" id="back-technologies" onclick="scrollToTop()">Vissza ↑</button>
     </section>
 
-    <section id="osszegzes" class="content">
-        <h2 id="summary-title">Összegzés</h2>
-        <p id="summary-text">Tanulmányaim összefoglalása...</p>
-        <button class="back-btn" id="back-summary" onclick="scrollToTop()">Vissza ↑</button>
-    </section>
-
-
-    <section id="rolam" class="content">
-        <h2 id="about-title">Bemutatkozás</h2>
-        <div class="about-card">
-            <div class="about-inner">
-                <p id="about-text">Bemutatkozás és szakmai céljaim...</p>
-            </div>
-        </div>
-        <button class="back-btn" id="back-about" onclick="scrollToTop()">Vissza ↑</button>
-    </section>
 
 <script src="./style/script.js"></script>
 </body>
