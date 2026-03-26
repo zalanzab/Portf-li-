@@ -11,6 +11,7 @@ body {
    font-family: 'Montserrat', sans-serif;
    margin: 0;
    overflow-x: hidden;
+   background-color: #f3f6f9;
 }
 
 h1, h2, h3 {
@@ -193,6 +194,11 @@ nav button:hover {
     margin-top: 20px;
 }
 
+/* Csökkentett padding a többi section számára */
+#tanulmanyok, #projektek, #osszegzes, #technologiak {
+    padding-top: 10px;
+}
+
 
 /* ================== 5. TANULMÁNYOK GRID
 /* A színes kártyák elrendezése */
@@ -252,7 +258,7 @@ nav button:hover {
 /* Színátmenetek */
 
 .card-1 {
-    background: linear-gradient(135deg, #d4af37, #ffffff);
+    background: linear-gradient(135deg, #f1d168, #ffffff);
 }
 
 .card-2 {
@@ -260,11 +266,11 @@ nav button:hover {
 }
 
 .card-3 {
-    background: linear-gradient(135deg, #d8a7b1, #ffffff);
+    background: linear-gradient(135deg, #c7b299, #ffffff);
 }
 
 .card-4 {
-    background: linear-gradient(135deg, #c7b299, #ffffff);
+    background: linear-gradient(135deg, #d6abb4, #ffffff);
 }
 
 /* Hover effekt */
@@ -624,6 +630,114 @@ nav button:hover {
 }
 
 
+/* Önreflexios kártya */
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reflex-card {
+  width: 1100px;
+  height: 280px;
+  padding: 60px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #1f2430 0%, #6a0d2f 100%);
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.reflex-content h3 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 15px 0 12px 0;
+}
+
+.reflex-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* gomb */
+.reflex-btn {
+  background: linear-gradient(135deg, #d63384, #a61e4d);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reflex-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(214, 51, 132, 0.4);
+}
+
+/* projekt kártya */
+
+.project-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-card {
+    width: 400px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.project-card-top {
+    height: 160px;
+    background-color: #c4c8d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.project-card-bottom {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.project-card-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-card-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.project-card-link .arrow {
+    font-size: 18px;
+}
+
 @media (max-width: 768px) {
 
 
@@ -768,6 +882,50 @@ nav button:hover {
     .egyetem-row {
         grid-template-columns: 1fr;
         gap: 16px;
+    }
+
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .project-card-top {
+        height: 140px;
+    }
+
+    .project-card-bottom {
+        padding: 16px;
+    }
+
+    .reflex-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 30px 20px;
+        margin: 20px 0;
+    }
+
+    .reflex-content h3 {
+        font-size: 24px;
+        margin: 10px 0 12px 0;
+    }
+
+    .reflex-content p {
+        max-width: 100%;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .reflex-btn {
+        position: static;
+        margin-top: 15px;
+        width: 100%;
     }
 
 }
