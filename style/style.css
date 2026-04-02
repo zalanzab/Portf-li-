@@ -866,10 +866,10 @@ nav button:hover {
         display: block;
     }
     .about-card {
-        width: 100%;
-        max-width: 100%;
+        width: 90%;
+        max-width: 90%;
         margin: 20px auto 40px auto;
-        padding: 22px 20px;
+        padding: 20px 10px;
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     }
 
