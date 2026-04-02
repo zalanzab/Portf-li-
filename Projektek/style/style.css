@@ -1,0 +1,549 @@
+﻿/* 1. GLOBAL / OLDAL*/
+/* Az egész oldal alap stílusa */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   margin: 0;
+   overflow-x: hidden;
+   background-color: #f3f6f9;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ================== 2. NAVBAR / FEJLÉC*/
+/* Felső fekete navigációs sáv */
+
+header {
+    margin: 0;
+    box-sizing: border-box;
+    background: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Bal oldali logó + név */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 140px;
+    width: auto;
+    padding-top: 40px;
+}
+
+/* Navigációs gombok */
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    color: #8a1538;
+}
+
+/* Nyelvváltó gomb */
+
+.lang-btn {
+    background-color: #8a1538;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.lang-btn:hover {
+    background-color: #a61e4d;
+}
+
+/* ================== 3. HERO SZEKCIÓ 
+/* Fekete-fehér átmenetes felső rész */
+
+.hero {
+    width: 100%;
+    margin: 0;
+
+    /* 👇 kép pozíció lejjebb */
+    background: url('./Photos/projekt_1.JPEG') center 20% / cover no-repeat;
+
+    /* 👇 több hely felül (navbar miatt is) */
+    padding: 320px 0 30px;
+
+    display: flex;
+    justify-content: flex-start; /* 👈 balra tolja */
+}
+
+/* SZÖVEG BLOKK */
+
+.hero-content {
+    margin-left: 80px; /* 👈 balra húzás */
+    max-width: 500px;
+}
+
+/* opcionális szebb kinézet */
+
+.hero h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: white;
+    font-size: 18px;
+}
+
+
+
+/* ================== 9. DROPDOWN MENÜ  */
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    border-radius: 12px;
+    padding: 10px 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* Hoverre lenyílik */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content button:hover {
+    color: #8a1538;
+    background: transparent;
+}
+
+/* tartalom ------------------------------------------------ */
+
+.wrapper h1,
+.wrapper2 h1 {
+    font-size: 25px;
+    font-weight: 450;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #111;
+    position: relative;
+}
+.wrapper h1::after,
+.wrapper2 h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #8a1538;
+    margin-top: 20px;
+}
+
+.cards-layout {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 95%;
+    margin: 20px auto 80px auto;
+    align-items: flex-start;
+}
+
+.cards-layout2 {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.wrapper {
+        max-width: 700px;
+        margin: 80px auto;
+        padding: 60px 50px;
+        background: #ffffff;
+        border-radius: 18px;
+        
+    }
+
+    
+    .wrapper h2 {
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+
+    .wrapper p {
+        color: #4a5a6a;
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 850px;
+        margin-bottom: 20px;
+    }
+
+
+    .wrapper2 {
+        max-width: 1100px;
+        margin: 80px auto;
+        padding: 60px 50px;
+        background: #ffffff;
+        border-radius: 18px;
+        min-height: 945px;
+        margin-top: 30px;
+    }
+
+    h1 {
+        font-size: 34px;
+        font-weight: 500;
+        color: #1c2b39;
+        margin-bottom: 20px;
+    }
+
+    .intro {
+        color: #4a5a6a;
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 850px;
+        margin-bottom: 20px;
+    }
+
+
+    .main-cards {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .main-card {
+        flex: 1;
+        min-width: 260px;
+        background: white;
+        border: 1px solid #e3e6ea;
+        border-radius: 16px;
+        padding: 30px 25px;
+        box-sizing: border-box;
+    }
+
+    .icon {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #2d3a45;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+
+        .icon img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+    .main-card p {
+        font-size: 15px;
+        color: #4a5a6a;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .outro {
+        margin-top: 20px;
+        color: #4a5a6a;
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 850px;
+        margin-bottom: 20px;
+    }
+
+
+    .right-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 80px;
+    }
+
+.summary-column h2 {
+    font-size: 25px;
+    font-weight: 450;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #111;
+    position: relative;
+}
+.summary-column h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #8a1538;
+    margin-top: 20px;
+}
+
+.project-summary-section {
+    width: 100%;
+    max-width: 95%;
+    margin: -120px auto 80px auto;
+}
+
+.project-summary-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 50px 45px;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    
+}
+
+.summary-column {
+    flex: 1;
+}
+
+.summary-column p {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4a5a6a;
+    margin-bottom: 16px;
+}
+
+
+/* KÉP */
+.side-video {
+        width: 100%;
+        max-width: 1100px;
+        border-radius: 18px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+
+
+/* ================== 📱 MOBIL (768px alatt) ================== */
+
+@media (max-width: 768px) {
+
+    /* ===== NAVBAR ===== */
+
+    header {
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    .logo img {
+        height: 80px;
+        padding-top: 10px;
+    }
+
+    .logo span {
+        font-size: 14px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 220px;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav button {
+        margin: 10px 0;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    /* Dropdown mobil fix */
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: #111;
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+
+    .dropdown-content.mobile-open {
+        display: block;
+    }
+
+    /* ===== HERO ===== */
+
+    .hero {
+        padding: 160px 20px 40px;
+        justify-content: flex-start;
+        text-align: left;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* ===== LAYOUT ===== */
+
+    .cards-layout {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px auto;
+    }
+
+    .cards-layout2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .right-slide {
+        margin-top: 0;
+    }
+
+    /* ===== WRAPPEREK ===== */
+
+    .wrapper,
+    .wrapper2 {
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+
+    .wrapper2 {
+        min-height: auto;
+    }
+
+    /* ===== SZÖVEG ===== */
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .wrapper h2 {
+        font-size: 18px;
+    }
+
+    .wrapper p,
+    .intro,
+    .outro {
+        font-size: 14px;
+    }
+
+    /* ===== KÁRTYÁK ===== */
+
+    .main-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-card {
+        padding: 20px;
+    }
+
+    .icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* ===== VIDEÓ ===== */
+
+    .side-video {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    /* ===== PROJECT SUMMARY ===== */
+
+    .project-summary-card {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .summary-column h2 {
+        font-size: 20px;
+    }
+
+    .summary-column p {
+        font-size: 14px;
+    }
+
+    .project-summary-section {
+        margin: 20px auto;
+    }
+}
+
