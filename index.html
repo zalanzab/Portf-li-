@@ -29,7 +29,14 @@
                     <button onclick="scrollToSection('ev13')" id="ev13-btn">13. évfolyam</button>
                 </div>
             </div>
-            <button onclick="scrollToSection('projektek')" id="nav-projects">Projektek</button>
+            <div class="dropdown">
+                <button class="dropbtn" id="nav-projects" onclick="handleProjectsClick()">Projektek</button>
+                <div class="dropdown-content">
+                    <button onclick="scrollToSection('projekt1')" id="projekt1-btn">Munkadarab számláló</button>
+                    <button onclick="openProject1()" id="projekt2-btn">Okosotthon vezérlés</button>
+                    <button onclick="scrollToSection('projekt3')" id="projekt3-btn">Portfólió</button>
+                </div>
+            </div>
             <button onclick="scrollToSection('technologiak')" id="nav-technologies">Technológiák</button>
         </nav>
 
@@ -627,7 +634,7 @@
         <h2 id="projects-title">Projektek</h2>
         <div class="project-cards">
     
-    <div class="project-card">
+    <div class="project-card" id="projekt1">
         <div class="project-card-top">
             <img src="./style/Photos/zeliosoft.jpg" alt="Zelio Soft" style="width: 80px; height: auto;">
         </div>
@@ -640,7 +647,7 @@
         </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="projekt2" onclick="openProject1()">
         <div class="project-card-top">
             <img src="./style/Photos/Cisco-Packet-Tracer.webp" alt="Cisco Packet Tracer" style="width: 80px; height: auto;">
         </div>
@@ -653,7 +660,7 @@
         </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="projekt3">
         <div class="project-card-top">
             <img src="./style/Photos/visual-studio.png" alt="Visual Studio" style="width: 80px; height: auto;">
         </div>

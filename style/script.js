@@ -35,6 +35,11 @@ function toggleLanguage() {
         setText("ev12-btn","Grade 12");
         setText("ev13-btn","Grade 13");
 
+        /* ===== PROJEKTEK ===== */
+        setText("projekt1-btn","Workpiece Counter");
+        setText("projekt2-btn","Smart Home Control");
+        setText("projekt3-btn","Portfolio");
+
         /* ===== BACK BUTTONS ===== */
         setText("back-about","Back ↑");
         setText("back-study","Back ↑");
@@ -94,6 +99,11 @@ function toggleLanguage() {
         setText("ev11-btn","11. évfolyam");
         setText("ev12-btn","12. évfolyam");
         setText("ev13-btn","13. évfolyam");
+
+        /* ===== PROJEKTEK ===== */
+        setText("projekt1-btn","Munkadarab számláló");
+        setText("projekt2-btn","Okosotthon vezérlés");
+        setText("projekt3-btn","Portfólió");
 
         /* ===== BACK BUTTONS ===== */
         setText("back-about","Vissza ↑");
@@ -183,4 +193,31 @@ function handleStudyClick() {
         dropdown.classList.remove("mobile-open");
         scrollToSection('tanulmanyok');
     }
+}
+
+function handleProjectsClick() {
+
+    const dropdowns = document.querySelectorAll(".dropdown-content");
+    const projectsDropdown = dropdowns[1]; // Assuming the second dropdown is for projects
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile) {
+        //  Desktop → azonnal scroll
+        scrollToSection('projektek');
+        return;
+    }
+
+    //  Mobil logika
+    if (!projectsDropdown.classList.contains("mobile-open")) {
+        // Első kattintás → lenyit
+        projectsDropdown.classList.add("mobile-open");
+    } else {
+        // Második kattintás → scroll
+        projectsDropdown.classList.remove("mobile-open");
+        scrollToSection('projektek');
+    }
+}
+
+function openProject1() {
+    window.location.href = 'Projektek/project_1.html';
 }
