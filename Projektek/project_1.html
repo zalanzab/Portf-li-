@@ -23,19 +23,19 @@
             ☰
         </button>
         <nav id="nav-menu">
-            <button onclick="scrollToSection('home')" id="nav-home">Home</button>
-            <button onclick="scrollToSection('rolam')" id="nav-about">Bemutatkozás</button>
+            <button onclick="navigateToSection('home')" id="nav-home">Home</button>
+            <button onclick="navigateToSection('rolam')" id="nav-about">Bemutatkozás</button>
             <div class="dropdown">
                 <button class="dropbtn" id="nav-study" onclick="handleStudyClick()">Tanulmányok</button>
                 <div class="dropdown-content">
-                    <button onclick="scrollToSection('ev910')" id="ev910-btn">9–10. évfolyam</button>
-                    <button onclick="scrollToSection('ev11')" id="ev11-btn">11. évfolyam</button>
-                    <button onclick="scrollToSection('ev12')" id="ev12-btn">12. évfolyam</button>
-                    <button onclick="scrollToSection('ev13')" id="ev13-btn">13. évfolyam</button>
+                    <button onclick="navigateToSection('ev910')" id="ev910-btn">9–10. évfolyam</button>
+                    <button onclick="navigateToSection('ev11')" id="ev11-btn">11. évfolyam</button>
+                    <button onclick="navigateToSection('ev12')" id="ev12-btn">12. évfolyam</button>
+                    <button onclick="navigateToSection('ev13')" id="ev13-btn">13. évfolyam</button>
                 </div>
             </div>
-            <button onclick="scrollToSection('projektek')" id="nav-projects">Projektek</button>
-            <button onclick="scrollToSection('technologiak')" id="nav-technologies">Technológiák</button>
+            <button onclick="navigateToSection('projektek')" id="nav-projects">Projektek</button>
+            <button onclick="navigateToSection('technologiak')" id="nav-technologies">Technológiák</button>
         </nav>
 
         <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">HU</button>
@@ -104,10 +104,18 @@
 
             <div class="right-slide">
 
-                <video class="side-video" autoplay muted loop controls playsinline>
-                    <source src="./style/Photos/cisco.mp4" type="video/mp4">
-                    A böngésződ nem támogatja a videó lejátszását.
-                </video>
+                <div class="video-container">
+
+                    <iframe class="drive-video"
+                        src="https://drive.google.com/file/d/1aJgLFd3139MfaMrBor8p5XpL0KWACQbv/preview" allow="autoplay"
+                        allowfullscreen>
+                    </iframe>
+
+                    <p id="video-note" class="video-note">
+                        ⚙️ A jobb minőségért állítsd 1080p-re a videót
+                    </p>
+
+                </div>
 
                 <div class="wrapper2">
                     <h1>A vezérlés szerkezeti felépítése</h1>
@@ -160,12 +168,18 @@
 
                     <p class="outro">
                         A működéshez tehát az volt szükséges, hogy minden eszközt csatlakoztassak a központi egységhez,
-                        majd létrehozzam a megfelelő IF–THEN szabályokat. Ezekben megadtam a feltételeket, például
-                        szenzorértékeket vagy állapotokat, valamint az ezekhez tartozó műveleteket, például bekapcsolást
-                        vagy kikapcsolást.
+                        majd létrehozzam a megfelelő IF–THEN szabályokat. Ennek során minden szenzort és beavatkozó
+                        eszközt regisztráltam a Home Gateway-ben, majd a szabályoknál kiválasztottam a konkrét eszközt,
+                        annak állapotát vagy mérési értékét feltételként. Például mozgásérzékelőnél az „motion detected
+                        = true”, füstérzékelőnél egy konkrét küszöbértéket, vagy RFID esetén az adott azonosítót adtam
+                        meg. Ezután hozzárendeltem a megfelelő műveleteket, mint például lámpa bekapcsolása, ajtó
+                        nyitása, ventilátor fokozatának állítása vagy riasztás aktiválása, és egyes esetekben több
+                        eszközt is egyetlen feltételhez kapcsoltam, így egy esemény egyszerre több reakciót is kivált.
                         <br></br>
-                        A rendszer így egy jól átlátható logikai struktúrát alkot, ahol minden működés egyértelmű
-                        szabályokhoz kötött, és minden esemény automatikusan kivált egy megfelelő reakciót.
+                        A rendszer így egy jól átlátható logikai struktúrát alkot, 
+                        minden esemény automatikusan kivált egy megfelelő reakciót, 
+                        és a rendszer az aktuális szenzoradatok alapján 
+                        azonnal reagál a változásokra.
                     </p>
                 </div>
             </div>
@@ -173,37 +187,39 @@
     </section>
 
     <section class="project-summary-section">
-    <div class="project-summary-card">
-        <div class="summary-column">
-            <h2>A projekt célja</h2>
-            <p>
-                A projekt célja egy olyan okosotthon rendszer megtervezése és szimulációja volt,
-                amely különböző érzékelők jelei alapján automatikusan vezérli az otthon eszközeit.
-                A megvalósítás során arra törekedtem, hogy a rendszer ne csak kényelmi funkciókat
-                lásson el, hanem biztonsági és környezetvezérlési feladatokat is.
-            </p>
-            <p>
-                A Cisco Packet Tracer használatával egy olyan modellt készítettem, amely jól
-                szemlélteti, hogyan lehet szenzoradatok alapján logikai döntéseket hozni, és ezekhez
-                megfelelő automatikus reakciókat rendelni.
-            </p>
-        </div>
+        <div class="project-summary-card">
+            <div class="summary-column">
+                <h2>A projekt célja</h2>
+                <p>
+                    A projekt célja egy olyan okosotthon rendszer megtervezése és szimulációja volt,
+                    amely különböző érzékelők jelei alapján automatikusan vezérli az otthon eszközeit.
+                    A megvalósítás során arra törekedtem, hogy a rendszer ne csak kényelmi funkciókat
+                    lásson el, hanem biztonsági és környezetvezérlési feladatokat is.
+                </p>
+                <p>
+                    A Cisco Packet Tracer használatával egy olyan modellt készítettem, amely jól
+                    szemlélteti, hogyan lehet szenzoradatok alapján logikai döntéseket hozni, és ezekhez
+                    megfelelő automatikus reakciókat rendelni.
+                </p>
+            </div>
 
-        <div class="summary-column">
-            <h2>Mit tanultam belőle?</h2>
-            <p>
-                A projekt elkészítése során jobban megértettem az IoT eszközök működését és
-                együttműködését, valamint azt, hogyan lehet különböző érzékelők állapotai alapján
-                automatizált vezérlést kialakítani.
-            </p>
-            <p>
-                Emellett gyakorlatot szereztem a Cisco Packet Tracer használatában, a szabályalapú
-                vezérlés felépítésében, valamint abban, hogyan lehet egy összetettebb rendszert
-                logikusan megtervezni és átlátható módon bemutatni.
-            </p>
+            <div class="summary-column">
+                <h2>Mit tanultam belőle?</h2>
+                <p>
+                    A projekt elkészítése során jobban megértettem az IoT eszközök működését és
+                    együttműködését, valamint azt, hogyan lehet különböző érzékelők állapotai alapján
+                    automatizált vezérlést kialakítani.
+                </p>
+                <p>
+                    Emellett gyakorlatot szereztem a Cisco Packet Tracer használatában, a szabályalapú
+                    vezérlés felépítésében, valamint abban, hogyan lehet egy összetettebb rendszert
+                    logikusan megtervezni és átlátható módon bemutatni.
+                </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <button class="back-btn" id="back-technologies" onclick="scrollToTop()">Vissza ↑</button>
 
 
 

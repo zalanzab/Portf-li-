@@ -17,6 +17,10 @@ function scrollToSection(id) {
     nav.classList.remove("active");
 }
 
+function navigateToSection(sectionId) {
+    window.location.href = '../index.html#' + sectionId;
+}
+
 function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("active");
 }
@@ -47,8 +51,8 @@ function handleStudyClick() {
     const isMobile = window.innerWidth <= 768;
 
     if (!isMobile) {
-        //  Desktop → azonnal scroll
-        scrollToSection('tanulmanyok');
+        //  Desktop → azonnal navigate
+        navigateToSection('tanulmanyok');
         return;
     }
 
@@ -57,8 +61,8 @@ function handleStudyClick() {
         // Első kattintás → lenyit
         dropdown.classList.add("mobile-open");
     } else {
-        // Második kattintás → scroll
+        // Második kattintás → navigate
         dropdown.classList.remove("mobile-open");
-        scrollToSection('tanulmanyok');
+        navigateToSection('tanulmanyok');
     }
 }
