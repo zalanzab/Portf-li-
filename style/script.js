@@ -198,7 +198,7 @@ function handleStudyClick() {
 function handleProjectsClick() {
 
     const dropdowns = document.querySelectorAll(".dropdown-content");
-    const projectsDropdown = dropdowns[1]; // Assuming the second dropdown is for projects
+    const projectsDropdown = dropdowns[1];
     const isMobile = window.innerWidth <= 768;
 
     if (!isMobile) {
@@ -220,4 +220,7 @@ function handleProjectsClick() {
 
 function openProject1() {
     window.location.href = 'Projektek/project_1.html';
+}
+function openProject2() {
+    window.location.href = 'Projektek_2/projekt_2.html';
 }
