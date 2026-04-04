@@ -7,14 +7,16 @@
     box-sizing: border-box;
 }
 
-body {
-   font-family: 'Montserrat', sans-serif;
-   margin: 0;
-   overflow-x: hidden;
-   background-color: #f3f6f9;
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #f3f6f9;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -85,6 +87,7 @@ nav button:hover {
     padding: 8px 15px;
     cursor: pointer;
 }
+
 .lang-btn:hover {
     background-color: #a61e4d;
 }
@@ -103,13 +106,15 @@ nav button:hover {
     padding: 320px 0 30px;
 
     display: flex;
-    justify-content: flex-start; /* 👈 balra tolja */
+    justify-content: flex-start;
+    /* 👈 balra tolja */
 }
 
 /* SZÖVEG BLOKK */
 
 .hero-content {
-    margin-left: 80px; /* 👈 balra húzás */
+    margin-left: 80px;
+    /* 👈 balra húzás */
     max-width: 500px;
 }
 
@@ -154,7 +159,7 @@ nav button:hover {
     left: 0;
     border-radius: 12px;
     padding: 10px 0;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
@@ -183,6 +188,7 @@ nav button:hover {
     color: #111;
     position: relative;
 }
+
 .wrapper h1::after,
 .wrapper2 h1::after {
     content: "";
@@ -209,113 +215,113 @@ nav button:hover {
 }
 
 .wrapper {
-        max-width: 700px;
-        margin: 80px auto;
-        padding: 60px 50px;
-        background: #ffffff;
-        border-radius: 18px;
-        
-    }
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 60px 50px;
+    background: #ffffff;
+    border-radius: 18px;
 
-    
-    .wrapper h2 {
-        font-size: 20px;
-        margin-top: 40px;
-        margin-bottom: 15px;
-    }
-
-    .wrapper p {
-        color: #4a5a6a;
-        font-size: 15px;
-        line-height: 1.6;
-        max-width: 850px;
-        margin-bottom: 20px;
-    }
+}
 
 
-    .wrapper2 {
-        max-width: 1100px;
-        margin: 80px auto;
-        padding: 60px 50px;
-        background: #ffffff;
-        border-radius: 18px;
-        min-height: 940px;
-        margin-top: 30px;
-    }
+.wrapper h2 {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
 
-    h1 {
-        font-size: 34px;
-        font-weight: 500;
-        color: #1c2b39;
-        margin-bottom: 20px;
-    }
-
-    .intro {
-        color: #4a5a6a;
-        font-size: 15px;
-        line-height: 1.6;
-        max-width: 850px;
-        margin-bottom: 20px;
-    }
+.wrapper p {
+    color: #4a5a6a;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 850px;
+    margin-bottom: 20px;
+}
 
 
-    .main-cards {
-        display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
-    }
+.wrapper2 {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 60px 50px;
+    background: #ffffff;
+    border-radius: 18px;
+    min-height: 940px;
+    margin-top: 30px;
+}
 
-    .main-card {
-        flex: 1;
-        min-width: 260px;
-        background: white;
-        border: 1px solid #e3e6ea;
-        border-radius: 16px;
-        padding: 30px 25px;
-        box-sizing: border-box;
-    }
+h1 {
+    font-size: 34px;
+    font-weight: 500;
+    color: #1c2b39;
+    margin-bottom: 20px;
+}
 
-    .icon {
-        font-size: 28px;
-        margin-bottom: 20px;
-        color: #2d3a45;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    }
-
-        .icon img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-        }
-
-    .main-card p {
-        font-size: 15px;
-        color: #4a5a6a;
-        line-height: 1.6;
-        margin: 0;
-    }
-
-    .outro {
-        margin-top: 20px;
-        color: #4a5a6a;
-        font-size: 15px;
-        line-height: 1.6;
-        max-width: 850px;
-        margin-bottom: 10px;
-    }
+.intro {
+    color: #4a5a6a;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 850px;
+    margin-bottom: 20px;
+}
 
 
-    .right-slide {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin-top: 80px;
-    }
+.main-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.main-card {
+    flex: 1;
+    min-width: 260px;
+    background: white;
+    border: 1px solid #e3e6ea;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+}
+
+.icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2d3a45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.main-card p {
+    font-size: 15px;
+    color: #4a5a6a;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.outro {
+    margin-top: 20px;
+    color: #4a5a6a;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 850px;
+    margin-bottom: 10px;
+}
+
+
+.right-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 80px;
+}
 
 .summary-column h2 {
     font-size: 25px;
@@ -325,6 +331,7 @@ nav button:hover {
     color: #111;
     position: relative;
 }
+
 .summary-column h2::after {
     content: "";
     display: block;
@@ -347,7 +354,7 @@ nav button:hover {
     display: flex;
     gap: 50px;
     align-items: flex-start;
-    
+
 }
 
 .summary-column {
@@ -402,12 +409,12 @@ nav button:hover {
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .back-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .back-btn:active {
@@ -543,7 +550,7 @@ nav button:hover {
         font-size: 14px;
     }
 
-   
+
     .drive-video {
         height: 320px;
     }
@@ -590,5 +597,13 @@ nav button:hover {
     .project-summary-section {
         margin: 20px auto;
     }
-}
 
+    /* ===== BACK BUTTON ===== */
+    .back-btn {
+        margin: 20px auto;
+        display: block;
+        width: 90%;
+        text-align: center;
+    }
+
+}

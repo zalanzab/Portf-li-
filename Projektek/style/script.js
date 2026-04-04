@@ -31,20 +31,6 @@ function scrollToTop() {
     });
 }
 
-function toggleCard(button) {
-
-    const card = button.closest(".study-card");
-    if (!card) return;
-
-    const isActive = card.classList.toggle("active");
-
-    if (isActive) {
-        button.innerText = "Bezárás";
-    } else {
-        button.innerText = "Bővebben";
-    }
-}
-
 function handleStudyClick() {
 
     const dropdown = document.querySelector(".dropdown-content");

@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     overflow-x: hidden;
@@ -601,4 +601,13 @@ h1 {
     .project-summary-section {
         margin: 20px auto;
     }
+    
+      /* ===== BACK BUTTON ===== */
+    .back-btn {
+        margin: 20px auto;
+        display: block;
+        width: 90%;
+        text-align: center;
+    }
+
 }
