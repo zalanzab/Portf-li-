@@ -21,6 +21,18 @@ function navigateToSection(sectionId) {
     window.location.href = '../index.html#' + sectionId;
 }
 
+function openProject1() {
+    window.location.href = '../Projektek_1/projekt_1.html';
+}
+
+function openProject2() {
+    window.location.href = '../Projektek_2/projekt_2.html';
+}
+
+function openProject3() {
+    window.location.href = '../Projektek_3/projekt_3.html';
+}
+
 function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("active");
 }

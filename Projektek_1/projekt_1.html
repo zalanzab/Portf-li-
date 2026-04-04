@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://szek-szechenyi.www.intezmeny.edir.hu/" target="_blank">
+                <img src="./style/Photos/logo.png" alt="School Logo">
+            </a>
+            <span id="nav-name">ZAB ZALÁN</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
+        <nav id="nav-menu">
+            <button onclick="navigateToSection('home')" id="nav-home">Home</button>
+            <button onclick="navigateToSection('rolam')" id="nav-about">Bemutatkozás</button>
+            <div class="dropdown">
+                <button class="dropbtn" id="nav-study" onclick="handleStudyClick()">Tanulmányok</button>
+                <div class="dropdown-content">
+                    <button onclick="navigateToSection('ev910')" id="ev910-btn">9–10. évfolyam</button>
+                    <button onclick="navigateToSection('ev11')" id="ev11-btn">11. évfolyam</button>
+                    <button onclick="navigateToSection('ev12')" id="ev12-btn">12. évfolyam</button>
+                    <button onclick="navigateToSection('ev13')" id="ev13-btn">13. évfolyam</button>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="nav-projects" onclick="handleProjectsClick()">Projektek</button>
+                <div class="dropdown-content">
+                    <button onclick="openProject1()" id="projekt1-btn">Munkadarab számláló</button>
+                    <button onclick="openProject2()" id="projekt2-btn">Okosotthon vezérlés</button>
+                    <button onclick="openProject3()" id="projekt3-btn">Magasság-Távolság</button>
+                </div>
+            </div>
+            <button onclick="navigateToSection('technologiak')" id="nav-technologies">Technológiák</button>
+        </nav>
+
+        <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">HU</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Munkadarab számláló</h1>
+            <p>Zelio Soft 2-ben</p>
+        </div>
+    </section>
+
+
+    <section class="cards-layout">
+        <div class="cards-layout2">
+
+            <div class="wrapper">
+                <h1>Vezérlés működésének bemutatása</h1>
+
+
+                <p>
+                    A munkadarab számláló rendszer a <b>Zelio Soft 2</b> környezetben készült, és egy PLC alapú
+                    vezérlésként
+                    valósul meg, amely digitális bemenetekből <b>(I1–I4)</b>, digitális kimenetekből <b>(Q1–Q3)</b>,
+                    valamint
+                    különböző funkcionális blokkokból épül fel. A program <b> (Function Block Diagram)</b> struktúrát
+                    alkalmaz, amelyben a jelút jól követhető módon halad a bemeneti feldolgozástól a logikai
+                    döntéshozatalon és számláláson keresztül egészen a kimeneti vezérlésig és kijelzésig. A rendszer
+                    moduláris felépítésű, így külön egységekbe szervezve tartalmazza a jelkezelést, a számlálást, az
+                    időzítést és a megjelenítést.
+                </p>
+
+                <h2>Bemeneti jelek és előfeldolgozás</h2>
+                <p>A rendszer működésének alapját az <b>I1–I4</b> digitális bemenetek képezik, amelyek különböző
+                    vezérlési és
+                    érzékelési feladatokat látnak el, például indítási, resetelési vagy darabérzékelési funkciókat.
+                    Kiemelt szerepet kap az <b>I4</b> bemenet, amely vészleállásként <b>(emergency stop)</b> működik, és
+                    aktiválása
+                    esetén azonnal megszakítja a rendszer működését, valamint leállítja a motort A
+                    bemeneti jelek feldolgozása során a <b> és B005 jelű MUX (multiplexer)</b> blokkok kerülnek
+                    alkalmazásra, amelyek lehetővé teszik több bemeneti jel közül a megfelelő kiválasztását, így
+                    különböző működési módok vagy jelutak kezelése valósítható meg. A <b>B006</b> blokk ezen jelek
+                    további
+                    feldolgozását végzi, biztosítva a rendszer számára a megfelelő logikai szintű bemeneti
+                    információkat.</p>
+
+                <h2>Logikai vezérlés és feltételvizsgálat</h2>
+                <p>A feldolgozott bemeneti jelek a <b>B010 jelű AND kapuba</b> kerülnek, amely a rendszer egyik központi
+                    logikai eleme. Ez a blokk biztosítja, hogy a számlálási folyamat csak akkor induljon el, ha minden
+                    szükséges feltétel teljesül, például a rendszer aktív állapotban van és nincs tiltó jel jelen. A
+                    logikai vezérlés részeként a <b>B008 OR kapu és a B012 NOT kapu</b> is szerepet játszik, amelyek
+                    különböző
+                    feltételek kombinációját és negálását végzik el, ezáltal növelve a rendszer rugalmasságát és
+                    biztonságát. A <b>B009 SR (SET/RESET) flip-flop blokk</b> az állapotok tárolására szolgál, így a
+                    rendszer
+                    képes megőrizni egy adott működési állapotot még akkor is, ha a bemeneti jel már megszűnt.</p>
+
+                <h2>Számláló egység működése</h2>
+                <p>A munkadarabok számlálását a <b>B011 jelű UP/DOWN COUNTER blokk</b> végzi, amely képes a bemeneti
+                    impulzusok
+                    alapján növelni vagy csökkenteni a számláló értékét. A számláló működéséhez tartozik egy előre
+                    beállított referenciaérték, amelyet a <b>B026 NUM (numerical constant)</b> blokk biztosít, és jelen
+                    esetben
+                    ez az érték 5. Ez azt jelenti, hogy a rendszer egy adott eseményhez, például jelzéshez vagy kimeneti
+                    aktiváláshoz akkor jut el, amikor a számláló eléri az <b>5</b> darabot. A számláló bemenetei
+                    közvetlenül
+                    kapcsolódnak a logikai vezérléshez, így biztosított, hogy csak megfelelő feltételek mellett
+                    történjen számlálás.
+                </p>
+
+                <h2>Időzítési funkciók</h2>
+                <p>A rendszer működésében fontos szerepet játszanak az időzítő blokkok, amelyek közül a <b>B013 jelű
+                        TIMER
+                        A/C blokk</b> késleltetési funkciót lát el. Ez az időzítő 0,1 másodperces időalapon működik, és
+                    5
+                    egységnyi késleltetést alkalmaz, ami összesen 0,5 másodpercet jelent, így alkalmas a bemeneti jelek
+                    stabilizálására és a zajok kiszűrésére. Ezen kívül a <b>B019 jelű TIMER Li blokk</b> ciklikus
+                    időzítést
+                    valósít meg, ahol az <b>ON és OFF idő egyaránt 0,1 másodperc</b>, így folyamatos villogó jelet
+                    generál. Ez
+                    a funkció elsősorban vizuális visszajelzésre szolgál, például egy jelzőlámpa működtetésére.</p>
+
+                <h2>Kimeneti vezérlés</h2>
+                <p>A rendszer kimenetei a <b>Q1 (B022), Q2 (B023) és Q3 (B024)</b> pontokon jelennek meg, amelyek
+                    különböző
+                    aktuátorokat vagy jelzőeszközöket vezérelnek. A kimeneti jelek a számláló, az időzítők és a logikai
+                    blokkok állapotától függően aktiválódnak, így biztosítva a megfelelő működési visszajelzéseket. A
+                    kimeneti vezérlés szoros kapcsolatban áll a belső logikai struktúrával, így a rendszer gyors és
+                    determinisztikus válaszidővel reagál a bemeneti eseményekre.</p>
+
+                <h2>Kijelző és felhasználói interfész</h2>
+                <p>A rendszer vizuális visszajelzését a <b>B014–B018 jelű DISPLAY (LCD display)</b> blokkok biztosítják,
+                    amelyek különböző szöveges információkat jelenítenek meg a felhasználó számára. A kijelzőn
+                    megjelennek olyan állapotüzenetek, mint a <b>„MOTOR KI”</b> és <b>„MOTOR BE”</b>, amelyek a rendszer
+                    aktuális
+                    működési állapotát jelzik, valamint a <b>„MUNKADARAB:”</b> felirat, amely a számlált darabok számát
+                    mutatja. Emellett a <b>„NEV”</b> megjelenítés is szerepel, amely azonosítási vagy információs célt
+                    szolgál.
+                    A kijelző blokkok paraméterezése lehetővé teszi a szöveg pozicionálását sor és oszlop szerint, így
+                    egy egyszerű, de jól áttekinthető operátori interfész valósul meg.</p>
+            </div>
+
+            <div class="right-slide">
+
+                <div class="video-container">
+
+                    <iframe class="drive-video"
+                        src="https://drive.google.com/file/d/1UgqXyO4oi8s55wT3C7rRVK34o-Md55EA/preview" allow="autoplay"
+                        allowfullscreen>
+                    </iframe>
+
+                    <p id="video-note" class="video-note">
+                        ⚙️ A jobb minőségért állítsa 1080p-re a videó felbontását
+                    </p>
+
+                </div>
+
+                <div class="wrapper2">
+                    <h1>Gyakorlati alkalmazás bemutatása</h1>
+
+                    <p class="intro">
+                        A szimuláció elindítása után első lépésként az I1 és I2 bemenetek megnyomásával beállítom a
+                        számlálási határértéket, amely ebben az esetben 10 darab. Ez határozza meg, hogy a rendszer egy
+                        cikluson belül hány munkadarabot számol, mielőtt újraindulna a számlálás.
+                        <br></br>
+                        A határérték beállítása után a B007 blokk segítségével elindítom a rendszert, amely aktiválja a
+                        vezérlést és működésbe hozza a motort. Ettől a ponttól kezdve a rendszer készen áll a
+                        munkadarabok fogadására és számlálására.
+                    </p>
+
+                    <div class="main-cards">
+                        <div class="main-card">
+
+                            <h3>Munkadarabok számlálása</h3>
+                            <p>
+                                A munkadarabok adagolása az I3 bemenet segítségével történik, ahol minden egyes
+                                gombnyomás egy darabként kerül feldolgozásra. A jel hatására a B011 számláló növeli az
+                                aktuális értéket, így a rendszer folyamatosan nyomon követi az elkészült darabok számát.
+                                A számlálás addig folytatódik, amíg el nem éri a beállított 10-es értéket.
+                            </p>
+                        </div>
+
+                        <div class="main-card">
+                            <h3>Ciklus újraindulása</h3>
+                            <p>
+                                Amikor a számláló eléri a 10 darabot, a B011 blokk nullázza az értéket, és ezzel
+                                automatikusan egy új számlálási ciklus kezdődik. Ennek köszönhetően a rendszer
+                                folyamatosan képes működni anélkül, hogy minden ciklus után külön beavatkozásra lenne
+                                szükség.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="outro">
+                        <h3>Vészleállítás</h3>
+                        <p>
+                            A rendszer biztonságos működését az I4 bemenet biztosítja, amely vészleállításként működik.
+                            Amennyiben ezt megnyomom, a motor azonnal leáll, függetlenül attól, hogy a számlálás éppen
+                            milyen
+                            állapotban van. Ez a funkció garantálja, hogy szükség esetén a rendszer gyorsan és
+                            biztonságosan
+                            leállítható.
+                        </p>
+                    </div>
+                </div>
+
+
+                <section class="project-summary-section">
+                    <div class="project-summary-card">
+                        <div class="summary-column">
+                            <h2>A projekt célja</h2>
+                            <p>
+                                A projekt célja egy munkadarab számláló rendszer megtervezése és szimulációja volt PLC
+                                környezetben. A rendszer feladata, hogy a bemeneti jelek alapján pontosan számolja a
+                                gyártási folyamat során keletkező darabokat, és a beállított határérték elérésekor
+                                automatikusan leálljon a ciklus.
+                            </p>
+                            <p>
+                                A megvalósítás során arra törekedtem, hogy a rendszer ne csak egyszerű számlálást
+                                végezzen, hanem tartalmazzon alapvető vezérlési elemeket is, mint például logikai
+                                feltételek kezelése, időzítők alkalmazása és biztonsági leállítás. Kiemelt szerepet
+                                kapott a megbízható működés és a vészleállítási lehetőség, amely az I4 bemeneten
+                                keresztül bármikor megszakíthatja a rendszer működését. A Zelio Soft 2 használatával egy
+                                jól átlátható és működő modellt hoztam létre.
+                            </p>
+                        </div>
+
+                        <div class="summary-column">
+                            <h2>Mit tanultam belőle?</h2>
+                            <p>
+                                A projekt elkészítése során jobban megértettem a PLC alapú vezérlések működését,
+                                különösen a funkcionális blokkdiagram (FBD) alapú programozás alkalmazását. Megtanultam,
+                                hogyan lehet logikai elemeket, számlálókat és időzítőket összehangoltan használni egy
+                                konkrét feladat megvalósítására.
+                            </p>
+                            <p>
+                                Gyakorlatot szereztem a számlálási folyamatok kialakításában, beleértve a határértékek
+                                kezelését és a ciklikus működés megvalósítását. Emellett fejlődött a rendszerben való
+                                gondolkodásom, mivel meg kellett terveznem a blokkok közötti kapcsolatokat és a teljes
+                                működési logikát. A projekt hozzájárult ahhoz is, hogy egy műszaki megoldást átlátható
+                                és érthető módon tudjak bemutatni.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    </div>
+    </div>
+    </section>
+    <button class="back-btn" id="back-technologies" onclick="scrollToTop()">Vissza ↑</button>
+
+    <script src="./style/script.js"></script>
+</body>
+
+</html>

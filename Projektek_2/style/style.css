@@ -1,4 +1,4 @@
-/* 1. GLOBAL / OLDAL*/
+﻿/* 1. GLOBAL / OLDAL*/
 /* Az egész oldal alap stílusa */
 
 * {
@@ -100,12 +100,10 @@ nav button:hover {
     margin: 0;
 
     /* 👇 kép pozíció lejjebb */
-    background: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('./Photos/PLC_Dept_4.JPEG') center 20% / cover no-repeat;
+    background: url('./Photos/projekt_1.JPEG') center 20% / cover no-repeat;
 
     /* 👇 több hely felül (navbar miatt is) */
-    padding: 360px 0 30px;
+    padding: 320px 0 30px;
 
     display: flex;
     justify-content: flex-start;
@@ -243,11 +241,11 @@ nav button:hover {
 
 .wrapper2 {
     max-width: 1100px;
-    margin: auto;
+    margin: 80px auto;
     padding: 60px 50px;
     background: #ffffff;
     border-radius: 18px;
-    min-height: 800px;
+    min-height: 940px;
     margin-top: 30px;
 }
 
@@ -283,6 +281,22 @@ h1 {
     box-sizing: border-box;
 }
 
+.icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2d3a45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
 
 .main-card p {
     font-size: 15px;
@@ -291,30 +305,14 @@ h1 {
     margin: 0;
 }
 
-.main-card h3 {
-    font-size: 20px;
-    color: #7c0e2f;
-    line-height: 1.6;
-    margin: 0;
-    margin-bottom: 10px;
-}
-
-.outro p {
-    margin-top: 10px;
+.outro {
+    margin-top: 20px;
     color: #4a5a6a;
     font-size: 15px;
     line-height: 1.6;
     max-width: 850px;
     margin-bottom: 10px;
 }
-.outro h3 {
-    font-size: 20px;
-    color: #7c0e2f;
-    line-height: 1.6;
-    margin: 0;
-    margin-top: 20px;
-}
-
 
 
 .right-slide {
@@ -345,24 +343,22 @@ h1 {
 
 .project-summary-section {
     width: 100%;
-    max-width: 1100px;
-    margin: 30px 0 0 0;
+    max-width: 95%;
+    margin: -120px auto 80px auto;
 }
+
 .project-summary-card {
-    min-height: 785px;
     background: #ffffff;
     border-radius: 18px;
     padding: 50px 45px;
     display: flex;
-    flex-direction: column;
-    gap: 35px;
+    gap: 50px;
     align-items: flex-start;
+
 }
 
-.project-summary-section {
-    width: 100%;
-    max-width: 1100px;
-    margin: 30px 0 0 0;
+.summary-column {
+    flex: 1;
 }
 
 .summary-column p {
@@ -391,7 +387,7 @@ h1 {
 /* NOTE */
 .video-note {
     position: absolute;
-    bottom: 10px;
+    top: 10px;
     left: 10px;
     background-color: black;
     color: white;
@@ -601,8 +597,8 @@ h1 {
     .project-summary-section {
         margin: 20px auto;
     }
-    
-      /* ===== BACK BUTTON ===== */
+
+    /* ===== BACK BUTTON ===== */
     .back-btn {
         margin: 20px auto;
         display: block;

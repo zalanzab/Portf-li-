@@ -1,4 +1,4 @@
-let isHungarian = true;
+﻿let isHungarian = true;
 
 function setText(id, text) {
     const el = document.getElementById(id);
@@ -30,6 +30,17 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+function openProject1() {
+    window.location.href = '../Projektek_1/projekt_1.html';
+}
+
+function openProject2() {
+    window.location.href = '../Projektek_2/projekt_2.html';
+}
+
+function openProject3() {
+    window.location.href = '../Projektek_3/projekt_3.html';
+}
 
 function handleStudyClick() {
 
@@ -51,4 +62,5 @@ function handleStudyClick() {
         dropdown.classList.remove("mobile-open");
         navigateToSection('tanulmanyok');
     }
+
 }

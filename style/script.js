@@ -219,7 +219,7 @@ function handleProjectsClick() {
 }
 
 function openProject1() {
-    window.location.href = 'Projektek/project_1.html';
+    window.location.href = 'Projektek_1/projekt_1.html';
 }
 function openProject2() {
     window.location.href = 'Projektek_2/projekt_2.html';
