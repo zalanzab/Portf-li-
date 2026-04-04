@@ -224,3 +224,6 @@ function openProject1() {
 function openProject2() {
     window.location.href = 'Projektek_2/projekt_2.html';
 }
+function openProject3() {
+    window.location.href = 'Projektek_3/projekt_3.html';
+}

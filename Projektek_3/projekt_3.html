@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://szek-szechenyi.www.intezmeny.edir.hu/" target="_blank">
+                <img src="./style/Photos/logo.png" alt="School Logo">
+            </a>
+            <span id="nav-name">ZAB ZALÁN</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
+        <nav id="nav-menu">
+            <button onclick="navigateToSection('home')" id="nav-home">Home</button>
+            <button onclick="navigateToSection('rolam')" id="nav-about">Bemutatkozás</button>
+            <div class="dropdown">
+                <button class="dropbtn" id="nav-study" onclick="handleStudyClick()">Tanulmányok</button>
+                <div class="dropdown-content">
+                    <button onclick="navigateToSection('ev910')" id="ev910-btn">9–10. évfolyam</button>
+                    <button onclick="navigateToSection('ev11')" id="ev11-btn">11. évfolyam</button>
+                    <button onclick="navigateToSection('ev12')" id="ev12-btn">12. évfolyam</button>
+                    <button onclick="navigateToSection('ev13')" id="ev13-btn">13. évfolyam</button>
+                </div>
+            </div>
+            <button onclick="navigateToSection('projektek')" id="nav-projects">Projektek</button>
+            <button onclick="navigateToSection('technologiak')" id="nav-technologies">Technológiák</button>
+        </nav>
+
+        <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">HU</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Magasság - Távolság konverzió</h1>
+            <p>Visual Studio Code-ban</p>
+        </div>
+    </section>
+
+
+    <section class="cards-layout">
+        <div class="cards-layout2"></b>
+
+            <div class="wrapper">
+                <h1>Vezérlés működésének bemutatása</h1>
+
+                <h2>A program általános működése</h2>
+                <p>
+                    A program működése egy <b>menürendszeren</b> alapul, amely lehetővé teszi, hogy a felhasználó
+                    kiválassza a
+                    kívánt átváltást. A program indulásakor egy végtelen ciklus <b>(while True)</b> indul el, amely
+                    addig fut,
+                    amíg a felhasználó ki nem lép. A felhasználó először kiválasztja, hogy <b>magasságot</b> vagy
+                    <b>távolságot</b>
+                    szeretne átváltani, majd megadja az átváltás irányát, vagyis hogy <b>metrikus</b> rendszerből
+                    <b>angolszászba</b>
+                    vagy fordítva szeretne váltani. Ezután a program bekéri a szükséges adatokat, elvégzi a számítást,
+                    és kiírja az eredményt.
+                </p>
+
+                <h2>A függvények szerepe a programban</h2>
+                <p>A program elején több külön függvény található, amelyek mind egy-egy konkrét átváltási feladatot
+                    látnak el. Például a <b>cmfoot()</b> függvény a centimétert alakítja át lábbá, míg a <b>cminch()</b>
+                    a centimétert
+                    hüvelykké konvertálja. A távolság átváltására szolgáló függvények, mint például a <b>milekm()</b> és
+                    a <b>kmmile()</b>,
+                    a mérföld és kilométer közötti váltást végzik el. A függvények használata azért előnyös, mert így a
+                    kód átláthatóbb,
+                    könnyebben karbantartható, és az egyes műveletek külön-külön is újra felhasználhatók.
+                </p>
+
+                <h2>A változók működése és szerepe</h2>
+                <p>A programban több változó is szerepel, amelyek a felhasználó által megadott adatokat és a program
+                    állapotát tárolják. A <b>fomenu</b> változó a főmenü választását tárolja, vagyis hogy a felhasználó
+                    magasságot, távolságot vagy kilépést választott. Az <b>almenu</b> változó az átváltás irányát
+                    jelöli, tehát
+                    azt, hogy <b>metrikus</b> vagy <b>angolszász</b> rendszerből történjen az átváltás. A
+                    <b>cmnagassag</b>, <b>footmag</b> és
+                    <b>inchmag</b> változók a magasság megadására szolgálnak különböző formátumokban. A távolság
+                    esetében a
+                    <b>meter tav</b>, <b>yardtav</b>, <b>kilometer</b> és <b>merfold</b> változók tárolják a felhasználó
+                    által megadott értékeket. A
+                    <b>tipus</b> változó azt határozza meg, hogy méter–yard vagy kilométer–mérföld átváltás történjen.
+
+                </p>
+
+                <h2>A magasság átváltás folyamata</h2>
+                <p>A magasság átváltása két irányban történhet. Ha a felhasználó centiméterből szeretne átváltani, akkor
+                    a program először kiszámolja, hogy hány teljes láb fér bele az adott értékbe, majd a maradék
+                    centimétert hüvelykké alakítja. Ez úgy történik, hogy a centiméter értéket elosztja
+                    <b>30,48-cal,</b> ami
+                    egy láb hossza, majd a maradékot elosztja <b>2,54-gyel,</b> ami egy hüvelyknek felel meg. Ha az
+                    átváltás
+                    fordított irányban történik, tehát láb és hüvelyk van megadva, akkor a program külön-külön
+                    átszámítja ezeket centiméterre, majd összeadja az eredményeket.
+                </p>
+
+                <h2>A távolság átváltás működése</h2>
+                <p>A távolság átváltása szintén két fő típusra bontható. Az egyik esetben a program méter és yard között
+                    vált, a másik esetben kilométer és mérföld között. A <b>méter–yard</b> átváltásnál a program a
+                    métert
+                    elosztja <b>0,9144-gyel,</b> míg a yardot megszorozza ezzel az értékkel. A <b>kilométer–mérföld</b>
+                    átváltásnál a
+                    kilométert elosztja <b>1,60934-gyel,</b> a mérföldet pedig megszorozza ezzel az értékkel.
+                </p>
+
+                <h2>A program vezérlési szerkezete</h2>
+                <p>A program működésének alapját a vezérlési szerkezetek adják. A <b>while True</b> ciklus biztosítja,
+                    hogy a
+                    program folyamatosan fusson, és többször is lehessen használni újraindítás nélkül. Az <b>if</b> és
+                    <b>elif</b>
+                    elágazások segítségével a program eldönti, hogy a felhasználó milyen műveletet szeretne
+                    végrehajtani, és ennek megfelelően melyik kódrészlet fusson le. A <b>break</b> utasítás lehetővé
+                    teszi a
+                    programból való kilépést. Ezek az elemek együtt biztosítják a program logikus és jól követhető
+                    működését.
+                </p>
+            </div>
+
+            <div class="right-slide">
+
+                <div class="video-container">
+
+                    <iframe class="drive-video"
+                        src="https://drive.google.com/file/d/1UgqXyO4oi8s55wT3C7rRVK34o-Md55EA/preview" allow="autoplay"
+                        allowfullscreen>
+                    </iframe>
+
+                    <p id="video-note" class="video-note">
+                        ⚙️ A jobb minőségért állítsa 1080p-re a videó felbontását
+                    </p>
+
+                </div>
+
+                <div class="wrapper2">
+                    <h1>Példa a gyakorlati alkalmazásra</h1>
+
+                    <p class="intro">
+                        Amikor elindítom a programot, először megjelenik egy kérdés, amelyben ki kell választanom, hogy
+                        milyen átváltást szeretnék végezni.
+                        <br></br>
+                        Itt én a „T” betűt írom be, mert távolságot szeretnék átváltani. Ezzel a program a távolság
+                        átváltás részhez lép, ahol további kérdéseket kapok a pontos művelet meghatározásához.
+                    </p>
+
+                    <div class="main-cards">
+                        <div class="main-card">
+                            <div class="text">
+
+                                <h3>Méter átváltása yardra</h3>
+                                <p>
+                                    AA következő lépésben meg kell adnom, hogy milyen típusú távolságot szeretnék
+                                    átváltani.
+                                    Itt az „M” betűt választom, mert métert szeretnék yardra átváltani. Ezután a program
+                                    megkérdezi az átváltás irányát is, ahol ismét „M”-et írok be, mivel metrikus
+                                    rendszerből
+                                    szeretnék angolszász rendszerbe váltani. Ezután megadom a távolságot, ami ebben az
+                                    esetben 70 méter. A program kiszámolja az eredményt, és kiírja, hogy ez hány yardnak
+                                    felel meg.
+                                </p>
+                            </div>
+                            <img src="./style/Photos/tavolsag.png" alt="Távolság">
+                        </div>
+
+                        <div class="main-card">
+                            <div class="text">
+                                <h3>Újabb művelet indítása</h3>
+                                <p>
+                                    Miután az átváltás megtörtént, a program nem áll le, hanem újra megjeleníti az első
+                                    kérdést. Ez számomra azért hasznos, mert így több különböző átváltást is el tudok
+                                    végezni egymás után anélkül, hogy újra kellene indítanom a programot.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="main-card">
+                            <div class="text">
+                                <h3>Magasság átváltása angolszászból</h3>
+                                <p>
+                                    A következő lépésben a főmenüben az „M” betűt választom, mert most magasságot
+                                    szeretnék
+                                    átváltani. Ezután az „A” opciót adom meg, mivel angolszász mértékegységből szeretnék
+                                    metrikusba váltani. A program ezután bekéri az adatokat: először megadom a láb
+                                    értéket,
+                                    ami 19, majd a hüvelyk értéket, ami 4. A program ezek alapján kiszámolja a teljes
+                                    magasságot centiméterben, és megjeleníti az eredményt.
+                                </p>
+                            </div>
+                            <img src="./style/Photos/magassag.png" alt="Magasság">
+                        </div>
+                    </div>
+                    <div class="outro">
+                        <h3>Kilépés a programból</h3>
+                        <p>
+                            Az átváltás után a program ismét visszatér a főmenühöz, és újra megjeleníti a kérdést. Ekkor
+                            már nem szeretnék további műveleteket végezni, ezért a „K” betűt írom be. Ennek hatására a
+                            program kilép, és befejeződik a futás.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project-summary-section">
+        <div class="project-summary-card">
+            <div class="summary-column">
+                <h2>A projekt célja</h2>
+                <p>
+                    A projekt célja egy olyan Python program elkészítése volt, amely képes különböző mértékegységek
+                    közötti átváltásra. A program elsősorban a magasság és a távolság átváltására fókuszál, és
+                    lehetőséget biztosít a metrikus (például centiméter, méter, kilométer) és az angolszász (például
+                    láb, hüvelyk, yard, mérföld) mértékegységek közötti konverzióra.
+                </p>
+                <p>
+                    A program célja nemcsak a
+                    gyakorlati használhatóság, hanem az is, hogy bemutassa a Python programozási alapjait, például a
+                    függvények, ciklusok és elágazások használatát.
+                </p>
+            </div>
+
+            <div class="summary-column">
+                <h2>Mit tanultam belőle?</h2>
+                <p>
+                    A projekt elkészítése során jobban megértettem a Python alapú programozás működését,
+                    különösen a függvények, ciklusok és elágazások használatát. Megtanultam, hogyan lehet
+                    egy programot logikusan felépíteni úgy, hogy a felhasználó különböző lehetőségek közül
+                    választhasson egy menürendszeren keresztül.
+                </p>
+                <p>
+                    Gyakorlatot szereztem abban, hogy hogyan lehet matematikai műveleteket programkódban alkalmazni.
+                    Emellett fejlődött a problémamegoldó gondolkodásom is, mivel meg kellett terveznem
+                    a program működésének lépéseit és a felhasználói bemenetek kezelését. 
+                </p>
+            </div>
+        </div>
+    </section>
+    <button class="back-btn" id="back-technologies" onclick="scrollToTop()">Vissza ↑</button>
+
+    <script src="./style/script.js"></script>
+</body>
+
+</html>
