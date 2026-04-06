@@ -79,20 +79,6 @@ nav button:hover {
     color: #8a1538;
 }
 
-/* Nyelvváltó gomb */
-
-.lang-btn {
-    background-color: #8a1538;
-    border: none;
-    color: white;
-    padding: 8px 15px;
-    cursor: pointer;
-}
-
-.lang-btn:hover {
-    background-color: #a61e4d;
-}
-
 /* ================== 3. HERO SZEKCIÓ 
 /* Fekete-fehér átmenetes felső rész */
 

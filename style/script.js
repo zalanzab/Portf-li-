@@ -91,3 +91,4 @@ function openProject3() {
 function openProject4() {
     window.location.href = 'Projektek_4/projekt_4.html';
 }
+

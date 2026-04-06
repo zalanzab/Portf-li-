@@ -1,12 +1,4 @@
-﻿let isHungarian = true;
-
-function setText(id, text) {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = text;
-}
-
-
-function scrollToSection(id) {
+﻿function scrollToSection(id) {
 
     document.getElementById(id).scrollIntoView({
         behavior: "smooth"
