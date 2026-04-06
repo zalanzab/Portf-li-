@@ -427,73 +427,110 @@ nav button:hover {
 
 
 /* ================== 📱 MOBIL (768px alatt) ================== */
-
+/* ================== 📱 MOBIL (768px alatt) ================== */
 @media (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
 
     /* ===== NAVBAR ===== */
 
     header {
-        padding: 0 20px;
-        height: 70px;
+        padding: 12px 16px;
+        height: 72px;
+        align-items: center;
+    }
+
+    .logo {
+        gap: 10px;
+        max-width: 75%;
     }
 
     .logo img {
-        height: 80px;
-        padding-top: 10px;
+        height: 58px;
+        padding-top: 0;
     }
 
-    .logo span {
-        font-size: 14px;
+    .logo span,
+    #nav-name {
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+        font-size: 30px;
+        z-index: 1001;
     }
 
     nav {
         display: none;
         flex-direction: column;
-        background-color: black;
+        align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0.96);
         position: absolute;
-        top: 70px;
-        right: 0;
-        width: 220px;
-        padding: 20px;
+        top: 72px;
+        right: 12px;
+        width: calc(100% - 24px);
+        max-width: 320px;
+        padding: 18px 16px;
+        border-radius: 14px;
         z-index: 999;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
 
     nav.active {
         display: flex;
     }
 
-    nav button {
-        margin: 10px 0;
+    nav button,
+    .dropbtn {
+        margin: 0;
+        padding: 12px 0;
         text-align: left;
-        font-size: 14px;
+        font-size: 15px;
+        width: 100%;
     }
 
-    .menu-toggle {
-        display: block;
-        margin-left: auto;
-        margin-right: 10px;
+    .dropdown {
+        width: 100%;
+        padding-bottom: 0;
     }
 
-    /* Dropdown mobil fix */
     .dropdown-content {
         position: static;
+        display: none;
+        opacity: 1;
+        transform: none;
         box-shadow: none;
         background: #111;
-        border-radius: 8px;
-        margin-top: 5px;
+        border-radius: 10px;
+        margin-top: 6px;
+        padding: 8px 12px;
+        min-width: 100%;
     }
 
     .dropdown-content.mobile-open {
         display: block;
     }
 
+    .dropdown-content button {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
     /* ===== HERO ===== */
 
     .hero {
-        padding: 160px 20px 40px;
+        padding: 130px 20px 50px;
         justify-content: flex-start;
         text-align: left;
-        background-position: 60% center;
+        background-position: center center;
+        background-size: cover;
     }
 
     .hero-content {
@@ -502,112 +539,164 @@ nav button:hover {
     }
 
     .hero h1 {
-        font-size: 28px;
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 10px;
     }
 
     .hero p {
         font-size: 16px;
+        line-height: 1.5;
     }
 
-    /* ===== LAYOUT ===== */
+    /* ===== FŐ KÁRTYÁK ===== */
+
+    .card {
+        width: calc(100% - 24px);
+        margin: 24px auto;
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+        gap: 8px;
+        border-bottom: none;
+        margin-bottom: 20px;
+    }
+
+    .tab {
+        flex: 1 1 calc(50% - 8px);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 12px 8px;
+        font-size: 13px;
+        background: #fafafa;
+    }
+
+    .tab.active {
+        border: 1px solid #7a003c;
+        border-bottom: 1px solid #7a003c;
+        background: #fff;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        margin-bottom: 28px;
+    }
+
+    .text-box,
+    .image-box {
+        width: 100%;
+    }
+
+    .text-box h2 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    .text-box p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .image-box {
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+    .image-box img {
+        border-radius: 10px;
+    }
+
+    .image-box-modal {
+        width: 94%;
+        padding: 10px;
+    }
+
+    /* ===== ALSÓ ÖSSZEGZŐ RÉSZ ===== */
 
     .cards-layout {
         flex-direction: column;
         gap: 20px;
-        margin: 20px auto;
+        max-width: 100%;
+        margin: 24px auto 40px auto;
+        padding: 0 12px;
     }
 
     .cards-layout2 {
-        flex-direction: column;
-        gap: 20px;
+        width: 100%;
     }
 
-    .right-slide {
-        margin-top: 0;
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding: 28px 18px;
+        border-radius: 14px;
     }
 
-    /* ===== WRAPPEREK ===== */
-
-    .wrapper,
-    .wrapper2 {
-        padding: 30px 20px;
-        margin: 20px auto;
+    .wrapper h1 {
+        font-size: 22px;
+        line-height: 1.4;
+        letter-spacing: 1px;
     }
 
-    .wrapper2 {
-        min-height: auto;
+    .wrapper h1::after {
+        margin-top: 14px;
     }
 
-    /* ===== SZÖVEG ===== */
-
-    h1 {
-        font-size: 24px;
-    }
-
-    .wrapper h2 {
-        font-size: 18px;
-    }
-
-    .wrapper p,
     .intro,
-    .outro {
-        font-size: 14px;
+    .outro,
+    .main-card p {
+        font-size: 15px;
+        line-height: 1.7;
     }
-
-
-    .drive-video {
-        height: 320px;
-    }
-
-    /* ===== KÁRTYÁK ===== */
 
     .main-cards {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
     }
 
     .main-card {
-        padding: 20px;
+        min-width: 100%;
+        padding: 22px 18px;
     }
 
     .icon img {
-        width: 50px;
-        height: 50px;
+        width: 52px;
+        height: 52px;
     }
 
     /* ===== VIDEÓ ===== */
 
-    .side-video {
-        width: 100%;
-        border-radius: 12px;
+    .video-container {
+        margin: 0 auto 30px auto;
+        width: calc(100% - 24px);
+        max-width: 100%;
+        border-radius: 14px;
     }
 
-    /* ===== PROJECT SUMMARY ===== */
-
-    .project-summary-card {
-        flex-direction: column;
-        padding: 30px 20px;
-        gap: 30px;
+    .drive-video {
+        height: 240px;
     }
 
-    .summary-column h2 {
-        font-size: 20px;
+    .video-note {
+        font-size: 12px;
+        padding: 6px 10px;
     }
 
-    .summary-column p {
-        font-size: 14px;
-    }
+    /* ===== GOMB ===== */
 
-    .project-summary-section {
-        margin: 20px auto;
-    }
-
-    /* ===== BACK BUTTON ===== */
     .back-btn {
-        margin: 20px auto;
+        margin: 10px auto 30px auto;
         display: block;
-        width: 90%;
+        width: calc(100% - 24px);
+        max-width: 320px;
         text-align: center;
+        padding: 14px 20px;
+        font-size: 15px;
     }
-
 }
