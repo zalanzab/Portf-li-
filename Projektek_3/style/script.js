@@ -33,6 +33,10 @@ function openProject3() {
     window.location.href = '../Projektek_3/projekt_3.html';
 }
 
+function openProject4() {
+    window.location.href = '../Projektek_4/projekt_4.html';
+}
+
 function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("active");
 }

@@ -33,6 +33,10 @@ function openProject3() {
     window.location.href = '../Projektek_3/projekt_3.html';
 }
 
+function openProject4() {
+    window.location.href = '../Projektek_4/projekt_4.html';
+}
+
 
 function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("active");
@@ -77,4 +81,16 @@ function showTab(index) {
 
   contents[index].classList.add("active");
   tabs[index].classList.add("active");
+}
+
+function openImage(src) {
+    const modal = document.getElementById("image-modal");
+    const img = document.getElementById("modal-img");
+
+    img.src = src;
+    modal.style.display = "flex";
+}
+
+function closeImage() {
+    document.getElementById("image-modal").style.display = "none";
 }

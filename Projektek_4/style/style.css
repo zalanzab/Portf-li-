@@ -7,7 +7,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     overflow-x: hidden;
@@ -100,9 +101,9 @@ nav button:hover {
     margin: 0;
 
     /* 👇 kép pozíció lejjebb */
-    background: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('./Photos/PLC_Dept_4.JPEG') center 20% / cover no-repeat;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('./Photos/rises.PNG') center 20% / cover no-repeat;
 
     /* 👇 több hely felül (navbar miatt is) */
     padding: 360px 0 30px;
@@ -181,8 +182,7 @@ nav button:hover {
 
 /* tartalom ------------------------------------------------ */
 
-.wrapper h1,
-.wrapper2 h1 {
+.wrapper h1 {
     font-size: 25px;
     font-weight: 450;
     letter-spacing: 4px;
@@ -191,8 +191,7 @@ nav button:hover {
     position: relative;
 }
 
-.wrapper h1::after,
-.wrapper2 h1::after {
+.wrapper h1::after {
     content: "";
     display: block;
     width: 60px;
@@ -210,116 +209,180 @@ nav button:hover {
     align-items: flex-start;
 }
 
-.cards-layout2 {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
 
 .wrapper {
-    min-width: 1200px;
-    margin: 80px auto;
+    width: 1200px;
+    margin: 30px auto;
     padding: 60px 50px;
     background: #ffffff;
-    border-radius: 18px;
-
+    border-radius: 15px;
 }
 
-
-.wrapper h2 {
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 15px;
-}
-
-.wrapper p {
-    color: #4a5a6a;
+.intro {
+    margin-top: 20px;
+    color: #000000;
     font-size: 15px;
     line-height: 1.6;
-    max-width: 850px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+
+.main-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.main-card {
+    flex: 1;
+    min-width: 260px;
+    background: white;
+    border: 1px solid #e3e6ea;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+}
+
+.icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2d3a45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+.main-card p {
+    font-size: 15px;
+    color: #000000;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.outro {
+    margin-top: 20px;
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 1000px;
     margin-bottom: 20px;
 }
 
 .card {
-  width: 1200px;
-  max-width: 100%;
-  margin: 40px auto;
-  background-color: #fffefe;
-  border-radius: 15px;
-  padding: 20px;
-  box-sizing: border-box;
+    width: 1200px;
+    max-width: 100%;
+    margin: 40px auto;
+    background-color: #fffefe;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .tabs {
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 30px;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
 }
 
 .tab {
-  flex: 1;
-  background: none;
-  border: none;
-  padding: 15px 10px;
-  cursor: pointer;
-  font-size: 14px;
-  text-align: center;
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
 }
 
 .tab.active {
-  color: #7a003c;
-  border-bottom: 2px solid #7a003c;
-  font-weight: bold;
+    color: #7a003c;
+    border-bottom: 2px solid #7a003c;
+    font-weight: bold;
 }
 
 .tab-content {
-  display: none;
+    display: none;
 }
 
 .tab-content.active {
-  display: block;
+    display: block;
 }
 
 .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
 .text-box {
-  width: 48%;
+    width: 48%;
 }
 
 .text-box h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 30px;
-  font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: normal;
 }
 
 .text-box p {
-  line-height: 1.6;
-  color: #444;
+    line-height: 1.6;
+    color: #444;
 }
 
 .image-box {
-  width: 48%;
-  background-color: #e6e6e6;
-  border-radius: 15px;
-  padding: 10px;
-  box-sizing: border-box;
-  text-align: center;
+    width: 48%;
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .image-box img {
-  max-width: 100%;
+    max-width: 100%;
     border-radius: 15px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box-modal {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    max-width: 1300px;
+    width: 80%;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.image-box-modal img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .video-container {
@@ -552,8 +615,8 @@ nav button:hover {
     .project-summary-section {
         margin: 20px auto;
     }
-    
-      /* ===== BACK BUTTON ===== */
+
+    /* ===== BACK BUTTON ===== */
     .back-btn {
         margin: 20px auto;
         display: block;

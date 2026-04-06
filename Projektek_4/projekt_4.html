@@ -2,292 +2,294 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./style/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="https://szek-szechenyi.www.intezmeny.edir.hu/" target="_blank">
-                <img src="./style/Photos/logo.png" alt="School Logo">
-            </a>
-            <span id="nav-name">ZAB ZALÁN</span>
+  <header>
+    <div class="logo">
+      <a href="https://szek-szechenyi.www.intezmeny.edir.hu/" target="_blank">
+        <img src="./style/Photos/logo.png" alt="School Logo">
+      </a>
+      <span id="nav-name">ZAB ZALÁN</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </button>
+    <nav id="nav-menu">
+      <button onclick="navigateToSection('home')" id="nav-home">Home</button>
+      <button onclick="navigateToSection('rolam')" id="nav-about">Bemutatkozás</button>
+      <div class="dropdown">
+        <button class="dropbtn" id="nav-study" onclick="handleStudyClick()">Tanulmányok</button>
+        <div class="dropdown-content">
+          <button onclick="navigateToSection('ev910')" id="ev910-btn">9–10. évfolyam</button>
+          <button onclick="navigateToSection('ev11')" id="ev11-btn">11. évfolyam</button>
+          <button onclick="navigateToSection('ev12')" id="ev12-btn">12. évfolyam</button>
+          <button onclick="navigateToSection('ev13')" id="ev13-btn">13. évfolyam</button>
         </div>
-        <button class="menu-toggle" onclick="toggleMenu()">
-            ☰
-        </button>
-        <nav id="nav-menu">
-            <button onclick="navigateToSection('home')" id="nav-home">Home</button>
-            <button onclick="navigateToSection('rolam')" id="nav-about">Bemutatkozás</button>
-            <div class="dropdown">
-                <button class="dropbtn" id="nav-study" onclick="handleStudyClick()">Tanulmányok</button>
-                <div class="dropdown-content">
-                    <button onclick="navigateToSection('ev910')" id="ev910-btn">9–10. évfolyam</button>
-                    <button onclick="navigateToSection('ev11')" id="ev11-btn">11. évfolyam</button>
-                    <button onclick="navigateToSection('ev12')" id="ev12-btn">12. évfolyam</button>
-                    <button onclick="navigateToSection('ev13')" id="ev13-btn">13. évfolyam</button>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn" id="nav-projects" onclick="handleProjectsClick()">Projektek</button>
-                <div class="dropdown-content">
-                    <button onclick="openProject1()" id="projekt1-btn">Munkadarab számláló</button>
-                    <button onclick="openProject2()" id="projekt2-btn">Okosotthon vezérlés</button>
-                    <button onclick="openProject3()" id="projekt3-btn">Magasság-Távolság</button>
-                    <button onclick="openProject4()" id="projekt4-btn">Portfólió</button>
-                </div>
-            </div>
-            <button onclick="navigateToSection('technologiak')" id="nav-technologies">Technológiák</button>
-        </nav>
-
-        <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">HU</button>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Munkadarab számláló</h1>
-            <p>Zelio Soft 2-ben</p>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" id="nav-projects" onclick="handleProjectsClick()">Projektek</button>
+        <div class="dropdown-content">
+          <button onclick="openProject1()" id="projekt1-btn">Munkadarab számláló</button>
+          <button onclick="openProject2()" id="projekt2-btn">Okosotthon vezérlés</button>
+          <button onclick="openProject3()" id="projekt3-btn">Magasság-Távolság</button>
+          <button onclick="openProject4()" id="projekt4-btn">Portfólió</button>
         </div>
-    </section>
+      </div>
+      <button onclick="navigateToSection('technologiak')" id="nav-technologies">Technológiák</button>
+    </nav>
 
+    <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">HU</button>
+  </header>
 
-    <section class="cards-layout">
-        <div class="cards-layout2">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Portfólió</h1>
+      <p>Visual Studio Code-ban</p>
+    </div>
+  </section>
 
-            <div class="wrapper">
-                <h1>Vezérlés működésének bemutatása</h1>
+  <section class="card">
+    <div class="tabs">
+      <button class="tab active" onclick="showTab(0)">Kezdetek</button>
+      <button class="tab" onclick="showTab(1)">Tartalom/Stílus</button>
+      <button class="tab" onclick="showTab(2)">Projektek</button>
+      <button class="tab" onclick="showTab(3)">GitHub/Mobile</button>
+    </div>
 
-
-                <p>
-                    A munkadarab számláló rendszer a <b>Zelio Soft 2</b> környezetben készült, és egy PLC alapú
-                    vezérlésként
-                    valósul meg, amely digitális bemenetekből <b>(I1–I4)</b>, digitális kimenetekből <b>(Q1–Q3)</b>,
-                    valamint
-                    különböző funkcionális blokkokból épül fel. A program <b> (Function Block Diagram)</b> struktúrát
-                    alkalmaz, amelyben a jelút jól követhető módon halad a bemeneti feldolgozástól a logikai
-                    döntéshozatalon és számláláson keresztül egészen a kimeneti vezérlésig és kijelzésig. A rendszer
-                    moduláris felépítésű, így külön egységekbe szervezve tartalmazza a jelkezelést, a számlálást, az
-                    időzítést és a megjelenítést.
-                </p>
-
-                <h2>Bemeneti jelek és előfeldolgozás</h2>
-                <p>A rendszer működésének alapját az <b>I1–I4</b> digitális bemenetek képezik, amelyek különböző
-                    vezérlési és
-                    érzékelési feladatokat látnak el, például indítási, resetelési vagy darabérzékelési funkciókat.
-                    Kiemelt szerepet kap az <b>I4</b> bemenet, amely vészleállásként <b>(emergency stop)</b> működik, és
-                    aktiválása
-                    esetén azonnal megszakítja a rendszer működését, valamint leállítja a motort A
-                    bemeneti jelek feldolgozása során a <b> és B005 jelű MUX (multiplexer)</b> blokkok kerülnek
-                    alkalmazásra, amelyek lehetővé teszik több bemeneti jel közül a megfelelő kiválasztását, így
-                    különböző működési módok vagy jelutak kezelése valósítható meg. A <b>B006</b> blokk ezen jelek
-                    további
-                    feldolgozását végzi, biztosítva a rendszer számára a megfelelő logikai szintű bemeneti
-                    információkat.</p>
-
-                <h2>Logikai vezérlés és feltételvizsgálat</h2>
-                <p>A feldolgozott bemeneti jelek a <b>B010 jelű AND kapuba</b> kerülnek, amely a rendszer egyik központi
-                    logikai eleme. Ez a blokk biztosítja, hogy a számlálási folyamat csak akkor induljon el, ha minden
-                    szükséges feltétel teljesül, például a rendszer aktív állapotban van és nincs tiltó jel jelen. A
-                    logikai vezérlés részeként a <b>B008 OR kapu és a B012 NOT kapu</b> is szerepet játszik, amelyek
-                    különböző
-                    feltételek kombinációját és negálását végzik el, ezáltal növelve a rendszer rugalmasságát és
-                    biztonságát. A <b>B009 SR (SET/RESET) flip-flop blokk</b> az állapotok tárolására szolgál, így a
-                    rendszer
-                    képes megőrizni egy adott működési állapotot még akkor is, ha a bemeneti jel már megszűnt.</p>
-
-                <h2>Számláló egység működése</h2>
-                <p>A munkadarabok számlálását a <b>B011 jelű UP/DOWN COUNTER blokk</b> végzi, amely képes a bemeneti
-                    impulzusok
-                    alapján növelni vagy csökkenteni a számláló értékét. A számláló működéséhez tartozik egy előre
-                    beállított referenciaérték, amelyet a <b>B026 NUM (numerical constant)</b> blokk biztosít, és jelen
-                    esetben
-                    ez az érték 5. Ez azt jelenti, hogy a rendszer egy adott eseményhez, például jelzéshez vagy kimeneti
-                    aktiváláshoz akkor jut el, amikor a számláló eléri az <b>5</b> darabot. A számláló bemenetei
-                    közvetlenül
-                    kapcsolódnak a logikai vezérléshez, így biztosított, hogy csak megfelelő feltételek mellett
-                    történjen számlálás.
-                </p>
-
-                <h2>Időzítési funkciók</h2>
-                <p>A rendszer működésében fontos szerepet játszanak az időzítő blokkok, amelyek közül a <b>B013 jelű
-                        TIMER
-                        A/C blokk</b> késleltetési funkciót lát el. Ez az időzítő 0,1 másodperces időalapon működik, és
-                    5
-                    egységnyi késleltetést alkalmaz, ami összesen 0,5 másodpercet jelent, így alkalmas a bemeneti jelek
-                    stabilizálására és a zajok kiszűrésére. Ezen kívül a <b>B019 jelű TIMER Li blokk</b> ciklikus
-                    időzítést
-                    valósít meg, ahol az <b>ON és OFF idő egyaránt 0,1 másodperc</b>, így folyamatos villogó jelet
-                    generál. Ez
-                    a funkció elsősorban vizuális visszajelzésre szolgál, például egy jelzőlámpa működtetésére.</p>
-
-                <h2>Kimeneti vezérlés</h2>
-                <p>A rendszer kimenetei a <b>Q1 (B022), Q2 (B023) és Q3 (B024)</b> pontokon jelennek meg, amelyek
-                    különböző
-                    aktuátorokat vagy jelzőeszközöket vezérelnek. A kimeneti jelek a számláló, az időzítők és a logikai
-                    blokkok állapotától függően aktiválódnak, így biztosítva a megfelelő működési visszajelzéseket. A
-                    kimeneti vezérlés szoros kapcsolatban áll a belső logikai struktúrával, így a rendszer gyors és
-                    determinisztikus válaszidővel reagál a bemeneti eseményekre.</p>
-
-                <h2>Kijelző és felhasználói interfész</h2>
-                <p>A rendszer vizuális visszajelzését a <b>B014–B018 jelű DISPLAY (LCD display)</b> blokkok biztosítják,
-                    amelyek különböző szöveges információkat jelenítenek meg a felhasználó számára. A kijelzőn
-                    megjelennek olyan állapotüzenetek, mint a <b>„MOTOR KI”</b> és <b>„MOTOR BE”</b>, amelyek a rendszer
-                    aktuális
-                    működési állapotát jelzik, valamint a <b>„MUNKADARAB:”</b> felirat, amely a számlált darabok számát
-                    mutatja. Emellett a <b>„NEV”</b> megjelenítés is szerepel, amely azonosítási vagy információs célt
-                    szolgál.
-                    A kijelző blokkok paraméterezése lehetővé teszi a szöveg pozicionálását sor és oszlop szerint, így
-                    egy egyszerű, de jól áttekinthető operátori interfész valósul meg.</p>
-            </div>
+    <div class="tab-content active">
+      <div class="row">
+        <div class="text-box">
+          <h2>Tervezés</h2>
+          <p>Ebben a szakaszban egy Word dokumentumban megterveztem a portfólió felépítését. Vizualizáltam az
+            elképzeléseimet és kialakítottam a főbb részeket. Átgondoltam, hogyan fog kinézni az oldal és milyen
+            tartalmak kerülnek bele.</p>
         </div>
-    </section>
-
-   <section class="card">
-  <div class="tabs">
-    <button class="tab active" onclick="showTab(0)">Tervezés</button>
-    <button class="tab" onclick="showTab(1)">Felkészülés</button>
-    <button class="tab" onclick="showTab(2)">Indulás</button>
-    <button class="tab" onclick="showTab(3)">Utazás után</button>
-  </div>
-
-  <div class="tab-content active">
-    <div class="row">
-      <div class="text-box">
-        <h2>Tervezz profin</h2>
-        <p>Az alkalmazás segít abban, hogy könnyebben megszervezd az utazásod.</p>
+        <div class="image-box">
+          <img src="./style/Photos/portfoli.PNG" alt="Tervezés 1" onclick="openImage(this.src)">
+        </div>
       </div>
-      <div class="image-box">
-        <img src="./style/Photos/portfoli.PNG" alt="Tervezés 1">
+
+      <div class="row">
+        <div class="image-box">
+          <img src="./style/Photos/portfolio.PNG" alt="Tervezés 2" onclick="openImage(this.src)">
+        </div>
+        <div class="text-box">
+          <h2>Első kész megjelenés</h2>
+          <p>Kidolgoztam a navigáció működését és az oldal elrendezését. Fontos volt számomra, hogy minden tartalom
+            könnyen elérhető legyen. Átgondoltam a menüpontok felépítését és sorrendjét. Törekedtem az egyszerű és
+            felhasználóbarát megoldásokra. Így az oldal használata átláthatóbb lett.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="text-box">
+          <h2>Kezdeti dizájn</h2>
+          <p>Tovább fejlesztettem az oldal kinézetét és elrendezését. Finomítottam a blokkok elhelyezkedését és
+            méreteit. Elkezdett kialakulni az oldal végleges struktúrája. Figyeltem az arányokra és az egységes
+            megjelenésre. Az oldal így egyre letisztultabb lett.</p>
+        </div>
+        <div class="image-box">
+          <img src="./style/Photos/portfolio2.PNG" alt="Tervezés 3" onclick="openImage(this.src)">
+        </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="image-box">
-        <img src="./style/Photos/portfolio.PNG" alt="Tervezés 2">
+    <div class="tab-content">
+      <div class="row">
+        <div class="text-box">
+          <h2>Letisztultabb stílus</h2>
+          <p>Megírtam a portfólió szöveges tartalmát és feltöltöttem az oldalra. Törekedtem arra, hogy minden rész
+            érthető és lényegre törő legyen. Figyeltem a megfelelő tagolásra is. A cél az volt, hogy könnyen olvasható
+            tartalom jöjjön létre. Így az oldal informatívabb lett</p>
+        </div>
+        <div class="image-box">
+          <img src="./style/Photos/portfolio5.PNG" alt="Felkészülés 1" onclick="openImage(this.src)">
+        </div>
       </div>
-      <div class="text-box">
-        <h2>Foglalj egyszerűen</h2>
-        <p>Gyors és kényelmes foglalás néhány kattintással, bárhol is vagy.</p>
+
+      <div class="row">
+        <div class="image-box">
+          <img src="./style/Photos/portfolio8.PNG" alt="Felkészülés 2" onclick="openImage(this.src)">
+        </div>
+        <div class="text-box">
+          <h2>Dizájnolás</h2>
+          <p>CSS segítségével kialakítottam az oldal megjelenését. Beállítottam a színeket, betűtípusokat és alap
+            stílusokat. Törekedtem az egységes dizájnra. Fontos volt, hogy az oldal modern hatást keltsen. Így
+            vizuálisan is rendezettebb lett.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="text-box">
+          <h2>Elrendezés javítása</h2>
+          <p>Finomhangoltam a részleteket, például a térközöket és az elrendezést. Kijavítottam az apróbb hibákat és
+            eltéréseket. Figyeltem az egységes megjelenés megtartására. Törekedtem a letisztult kialakításra. Az oldal
+            így esztétikusabb lett.</p>
+        </div>
+        <div class="image-box">
+          <img src="./style/Photos/portfolio12.PNG" alt="Felkészülés 3" onclick="openImage(this.src)">
+        </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="text-box">
-        <h2>Találj ajánlatokat</h2>
-        <p>Fedezd fel az utazási csomagokat és válaszd ki a neked legjobbat.</p>
+    <div class="tab-content">
+      <div class="row">
+        <div class="text-box">
+          <h2>Kezdeti projekt dizájn</h2>
+          <p>Kialakítottam a projektoldalak alap dizájnját. Meghatároztam, hogyan jelenjenek meg a tartalmak és a képek.
+            Törekedtem
+            az átlátható és esztétikus elrendezésre. A későbbiekben ezt a dizájnt tovább fejlesztettem és finomítottam.
+            Ez lett az alapja a végleges megjelenésnek.</p>
+        </div>
+        <div class="image-box">
+          <img src="./style/Photos/project1.PNG" alt="Indulás 1" onclick="openImage(this.src)">
+        </div>
       </div>
-      <div class="image-box">
-        <img src="./style/Photos/portfolio2.PNG" alt="Tervezés 3">
-      </div>
-    </div>
-  </div>
 
-  <div class="tab-content">
-    <div class="row">
-      <div class="text-box">
-        <h2>Készülj fel időben</h2>
-        <p>Minden fontos részletet előre láthatsz egy helyen az indulás előtt.</p>
+      <div class="row">
+        <div class="image-box">
+          <img src="./style/Photos/project4.PNG" alt="Indulás 2" onclick="openImage(this.src)">
+        </div>
+        <div class="text-box">
+          <h2>Projektek összehangolása</h2>
+          <p>Bővítettem a projektek listáját további munkákkal. Minden projekthez rövid leírást készítettem. Törekedtem
+            az egységes megjelenítésre. Figyeltem a rendezett struktúrára. Így a projektek áttekinthetőbbek lettek</p>
+        </div>
       </div>
-      <div class="image-box">
-        <img src="./style/Photos/portfolio5.PNG" alt="Felkészülés 1">
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="image-box">
-        <img src="./style/Photos/portfolio8.PNG" alt="Felkészülés 2">
-      </div>
-      <div class="text-box">
-        <h2>Nézd át az adatokat</h2>
-        <p>Gyorsan ellenőrizheted az utazáshoz szükséges információkat és részleteket.</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="text-box">
-        <h2>Legyen minden kéznél</h2>
-        <p>Az alkalmazásban egyszerűen elérhető minden fontos utazási információ.</p>
-      </div>
-      <div class="image-box">
-        <img src="./style/Photos/portfolio12.PNG" alt="Felkészülés 3">
-      </div>
-    </div>
-  </div>
-
-  <div class="tab-content">
-    <div class="row">
-      <div class="text-box">
-        <h2>Indulj könnyedén</h2>
-        <p>Az utazás napján minden fontos részlet gyorsan elérhető marad számodra.</p>
-      </div>
-      <div class="image-box">
-        <img src="./style/Photos/project1.PNG" alt="Indulás 1">
+      <div class="row">
+        <div class="text-box">
+          <h2>Visual Studio Code-ban</h2>
+          <p>Ezen a képen a portfólió kódban látható Visual Studio Code-ban. HTML, CSS és JavaScript segítségével
+            építettem fel az oldalt. Figyeltem a rendezett és
+            átlátható kódra. Így a projekt könnyebben fejleszthetővé vált.</p>
+        </div>
+        <div class="image-box">
+          <img src="./style/Photos/project5.PNG" alt="Indulás 3" onclick="openImage(this.src)">
+        </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="image-box">
-        <img src="./style/Photos/project4.PNG" alt="Indulás 2">
+    <div class="tab-content">
+      <div class="row">
+        <div class="text-box">
+          <h2>GitHub fiók</h2>
+          <p>Készítettem egy GitHub fiókot, ahova folyamatosan feltöltöttem a portfóliót. Minden fontosabb lépést
+            mentettem, hogy nyomon követhető legyen a fejlődés. Ez azért volt fontos számomra, hogy semmiképpen ne
+            vesszen el a munkám. Emellett így biztonságosan tároltam a fájlokat, így a portfólió online is elérhetővé
+            vált.
+          </p>
+        </div>
+        <div class="image-box">
+          <img src="./style/Photos/github.PNG" alt="Utazás után 1" onclick="openImage(this.src)">
+        </div>
       </div>
-      <div class="text-box">
-        <h2>Kövesd a részleteket</h2>
-        <p>Gyorsan láthatod a járattal kapcsolatos információkat és frissítéseket.</p>
+
+      <div class="row">
+        <div class="image-box" style="background: none;">
+          <img src="./style/Photos/mobile.png" alt="Utazás után 2" style="max-height: 260px;">
+        </div>
+        <div class="text-box">
+          <h2>Megjelenés mobilon</h2>
+          <p>Reszponzív kialakítást készítettem főként a GitHub link miatt, hogy mobilon is jól működjön az oldal, és
+            bármikor rá tudjak nézni. Az elemek elrendezését kisebb
+            képernyőkhöz igazítottam. Figyeltem a megfelelő méretezésre. A navigációt is mobilbaráttá tettem. Így az
+            oldal több eszközön is használható lett</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="text-box">
+          <h2>Végső arculat</h2>
+          <p>A projekt végére egy működő portfólió oldalt hoztam létre. Összehangoltam a tartalmat, a dizájnt és a
+            funkcionalitást. Ellenőriztem az oldal működését különböző nézetekben. Törekedtem az átlátható és egységes
+            megjelenésre.</p>
+        </div>
+        <div class="image-box">
+          <img src="./style/Photos/kesz_oldal.PNG" alt="Utazás után 3" onclick="openImage(this.src)">
+        </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="text-box">
-        <h2>Maradj naprakész</h2>
-        <p>Fontos értesítések és információk egy helyen, amikor szükséged van rájuk.</p>
-      </div>
-      <div class="image-box">
-        <img src="./style/Photos/project5.PNG" alt="Indulás 3">
+    <div id="image-modal" class="image-modal" onclick="closeImage()">
+      <div class="image-box-modal">
+        <img id="modal-img">
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="tab-content">
-    <div class="row">
-      <div class="text-box">
-        <h2>Utazás után is hasznos</h2>
-        <p>Az alkalmazásban később is visszanézheted a fontos utazási információkat.</p>
-      </div>
-      <div class="image-box">
-        <img src="https://via.placeholder.com/260x220?text=Utan+1" alt="Utazás után 1">
-      </div>
-    </div>
+  <section class="cards-layout" id="bemutatas">
+    <div class="cards-layout2">
 
-    <div class="row">
-      <div class="image-box">
-        <img src="https://via.placeholder.com/260x220?text=Utan+2" alt="Utazás után 2">
-      </div>
-      <div class="text-box">
-        <h2>Nézd vissza az adatokat</h2>
-        <p>Az utazás részletei továbbra is könnyen elérhetőek maradnak számodra.</p>
-      </div>
-    </div>
+      <div class="wrapper">
+        <h1>Őszinte összegzés a portólió készültéről</h1>
+        <p class="intro">
+          A portfólióm elkészítése során végig arra törekedtem, hogy a <b>lehető legmagasabb színvonalat</b> érjem el.
+          Már a
+          tervezési szakaszban is részletesen átgondoltam az oldal felépítését, a tartalom elrendezését és a
+          felhasználói élményt. <b>Nem elégedtem meg egy egyszerű, működő megoldással</b> az volt a célom, hogy egy
+          esztétikus,
+          letisztult és professzionális megjelenésű weboldalt hozzak létre, ami felkelti az ember figyelmét.
+        </p>
 
-    <div class="row">
-      <div class="text-box">
-        <h2>Tervezd a következőt</h2>
-        <p>Használd újra az alkalmazást a következő utazásod gyors megszervezéséhez.</p>
-      </div>
-      <div class="image-box">
-        <img src="https://via.placeholder.com/260x220?text=Utan+3" alt="Utazás után 3">
-      </div>
-    </div>
-  </div>
-</section>
-    <button class="back-btn" id="back-technologies" onclick="scrollToTop()">Vissza ↑</button>
+        <div class="main-cards">
+          <div class="main-card">
+            <div class="icon">
+              <img src="./style/Photos/high-quality.png" alt="Lámpa">
+            </div>
+            <p>
+              A fejlesztés során <b>HTML, CSS és JavaScript</b> segítségével építettem fel az oldalt, külön figyelmet
+              fordítva
+              a részletekre. Többször újraterveztem bizonyos elemeket, finomhangoltam a dizájnt, a színeket, a
+              térközöket és az animációkat, hogy minden összhangban legyen. <b>Fontos volt, hogy az oldal ne csak
+                működjön, hanem vizuálisan is kiemelkedő legyen.</b>
+            </p>
+          </div>
 
-    <script src="./style/script.js"></script>
+          <div class="main-card">
+            <div class="icon">
+              <img src="./style/Photos/time.png" alt="Lámpa">
+            </div>
+            <p>
+              A <b>maximalizmusom</b> végig meghatározta a munkafolyamatot. Sokszor visszaléptem egy-egy korábbi
+              verzióhoz,
+              hogy még jobbá tegyem az adott részt. Nem hagytam félkész megoldásokat, <b>minden apró részletet</b> addig
+              javítottam, amíg elégedett nem voltam vele. <b>Ez a hozzáállás jelentősen megnövelte a ráfordított időt
+                is: a
+                projekt elkészítése emiatt nem túlzás 100+ munkaórát is igénybe vett.</b>
+            </p>
+          </div>
+
+          <div class="main-card">
+            <div class="icon">
+              <img src="./style/Photos/github_logo.png" alt="Lámpa">
+            </div>
+            <p>
+              Külön figyelmet fordítottam arra is (föként saját meggondolatlanságom révén), hogy az oldal
+              <b>reszponzív</b> legyen, tehát különböző eszközökön – például
+              mobilon – is megfelelően jelenjen meg. Emellett a <b>GitHub</b> használatával folyamatosan mentettem a
+              munkámat,
+              így a <b>fejlődés minden lépése nyomon követhetővé vált.</b>
+            </p>
+          </div>
+        </div>
+        <p class="outro">
+          Összességében ez a portfólió nem csupán egy iskolai feladat lett számomra, hanem egy olyan projekt, amely tükrözi a
+          <b>hozzáállásomat,</b> a <b>kitartásomat</b> és azt az igényt, hogy <b>a lehető legjobbat hozzam ki a munkámból.</b>
+        </p>
+      </div>
+  </section>
+  <button class="back-btn" id="back-technologies" onclick="scrollToTop()">Vissza ↑</button>
+
+  <script src="./style/script.js"></script>
 </body>
 
 </html>
