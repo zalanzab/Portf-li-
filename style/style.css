@@ -749,9 +749,13 @@ nav button:hover {
         z-index: 999;
     }
 
-    nav button {
-        margin: 10px 0;
+    nav button,
+    .dropbtn {
+        margin: 0;
+        padding: 12px 0;
         text-align: left;
+        font-size: 15px;
+        width: 100%;
     }
 
     nav.active {
@@ -856,13 +860,35 @@ nav button:hover {
         padding: 60px 15px;
     }
 
+    
+
     /* Mobil dropdown viselkedés */
+    
+    .dropdown {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
     .dropdown-content {
+        position: static;
         display: none;
+        opacity: 1;
+        transform: none;
+        box-shadow: none;
+        background: #111;
+        border-radius: 10px;
+        margin-top: 6px;
+        padding: 8px 12px;
+        min-width: 100%;
     }
 
     .dropdown-content.mobile-open {
         display: block;
+    }
+
+    .dropdown-content button {
+        font-size: 14px;
+        padding: 10px 0;
     }
     /* Rólam kártya mobilon */
     .about-card {
