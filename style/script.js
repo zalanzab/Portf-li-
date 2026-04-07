@@ -92,3 +92,20 @@ function openProject4() {
     window.location.href = 'Projektek_4/projekt_4.html';
 }
 
+document.querySelectorAll('.accordion-header').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    const body = item.querySelector('.accordion-body');
+    const isActive = item.classList.contains('active');
+
+    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+      otherItem.classList.remove('active');
+      otherItem.querySelector('.accordion-body').style.maxHeight = null;
+    });
+
+    if (!isActive) {
+      item.classList.add('active');
+      body.style.maxHeight = body.scrollHeight + 'px';
+    }
+  });
+});
