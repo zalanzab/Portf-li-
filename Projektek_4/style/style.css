@@ -197,7 +197,7 @@ nav button:hover {
 
 
 .wrapper {
-    width: 1200px;
+    width: min(100%, 1200px);
     margin: 30px auto;
     padding: 60px 50px;
     background: #ffffff;
@@ -263,7 +263,7 @@ nav button:hover {
 }
 
 .card {
-    width: 1200px;
+    width: min(100%, 1200px);
     max-width: 100%;
     margin: 40px auto;
     background-color: #fffefe;
@@ -372,8 +372,9 @@ nav button:hover {
 }
 
 .video-container {
-    margin-top: -100px;
-    margin-left: 350px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
     position: relative;
     width: 100%;
@@ -428,6 +429,106 @@ nav button:hover {
 
 /* ================== 📱 MOBIL (768px alatt) ================== */
 /* ================== 📱 MOBIL (768px alatt) ================== */
+@media (max-width: 1280px) {
+    header {
+        padding: 0 20px;
+    }
+
+    nav button {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 240px 0 30px;
+    }
+
+    .hero-content {
+        margin-left: 40px;
+        max-width: calc(100% - 80px);
+    }
+
+    .cards-layout {
+        margin: 20px auto 50px auto;
+        padding: 0 20px;
+    }
+
+    .cards-layout2 {
+        width: 100%;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .card,
+    .wrapper,
+    .video-container {
+        width: 100%;
+        max-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .text-box h2 {
+        font-size: 26px;
+    }
+
+    .text-box,
+    .image-box {
+        width: 100%;
+    }
+
+    .video-container {
+        margin: 0 auto 30px auto;
+    }
+
+    .drive-video {
+        height: 420px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .card,
+    .wrapper,
+    .video-container,
+    .cards-layout2 {
+        max-width: 860px;
+    }
+
+    .wrapper {
+        padding: 34px 24px;
+    }
+}
+
+@media (max-width: 980px) {
+    .tabs {
+        flex-wrap: wrap;
+        gap: 8px;
+        border-bottom: none;
+    }
+
+    .tab {
+        flex: 1 1 calc(50% - 8px);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background: #fafafa;
+    }
+
+    .tab.active {
+        border: 1px solid #7a003c;
+        border-bottom: 1px solid #7a003c;
+    }
+
+    .wrapper {
+        padding: 35px 24px;
+    }
+}
+
 @media (max-width: 768px) {
 
     html,
