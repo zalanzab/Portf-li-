@@ -1,5 +1,5 @@
-/* 1. GLOBAL / OLDAL*/
-/* Az egész oldal alap stílusa */
+/* ================== 1. ALAP ================== */
+/* Alap reset, tipografia es oldal szintu beallitasok. */
 
 * {
     margin: 0;
@@ -21,8 +21,8 @@ h3 {
     font-family: 'Playfair Display', serif;
 }
 
-/* ================== 2. NAVBAR / FEJLÉC*/
-/* Felső fekete navigációs sáv */
+/* ================== 2. FEJLEC ES NAVIGACIO ================== */
+/* Felso navigacio, logo es menugombok. */
 
 header {
     margin: 0;
@@ -50,7 +50,7 @@ header {
     cursor: pointer;
 }
 
-/* Bal oldali logó + név */
+/* Logo blokk */
 
 .logo {
     display: flex;
@@ -64,7 +64,7 @@ header {
     padding-top: 40px;
 }
 
-/* Navigációs gombok */
+/* Navigacios gombok */
 
 nav button {
     background: none;
@@ -79,35 +79,31 @@ nav button:hover {
     color: #8a1538;
 }
 
-/* ================== 3. HERO SZEKCIÓ 
-/* Fekete-fehér átmenetes felső rész */
+/* ================== 3. HERO SZEKCIO ================== */
+/* Fokep hatter, cimsor es bevezeto szoveg. */
 
 .hero {
     width: 100%;
     margin: 0;
 
-    /* 👇 kép pozíció lejjebb */
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('./Photos/rises.PNG') center 20% / cover no-repeat;
 
-    /* 👇 több hely felül (navbar miatt is) */
     padding: 360px 0 30px;
 
     display: flex;
     justify-content: flex-start;
-    /* 👈 balra tolja */
 }
 
-/* SZÖVEG BLOKK */
+/* Hero szovegblokk */
 
 .hero-content {
     margin-left: 80px;
-    /* 👈 balra húzás */
     max-width: 500px;
 }
 
-/* opcionális szebb kinézet */
+/* Hero tipografia */
 
 .hero h1 {
     color: white;
@@ -122,7 +118,8 @@ nav button:hover {
 
 
 
-/* ================== 9. DROPDOWN MENÜ  */
+/* ================== 4. NAV DROPDOWN ================== */
+/* Desktopon hoverre nyilik le */
 
 
 .dropdown {
@@ -154,7 +151,7 @@ nav button:hover {
     transition: all 0.3s ease;
 }
 
-/* Hoverre lenyílik */
+/* Desktopon hoverre nyilik le */
 .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
@@ -166,7 +163,7 @@ nav button:hover {
     background: transparent;
 }
 
-/* tartalom ------------------------------------------------ */
+/* ================== 5. FOTARTALOM ================== */
 
 .wrapper h1 {
     font-size: 25px;
@@ -389,7 +386,7 @@ nav button:hover {
     border: none;
 }
 
-/* NOTE */
+/* Beagyazott video jelzes */
 .video-note {
     position: absolute;
     bottom: 10px;
@@ -426,9 +423,7 @@ nav button:hover {
     transform: scale(0.95);
 }
 
-
-/* ================== 📱 MOBIL (768px alatt) ================== */
-/* ================== 📱 MOBIL (768px alatt) ================== */
+/* ================== 6. RESZPONZIV (MOBIL) ================== */
 @media (max-width: 1280px) {
     header {
         padding: 0 20px;
@@ -536,7 +531,6 @@ nav button:hover {
         overflow-x: hidden;
     }
 
-    /* ===== NAVBAR ===== */
 
     header {
         padding: 12px 16px;
@@ -624,7 +618,6 @@ nav button:hover {
         padding: 10px 0;
     }
 
-    /* ===== HERO ===== */
 
     .hero {
         padding: 130px 20px 50px;
@@ -650,7 +643,6 @@ nav button:hover {
         line-height: 1.5;
     }
 
-    /* ===== FŐ KÁRTYÁK ===== */
 
     .card {
         width: calc(100% - 24px);
@@ -718,7 +710,6 @@ nav button:hover {
         padding: 10px;
     }
 
-    /* ===== ALSÓ ÖSSZEGZŐ RÉSZ ===== */
 
     .cards-layout {
         flex-direction: column;
@@ -771,7 +762,6 @@ nav button:hover {
         height: 52px;
     }
 
-    /* ===== VIDEÓ ===== */
 
     .video-container {
         margin: 0 auto 30px auto;
@@ -789,7 +779,6 @@ nav button:hover {
         padding: 6px 10px;
     }
 
-    /* ===== GOMB ===== */
 
     .back-btn {
         margin: 10px auto 30px auto;
@@ -801,3 +790,4 @@ nav button:hover {
         font-size: 15px;
     }
 }
+
