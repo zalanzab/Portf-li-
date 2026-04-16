@@ -707,13 +707,13 @@ nav button:hover {
 }
 
 .reflex-list summary::after {
-  content: "âŚ„";
+  content: "⮟";
   float: right;
   font-size: 22px;
 }
 
 .reflex-list details[open] summary::after {
-  content: "âŚ";
+  content: "⮝";
 }
 
 .reflex-list p {
