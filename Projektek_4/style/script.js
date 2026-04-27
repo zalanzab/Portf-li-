@@ -4,7 +4,6 @@
         behavior: "smooth"
     });
 
-    // Mobil menü bezárása kattintás után
     const nav = document.getElementById("nav-menu");
     nav.classList.remove("active");
 }
@@ -46,17 +45,13 @@ function handleStudyClick() {
     const isMobile = window.innerWidth <= 768;
 
     if (!isMobile) {
-        //  Desktop → azonnal navigate
         navigateToSection('tanulmanyok');
         return;
     }
 
-    //  Mobil logika
     if (!dropdown.classList.contains("mobile-open")) {
-        // Első kattintás → lenyit
         dropdown.classList.add("mobile-open");
     } else {
-        // Második kattintás → navigate
         dropdown.classList.remove("mobile-open");
         navigateToSection('tanulmanyok');
     }

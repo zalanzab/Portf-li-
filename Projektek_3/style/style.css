@@ -1,4 +1,4 @@
-﻿/* ================== 1. ALAP ================== */
+﻿/* ----------------- 1. ALAP ----------------- */
 /* Alap reset, tipografia es oldal szintu beallitasok. */
 
 * {
@@ -20,7 +20,7 @@ h3 {
     font-family: 'Playfair Display', serif;
 }
 
-/* ================== 2. FEJLEC ES NAVIGACIO ================== */
+/* ----------------- 2. FEJLEC ES NAVIGACIO ----------------- */
 /* Felso navigacio, logo es menugombok. */
 
 header {
@@ -78,7 +78,7 @@ nav button:hover {
     color: #8a1538;
 }
 
-/* ================== 3. HERO SZEKCIO ================== */
+/* ----------------- 3. HERO SZEKCIO ----------------- */
 /* Fokep hatter, cimsor es bevezeto szoveg. */
 
 .hero {
@@ -115,8 +115,7 @@ nav button:hover {
 }
 
 
-
-/* ================== 4. NAV DROPDOWN ================== */
+/* ----------------- 4. NAV DROPDOWN ----------------- */
 /* Desktopon hoverre nyilik le */
 
 
@@ -161,7 +160,7 @@ nav button:hover {
     background: transparent;
 }
 
-/* ================== 5. FOTARTALOM ================== */
+/* ----------------- 5. FOTARTALOM ----------------- */
 
 .wrapper h1,
 .wrapper2 h1 {
@@ -422,7 +421,7 @@ h1 {
     transform: scale(0.95);
 }
 
-/* ================== 6. RESZPONZIV (MOBIL) ================== */
+/* ----------------- 6. RESZPONZIV (MOBIL) ----------------- */
 @media (max-width: 1280px) {
     header {
         padding: 0 20px;
