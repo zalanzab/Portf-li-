@@ -368,37 +368,6 @@ nav button:hover {
     border-radius: 10px;
 }
 
-.video-container {
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    border-radius: 18px;
-    overflow: hidden;
-}
-
-.drive-video {
-    width: 100%;
-    height: 500px;
-    border: none;
-}
-
-/* Beagyazott video jelzes */
-.video-note {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: black;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: opacity 0.3s ease;
-}
-
 .back-btn {
     margin-top: 5px;
     margin-bottom: 50px;
@@ -455,8 +424,7 @@ nav button:hover {
     }
 
     .card,
-    .wrapper,
-    .video-container {
+    .wrapper {
         width: 100%;
         max-width: 980px;
         margin-left: auto;
@@ -478,19 +446,11 @@ nav button:hover {
         width: 100%;
     }
 
-    .video-container {
-        margin: 0 auto 30px auto;
-    }
-
-    .drive-video {
-        height: 420px;
-    }
 }
 
 @media (max-width: 1080px) {
     .card,
     .wrapper,
-    .video-container,
     .cards-layout2 {
         max-width: 860px;
     }
@@ -761,24 +721,6 @@ nav button:hover {
         width: 52px;
         height: 52px;
     }
-
-
-    .video-container {
-        margin: 0 auto 30px auto;
-        width: calc(100% - 24px);
-        max-width: 100%;
-        border-radius: 14px;
-    }
-
-    .drive-video {
-        height: 240px;
-    }
-
-    .video-note {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-
 
     .back-btn {
         margin: 10px auto 30px auto;

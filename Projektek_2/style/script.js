@@ -1,14 +1,4 @@
-﻿function scrollToSection(id) {
-
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
-    });
-
-    const nav = document.getElementById("nav-menu");
-    nav.classList.remove("active");
-}
-
-function navigateToSection(sectionId) {
+﻿function navigateToSection(sectionId) {
     window.location.href = '../index.html#' + sectionId;
 }
 
@@ -55,3 +45,4 @@ function handleStudyClick() {
     }
 
 }
+

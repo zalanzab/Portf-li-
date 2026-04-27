@@ -681,13 +681,6 @@ h1 {
         height: 50px;
     }
 
-
-    .side-video {
-        width: 100%;
-        border-radius: 12px;
-    }
-
-
     .project-summary-card {
         flex-direction: column;
         padding: 30px 20px;

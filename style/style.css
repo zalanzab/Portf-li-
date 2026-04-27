@@ -1,4 +1,4 @@
-﻿/* ================== 1. ALAP ================== */
+﻿/* -------------- 1. ALAP -------------- */
 /* Alap reset, tipografia es oldal szintu beallitasok. */
 
 html, body {
@@ -11,7 +11,7 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
-/* ================== 2. FEJLEC ES NAVIGACIO ================== */
+/* -------------- 2. FEJLEC ES NAVIGACIO -------------- */
 /* Felso navigacio, logo es menugombok. */
 
 header {
@@ -69,7 +69,7 @@ nav button:hover {
     color: #8a1538;
 }
 
-/* ================== 3. HERO SZEKCIO ================== */
+/* -------------- 3. HERO SZEKCIO -------------- */
 /* Fokep hatter, cimsor es bevezeto szoveg. */
 
 .hero {
@@ -156,7 +156,7 @@ nav button:hover {
 
 
 
-/* ================== 4. TARTALMI SZEKCIOK ================== */
+/* -------------- 4. TARTALMI SZEKCIOK -------------- */
 .content {
     padding: 100px 80px;
 }
@@ -178,7 +178,7 @@ nav button:hover {
 }
 
 
-/* ================== 5. ROLAM KARTYA ================== */
+/* -------------- 5. ROLAM KARTYA -------------- */
 .about-card {
     margin: 60px auto 70px auto;
     width: min(96%, 1120px);
@@ -224,13 +224,13 @@ nav button:hover {
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
 }
 
-#tanulmanyok, #projektek, #osszegzes, #technologiak {
+#tanulmanyok, #projektek, #technologiak {
     padding-top: 10px;
 }
 
 
 
-/* ================== 6. TANULMANY GRID ================== */
+/* -------------- 6. TANULMANY GRID -------------- */
 .study-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -238,7 +238,7 @@ nav button:hover {
     margin-top: 50px;
 }
 
-/* ================== 7. TANULMANY KARTYAK ================== */
+/* -------------- 7. TANULMANY KARTYAK -------------- */
 
 .study-card {
     padding: 40px;
@@ -255,17 +255,6 @@ nav button:hover {
     margin: 25px 0;
     line-height: 1.6;
     color: #555;
-}
-.study-card .btn {
-    align-self: flex-start;
-    padding: 10px 22px;
-    background: #8a1538;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
 }
 .study-card h3 {
     margin: 0 0 20px 0;
@@ -290,7 +279,6 @@ nav button:hover {
 .card-2 {
     background: linear-gradient(135deg, #c0c0c0, #ffffff);
 }
-
 .card-3 {
     background: linear-gradient(135deg, #c7b299, #ffffff);
 }
@@ -518,7 +506,7 @@ nav button:hover {
     padding: 8px;
 }
 
-/* ================== 8. GOMBOK ================== */
+/* -------------- 8. GOMBOK -------------- */
 
 
 .expand-btn {
@@ -564,7 +552,7 @@ nav button:hover {
 
 
 
-/* ================== 9. NAV DROPDOWN ================== */
+/* -------------- 9. NAV DROPDOWN -------------- */
 /* Desktopon hoverre nyilik le */
 .dropdown {
     position: relative;
@@ -723,7 +711,7 @@ nav button:hover {
   margin-top: 15px;
   max-width: 800px;
 }
-
+/* -------------- 10. RESZPONZIV (MOBIL) -------------- */
 @media (max-width: 1200px) {
     header {
         padding: 0 20px;
@@ -780,7 +768,6 @@ nav button:hover {
     }
 }
 
-/* ================== 10. RESZPONZIV (MOBIL) ================== */
 @media (max-width: 768px) {
 
 
@@ -860,10 +847,6 @@ nav button:hover {
         margin: 16px 0;
         font-size: 15px;
         line-height: 1.55;
-    }
-    .study-card .btn {
-        width: 100%;
-        text-align: center;
     }
     .study-card.active {
         grid-column: span 1;
@@ -996,12 +979,6 @@ nav button:hover {
         max-width: 100%;
         font-size: 16px;
         margin-bottom: 20px;
-    }
-
-    .reflex-btn {
-        position: static;
-        margin-top: 15px;
-        width: 100%;
     }
 
 }
