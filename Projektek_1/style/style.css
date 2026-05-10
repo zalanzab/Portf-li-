@@ -330,24 +330,19 @@ h1 {
 
 .project-summary-section {
     width: 100%;
-    max-width: 1100px;
-    margin: 30px 0 0 0;
+    max-width: 95%;
+    margin: -120px auto 80px auto;
 }
 .project-summary-card {
-    min-height: 785px;
     background: #ffffff;
     border-radius: 18px;
     padding: 50px 45px;
     display: flex;
-    flex-direction: column;
-    gap: 35px;
+    gap: 50px;
     align-items: flex-start;
 }
-
-.project-summary-section {
-    width: 100%;
-    max-width: 1100px;
-    margin: 30px 0 0 0;
+.summary-column {
+    flex: 1;
 }
 
 .summary-column p {

@@ -43,7 +43,7 @@
                     <button onclick="openProject4()" id="projekt4-btn">Portfólió</button>
                 </div>
             </div>
-            
+
             <button onclick="navigateToSection('technologiak')" id="nav-technologies">Technológiák</button>
         </nav>
     </header>
@@ -65,48 +65,49 @@
 
 
                 <p>
-                    Az általam készített okosotthon rendszer működése egy központi vezérlésen alapul, amely folyamatosan
-                    figyeli az érzékelők állapotát, és ezek alapján automatikusan vezérli az eszközöket. A rendszer nem
-                    időzítések szerint működik, hanem úgynevezett állapotvezérelt logikával, vagyis mindig az aktuális
-                    szenzoradatok alapján hoz döntést.
+                    Az általam készített okosotthon rendszer egy központi vezérlésen alapul, amely folyamatosan figyeli
+                    az érzékelőket, és ezek alapján automatikusan vezérli az eszközöket. A működés állapotvezérelt
+                    logikán alapul, így mindig az aktuális szenzoradatok döntenek.
                 </p>
 
                 <h2>Garázs</h2>
-                <p>A garázs esetében a működés a mozgásérzékelőhöz kötött. Amikor a szenzor mozgást érzékel,
-                    a rendszer ezt jelenlétként értelmezi, ezért felkapcsolja a világítást és kinyitja a garázsajtót.
-                    Amint a mozgás megszűnik, a rendszer automatikusan lekapcsolja a lámpát és bezárja az ajtót. Tehát a
-                    garázs teljes működése közvetlenül a mozgásérzékelő állapotát követi.</p>
+                <p>A garázs működése a mozgásérzékelőhöz kötött. Mozgás esetén a rendszer felkapcsolja a világítást és
+                    kinyitja a garázsajtót. Ha a mozgás megszűnik, automatikusan lekapcsolja a lámpát és bezárja az
+                    ajtót. A működés teljesen a szenzor állapotát követi.
+                </p>
 
                 <h2>Bejárat</h2>
-                <p>A bejáratnál egy RFID-alapú azonosítás történik. A rendszer ellenőrzi a kártya
-                    azonosítóját, és ha az megfelel az előre beállított értéknek, akkor az ajtó kinyílik, és a világítás
-                    is bekapcsol. Ha a kártya nem érvényes, az ajtó zárva marad. Emellett itt is működik egy
-                    mozgásérzékelő, amely a világítást vezérli: mozgás esetén felkapcsol, mozgás hiányában lekapcsol.
-                    Így a rendszer egyszerre biztosít biztonságos beléptetést és kényelmi automatizmust.</p>
+                <p>A bejáratnál RFID-alapú azonosítás működik. A rendszer ellenőrzi a kártya azonosítóját, és érvényes
+                    esetén kinyitja az ajtót, valamint bekapcsolja a világítást. Érvénytelen kártyánál az ajtó zárva
+                    marad. A világítást mozgásérzékelő is vezérli, amely mozgásnál felkapcsolja, majd annak hiányában
+                    lekapcsolja, így biztosítva a biztonságot és a kényelmet.
+                </p>
 
                 <h2>Biztonság</h2>
-                <p>A biztonsági részben a rendszer a mozgásérzékelő jelére reagál. Ha mozgást észlel, azt potenciális
-                    betörésként kezeli, ezért azonnal bekapcsolja a szirénát és aktiválja a kamerát. Amikor a mozgás
-                    megszűnik, ezek az eszközök kikapcsolnak. Ez egy egyszerű, de gyors reagálású védelmi mechanizmus.
+                <p>A biztonsági rendszer a mozgásérzékelő jelére reagál. Mozgás esetén a rendszer potenciális
+                    betörésként értelmezi az eseményt, ezért bekapcsolja a szirénát és aktiválja a kamerát. A mozgás
+                    megszűnésekor ezek az eszközök kikapcsolnak, így gyors reagálású védelmet biztosít.
+
                 </p>
 
                 <h2>Konyha</h2>
-                <p>A konyhában a működés a füstszinthez van kötve. Ha a füstérzékelő által mért érték eléri a beállított
-                    küszöböt, a rendszer kinyitja az ablakokat és bekapcsolja a ventilátort magas fokozaton, hogy
-                    kiszellőztesse a helyiséget. Amikor a füstszint visszaesik a határérték alá, az ablakok bezáródnak,
-                    és a ventilátor leáll.</p>
+                <p>A konyhában a működés a füstszinthez kötött. Ha a füstérzékelő eléri a küszöbértéket, a rendszer
+                    kinyitja az ablakokat és magas fokozatra kapcsolja a ventilátort a szellőztetéshez. Amikor a
+                    füstszint a határ alá csökken, az ablakok bezáródnak és a ventilátor leáll.
+                </p>
 
                 <h2>Szoba</h2>
-                <p>A szobában a rendszer tűz esetén több eszközt is egyszerre vezérel. Ha a tűzérzékelő
-                    tüzet jelez, a sprinkler rendszer elindul, a vízelvezetés aktiválódik, az ablakok kinyílnak, és a
-                    ventilátor magas fokozatra kapcsol. Ez egyszerre biztosítja a tűz oltását és a füst eltávolítását.
-                    Amikor a tűz megszűnik, minden eszköz visszaáll alapállapotba.</p>
+                <p>A szobában tűz esetén a rendszer több eszközt egyszerre vezérel. Ha a tűzérzékelő jelez, a sprinkler
+                    rendszer elindul, a vízelvezetés aktiválódik, az ablakok kinyílnak, és a ventilátor magas fokozatra
+                    kapcsol, így biztosítva az oltást és a füst eltávolítását. A tűz megszűnése után minden eszköz
+                    visszaáll alapállapotba.
+                </p>
 
                 <h2>Hőmérséklet-szabályozás</h2>
                 <p>A hőmérséklet-szabályozás során a termosztát folyamatosan méri a hőmérsékletet. Ha az érték a
-                    beállított szint alá csökken, a rendszer bekapcsolja a fűtést és kikapcsolja a klímát. Ha a
-                    hőmérséklet magasabb, a rendszer leállítja a fűtést és bekapcsolja a klímát. Ez biztosítja az
-                    automatikus hőmérséklet-szabályozást.</p>
+                    beállított szint alá csökken, a rendszer bekapcsolja a fűtést és kikapcsolja a klímát. Ha magasabb,
+                    leállítja a fűtést és bekapcsolja a klímát, így automatikusan szabályozza a hőmérsékletet.
+                </p>
             </div>
 
             <div class="right-slide">
@@ -128,9 +129,9 @@
                     <h1>A vezérlés szerkezeti felépítése</h1>
 
                     <p class="intro">
-                        A rendszer szerkezetileg három fő részből áll: érzékelőkből, központi vezérlésből és beavatkozó
-                        eszközökből, amelyek egymással szorosan együttműködve biztosítják a folyamatos, automatikus és
-                        megbízható működést, valamint a különböző eseményekre történő gyors és megfelelő reakciót.
+                        A rendszer három fő részből áll: érzékelők, központi vezérlés és beavatkozó eszközök, amelyek
+                        együtt biztosítják az automatikus, megbízható működést és a gyors reakciót az eseményekre.
+
                     </p>
 
                     <div class="main-cards">
@@ -144,6 +145,7 @@
                                 Az érzékelők feladata az adatok gyűjtése. Ide tartoznak a mozgásérzékelők, a
                                 füstérzékelő, a tűzérzékelő, az RFID kártyaolvasó és a termosztát. Ezek folyamatosan
                                 figyelik a környezetet, és állapotváltozás esetén jelet küldenek.
+
                             </p>
                         </div>
 
@@ -153,10 +155,11 @@
                                 <img src="./style/Photos/home_gateway.png" alt="Home Gateway">
                             </div>
                             <p>
-                                A központi vezérlést a Home Gateway biztosítja, ahol a működést meghatározó szabályok
-                                vannak beállítva. Minden szabály egy feltételből és egy műveletből áll, például ha a
-                                mozgásérzékelő jelez, akkor a lámpa bekapcsol. A rendszer folyamatosan figyeli ezeket a
-                                feltételeket, és az aktuális állapotok alapján hajtja végre a műveleteket.
+                                A központi vezérlést a Home Gateway biztosítja, ahol a működési szabályok vannak
+                                beállítva. Minden szabály feltételből és műveletből áll, például mozgás esetén a lámpa
+                                bekapcsol. A rendszer folyamatosan figyeli a feltételeket, és az aktuális állapotok
+                                alapján végrehajtja a műveleteket.
+
                             </p>
                         </div>
 
@@ -165,28 +168,20 @@
                                 <img src="./style/Photos/lamp.png" alt="Lámpa">
                             </div>
                             <p>
-                                A beavatkozó eszközök azok az elemek, amelyek a rendszer döntéseit végrehajtják. Ide
-                                tartoznak a lámpák, az ajtók, a garázsajtó, a sziréna, a kamera, a ventilátor, az
-                                ablakok, a sprinkler rendszer, valamint a fűtés és a klíma. Ezek közvetlenül a központi
-                                vezérlő utasításai alapján működnek.
+                                A beavatkozó eszközök a rendszer döntéseit hajtják végre. Ide tartoznak a lámpák, ajtók,
+                                garázsajtó, sziréna, kamera, ventilátor, ablakok, sprinkler rendszer, valamint a fűtés
+                                és a klíma. Ezek a központi vezérlő utasításai alapján működnek.
+
                             </p>
                         </div>
                     </div>
 
                     <p class="outro">
-                        A működéshez tehát az volt szükséges, hogy minden eszközt csatlakoztassak a központi egységhez,
-                        majd létrehozzam a megfelelő IF–THEN szabályokat. Ennek során minden szenzort és beavatkozó
-                        eszközt regisztráltam a Home Gateway-ben, majd a szabályoknál kiválasztottam a konkrét eszközt,
-                        annak állapotát vagy mérési értékét feltételként. Például mozgásérzékelőnél az „motion detected
-                        = true”, füstérzékelőnél egy konkrét küszöbértéket, vagy RFID esetén az adott azonosítót adtam
-                        meg. Ezután hozzárendeltem a megfelelő műveleteket, mint például lámpa bekapcsolása, ajtó
-                        nyitása, ventilátor fokozatának állítása vagy riasztás aktiválása, és egyes esetekben több
-                        eszközt is egyetlen feltételhez kapcsoltam, így egy esemény egyszerre több reakciót is kivált.
-                        <br></br>
-                        A rendszer így egy jól átlátható logikai struktúrát alkot, 
-                        minden esemény automatikusan kivált egy megfelelő reakciót, 
-                        és a rendszer az aktuális szenzoradatok alapján 
-                        azonnal reagál a változásokra.
+                        A működéshez minden eszközt a központi egységhez kellett csatlakoztatni, majd IF–THEN
+                        szabályokat létrehozni. A Home Gateway-ben minden szenzort és beavatkozót regisztráltam, és
+                        feltételekhez rendeltem, például mozgásérzékelőnél „motion detected = true”, füstérzékelőnél
+                        küszöbérték, RFID-nél azonosító. Ezekhez műveleteket társítottam, mint lámpa, ajtó, ventilátor
+                        vagy riasztás vezérlése, akár több eszközt is egy feltételhez kötve.
                     </p>
                 </div>
             </div>
